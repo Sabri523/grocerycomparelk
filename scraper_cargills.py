@@ -41,12 +41,14 @@ Note on pagination:
   what control is actually there, so the selectors below can be adjusted.
 
 Note on quantity:
-  Each product tile lives inside a "div.veg" card, and the pack size
-  (e.g. "400g", "1 Kg") is rendered inside a <button> within that card —
-  separate from the product name link. This scraper pulls that button
-  text out into its own "quantity" field per item, rather than relying on
-  the name to contain a parseable size. match_products.py uses this field
-  directly (falling back to parsing the name only if it's missing).
+  The pack size (e.g. "500.0 g") is rendered in a <button class="dropbtn1
+  ...">, close to the product's name/price link but NOT inside any
+  specially-named wrapper div (an earlier version guessed a "div.veg"
+  container that turned out not to exist, so it silently found nothing).
+  This scraper instead walks up a few ancestor levels from the anchor
+  itself and grabs the first "dropbtn1" button it finds — separate from
+  the name, into its own "quantity" field. match_products.py uses this
+  field directly (falling back to parsing the name only if it's missing).
 """
 
 import json
@@ -108,16 +110,31 @@ def extract_id(href):
         return None
 
 
-def find_quantity(card):
-    """Pull the pack-size text out of the <button> inside a product's
-    'div.veg' card (e.g. '400g', '1 Kg'). Returns None if not found."""
-    if not card:
-        return None
-    button = card.find("button")
-    if not button:
-        return None
-    text = button.get_text(" ", strip=True)
-    return text or None
+def find_quantity_near(anchor, max_levels=6):
+    """Pull the pack-size text out of the quantity dropdown button
+    (e.g. '500.0 g') near a product's name/price anchor.
+
+    Earlier versions assumed the anchor sat inside a wrapping
+    'div.veg' card and searched within that — but that class was an
+    unverified guess and doesn't actually exist, so the search silently
+    found nothing. Looking at the real rendered HTML, the quantity
+    button is a close sibling of the <a> tag (often just one parent up,
+    separated only by an Angular "<!--ngIf-->" comment), not nested
+    inside some specially-named card. So instead this walks upward from
+    the anchor itself, checking each ancestor level for a
+    'dropbtn1' button, and stops at the first one found — rather than
+    requiring a specific container class we can't verify in advance."""
+    node = anchor
+    for _ in range(max_levels):
+        node = node.parent
+        if node is None:
+            break
+        button = node.find("button", class_=lambda c: c and "dropbtn1" in c.split())
+        if button:
+            text = button.get_text(" ", strip=True)
+            if text:
+                return text
+    return None
 
 
 def parse_current_page(html):
@@ -146,11 +163,11 @@ def parse_current_page(html):
         elif text:
             by_id[pid]["name_parts"].append(text)
 
-        # The product card is the nearest ancestor with class "veg". The
-        # pack-size button lives there, separate from this anchor.
+        # Look for the quantity dropdown button near this anchor (see
+        # find_quantity_near's docstring for why this walks up from the
+        # anchor itself rather than searching within a named card).
         if by_id[pid]["quantity"] is None:
-            card = a.find_parent("div", class_=lambda c: c and "veg" in c.split())
-            qty = find_quantity(card)
+            qty = find_quantity_near(a)
             if qty:
                 by_id[pid]["quantity"] = qty
 
