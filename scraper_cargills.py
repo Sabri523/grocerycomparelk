@@ -21,7 +21,7 @@ Usage:
     python scraper_cargills.py
 
 Output:
-    cargills_prices.json  ->  [{"name": ..., "price": ..., "category": ...}, ...]
+    cargills_prices.json  ->  [{"name": ..., "price": ..., "quantity": ..., "category": ...}, ...]
 
 Note on pagination:
   Earlier versions tried scrolling + clicking "load more" style buttons,
@@ -39,6 +39,14 @@ Note on pagination:
   cargills_debug_<category>.html (saved automatically when a category
   looks suspiciously small) and search for "Next" or "pagination" to see
   what control is actually there, so the selectors below can be adjusted.
+
+Note on quantity:
+  Each product tile lives inside a "div.veg" card, and the pack size
+  (e.g. "400g", "1 Kg") is rendered inside a <button> within that card —
+  separate from the product name link. This scraper pulls that button
+  text out into its own "quantity" field per item, rather than relying on
+  the name to contain a parseable size. match_products.py uses this field
+  directly (falling back to parsing the name only if it's missing).
 """
 
 import json
@@ -100,10 +108,22 @@ def extract_id(href):
         return None
 
 
+def find_quantity(card):
+    """Pull the pack-size text out of the <button> inside a product's
+    'div.veg' card (e.g. '400g', '1 Kg'). Returns None if not found."""
+    if not card:
+        return None
+    button = card.find("button")
+    if not button:
+        return None
+    text = button.get_text(" ", strip=True)
+    return text or None
+
+
 def parse_current_page(html):
     """Parse whatever products are currently rendered on the page into
-    {pid: {"name": ..., "price": ...}}. Does NOT accumulate across pages —
-    that happens in scrape_category."""
+    {pid: {"name": ..., "price": ..., "quantity": ...}}. Does NOT
+    accumulate across pages — that happens in scrape_category."""
     soup = BeautifulSoup(html, "html.parser")
 
     # temporarily removes discount div (avoids picking up promo/MRP text
@@ -119,11 +139,20 @@ def parse_current_page(html):
         if not pid:
             continue
         text = a.get_text(" ", strip=True)
-        by_id.setdefault(pid, {"name_parts": [], "price_parts": []})
+        by_id.setdefault(pid, {"name_parts": [], "price_parts": [], "quantity": None})
+
         if PRICE_RE.search(text):
             by_id[pid]["price_parts"].append(text)
         elif text:
             by_id[pid]["name_parts"].append(text)
+
+        # The product card is the nearest ancestor with class "veg". The
+        # pack-size button lives there, separate from this anchor.
+        if by_id[pid]["quantity"] is None:
+            card = a.find_parent("div", class_=lambda c: c and "veg" in c.split())
+            qty = find_quantity(card)
+            if qty:
+                by_id[pid]["quantity"] = qty
 
     page_items = {}
     for pid, parts in by_id.items():
@@ -134,7 +163,7 @@ def parse_current_page(html):
         if not price_match:
             continue
         price = float(price_match.group(1).replace(",", ""))
-        page_items[pid] = {"name": item_name, "price": price}
+        page_items[pid] = {"name": item_name, "price": price, "quantity": parts["quantity"]}
 
     return page_items
 
@@ -208,7 +237,7 @@ def scrape_category(page, name, url, save_debug_html=False):
         print(f"  saved last rendered page HTML to {debug_path} for inspection")
 
     items = [
-        {"name": v["name"], "price": v["price"], "category": name}
+        {"name": v["name"], "price": v["price"], "quantity": v.get("quantity"), "category": name}
         for v in all_items_by_id.values()
     ]
     return items
@@ -249,7 +278,8 @@ def main():
     with open("cargills_prices.json", "w", encoding="utf-8") as f:
         json.dump(all_items, f, ensure_ascii=False, indent=2)
 
-    print(f"\nSaved {len(all_items)} items to cargills_prices.json")
+    have_qty = sum(1 for i in all_items if i.get("quantity"))
+    print(f"\nSaved {len(all_items)} items to cargills_prices.json ({have_qty} with a quantity found)")
 
 
 if __name__ == "__main__":

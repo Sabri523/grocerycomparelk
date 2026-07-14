@@ -150,6 +150,25 @@
     color:#9A9488;
     font-style:italic;
   }
+  .unit-price-hint{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:#8A9089;
+    margin-top:2px;
+  }
+  .badge-unverified{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:.03em;
+    padding:2px 6px;
+    border-radius:2px;
+    background:var(--mango-dim);
+    color:#8A6A2E;
+    border:1px solid #E9C685;
+    margin-left:6px;
+    white-space:nowrap;
+  }
 
   .table-scroll{
     border:1px solid var(--rule);
@@ -311,7 +330,7 @@
 
   <footer>
     <p><b>How this works:</b> this page loads <code>comparison.json</code>, produced by running <code>scraper_glomark.py</code> → <code>scraper_cargills.py</code> → <code>match_products.py</code> in order (see README.md). Re-run those three scripts periodically (e.g. via a scheduled task) and refresh this page to pick up new prices.</p>
-    <p><b>Note on matching:</b> Cargills and Glomark don't share product IDs, so items are paired by name similarity. Mismatches are possible, especially for generic names or different pack sizes — the match % next to each item is a rough confidence signal, not a guarantee.</p>
+    <p><b>Note on matching:</b> Cargills and Glomark don't share product IDs, so items are paired by name similarity and, where available, pack size (shown next to each price, e.g. "500g"). Mismatches are still possible, especially for generic names — the match % and pack size next to each item are there so you can double-check before trusting a comparison. A "⚠ size unverified" tag means the pack size couldn't be confirmed on at least one side.</p>
   </footer>
 
 </div>
@@ -329,6 +348,23 @@ let hideUnavailable = false;
 // isn't a finite number as "not available" rather than doing math on it.
 function isValidPrice(v){
   return typeof v === "number" && Number.isFinite(v);
+}
+
+// match_products.py stores quantities normalized to grams (weight),
+// millilitres (volume), or a plain count — turn that back into something
+// readable, e.g. 500 -> "500g", 1500 -> "1.5kg", 6 -> "6 pcs".
+function formatQty(qty, unitType){
+  if(qty === null || qty === undefined || !unitType) return null;
+  if(unitType === "weight"){
+    return qty >= 1000 ? `${(qty/1000).toFixed(qty % 1000 === 0 ? 0 : 1)}kg` : `${qty}g`;
+  }
+  if(unitType === "volume"){
+    return qty >= 1000 ? `${(qty/1000).toFixed(qty % 1000 === 0 ? 0 : 1)}L` : `${qty}ml`;
+  }
+  if(unitType === "count"){
+    return `${qty} ${qty === 1 ? "pc" : "pcs"}`;
+  }
+  return null;
 }
 
 async function loadData(){
@@ -426,23 +462,33 @@ function render(){
     const glomarkWin = d.bothValid && d.cheaper === "glomark";
     const tie = d.bothValid && d.cheaper === "tie";
 
+    const cargillsQtyLabel = formatQty(d.cargills_qty, d.unit_type);
+    const glomarkQtyLabel = formatQty(d.glomark_qty, d.unit_type);
+
+    const cargillsHintParts = [cargillsQtyLabel, d.cargills_unit_price ? `Rs. ${d.cargills_unit_price} ${d.unit_label || ''}` : null].filter(Boolean);
+    const glomarkHintParts = [glomarkQtyLabel, d.glomark_unit_price ? `Rs. ${d.glomark_unit_price} ${d.unit_label || ''}` : null].filter(Boolean);
+
     const cargillsCell = d.cargillsValid
-      ? `<span class="price price-cell ${tie ? 'tie' : (cargillsWin ? 'win' : '')}">${fmt(d.cargills)}</span>${cargillsWin ? '<span class="badge-cheapest">Cheapest</span>' : ''}`
+      ? `<span class="price price-cell ${tie ? 'tie' : (cargillsWin ? 'win' : '')}">${fmt(d.cargills)}</span>${cargillsWin ? '<span class="badge-cheapest">Cheapest</span>' : ''}${cargillsHintParts.length ? `<span class="unit-price-hint">${cargillsHintParts.join(' · ')}</span>` : ''}`
       : `<span class="price-na">N/A</span>`;
 
     const glomarkCell = d.glomarkValid
-      ? `<span class="price price-cell ${tie ? 'tie' : (glomarkWin ? 'win' : '')}">${fmt(d.glomark)}</span>${glomarkWin ? '<span class="badge-cheapest">Cheapest</span>' : ''}`
+      ? `<span class="price price-cell ${tie ? 'tie' : (glomarkWin ? 'win' : '')}">${fmt(d.glomark)}</span>${glomarkWin ? '<span class="badge-cheapest">Cheapest</span>' : ''}${glomarkHintParts.length ? `<span class="unit-price-hint">${glomarkHintParts.join(' · ')}</span>` : ''}`
       : `<span class="price-na">N/A</span>`;
 
     const savingsCell = !d.bothValid
       ? `<span class="price-na">not comparable</span>`
       : (d.cheaper === "tie" ? '<span class="savings">—</span>' : `<span class="savings">${fmt(d.diff)} (${d.pct.toFixed(1)}%)</span>`);
 
+    const sizeWarning = (d.bothValid && d.size_verified === false)
+      ? `<span class="badge-unverified" title="Pack size couldn't be confirmed as matching on both sides">⚠ size unverified</span>`
+      : '';
+
     const confidenceNote = d.match_confidence ? `match ${d.match_confidence}%` : (d.unit || "");
     tr.innerHTML = `
       <td>
         <span class="item-name">${d.name}</span>
-        <span class="item-unit">${[confidenceNote, d.cat].filter(Boolean).join(" · ")}</span>
+        <span class="item-unit">${[confidenceNote, d.cat].filter(Boolean).join(" · ")}${sizeWarning}</span>
       </td>
       <td>${cargillsCell}</td>
       <td>${glomarkCell}</td>

@@ -35,7 +35,15 @@ Usage:
     python scraper_glomark.py
 
 Output:
-    glomark_prices.json  ->  [{"name": ..., "price": ..., "url": ..., "category": ...}, ...]
+    glomark_prices.json  ->  [{"name": ..., "price": ..., "quantity": ..., "url": ..., "category": ...}, ...]
+
+Note on quantity:
+  Each product's pack size (e.g. "400g", "1 Kg") lives in a div with
+  id="product-Quantity", separate from the name/price. This scraper pulls
+  that out into its own "quantity" field per item — the same field name
+  used by scraper_cargills.py — so match_products.py can rely on an
+  explicit quantity value from both sides instead of guessing one out of
+  the product name.
 """
 
 import json
@@ -212,11 +220,24 @@ def parse_products(html, category_name):
 
             price = float(price_match.group(1).replace(",", ""))
 
+            # Pack size / quantity lives in a div with id "product-Quantity".
+            # Look inside the product card first; if it's not nested there,
+            # check one level up in case it's a sibling of product-caption
+            # rather than a descendant of it.
+            quantity = None
+            qty_element = product_card.find(id="product-Quantity")
+            if not qty_element and product_card.parent:
+                qty_element = product_card.parent.find(id="product-Quantity")
+            if qty_element:
+                qty_text = qty_element.get_text(" ", strip=True)
+                quantity = qty_text or None
+
             href = tag["href"]
 
             items.append({
                 "name": name_part,
                 "price": price,
+                "quantity": quantity,
                 "url": href if href.startswith("http") else f"https://glomark.lk{href}",
                 "category": category_name,
             })
@@ -268,7 +289,8 @@ def main():
     with open("glomark_prices.json", "w", encoding="utf-8") as f:
         json.dump(all_items, f, ensure_ascii=False, indent=2)
 
-    print(f"\nSaved {len(all_items)} items to glomark_prices.json")
+    have_qty = sum(1 for i in all_items if i.get("quantity"))
+    print(f"\nSaved {len(all_items)} items to glomark_prices.json ({have_qty} with a quantity found)")
 
 
 if __name__ == "__main__":
