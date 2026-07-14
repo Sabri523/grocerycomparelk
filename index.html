@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Aapa | Sri Lanka grocery price ledger</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F3EC;
+    --ink:#1C2A22;
+    --teal:#2F6B5E;
+    --teal-dim:#DCE8E4;
+    --mango:#E2932A;
+    --mango-dim:#F8E6CB;
+    --leaf:#3F7D4A;
+    --leaf-dim:#E1EEDE;
+    --rule:#D8D3C4;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px 80px;}
+
+  header.top{
+    padding:56px 24px 32px;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:36px;
+  }
+  header.top .inner{max-width:1080px;margin:0 auto;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(34px,5vw,54px);
+    line-height:1.05;
+    margin:0 0 16px;
+    max-width:14ch;
+  }
+  .sub{
+    max-width:58ch;
+    font-size:16px;
+    line-height:1.6;
+    color:#3E4A42;
+    margin:0 0 4px;
+  }
+  .sample-note{
+    display:inline-block;
+    margin-top:18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:#8A6A2E;
+    background:var(--mango-dim);
+    border:1px solid #E9C685;
+    padding:8px 12px;
+    border-radius:3px;
+  }
+
+  .ticker{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    margin-bottom:36px;
+  }
+  .ticker .cell{
+    background:var(--white);
+    padding:20px 22px;
+  }
+  .ticker .num{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:30px;
+    line-height:1;
+  }
+  .ticker .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#6B756E;
+    margin-top:8px;
+  }
+
+  .controls{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:20px;
+    align-items:center;
+  }
+  input[type="text"]{
+    flex:1;
+    min-width:200px;
+    padding:12px 14px;
+    border:1px solid var(--rule);
+    background:var(--white);
+    font-family:'IBM Plex Sans';
+    font-size:14.5px;
+    color:var(--ink);
+    border-radius:2px;
+  }
+  input[type="text"]:focus{outline:2px solid var(--teal); outline-offset:1px;}
+  select{
+    padding:12px 14px;
+    border:1px solid var(--rule);
+    background:var(--white);
+    font-family:'IBM Plex Sans';
+    font-size:14.5px;
+    color:var(--ink);
+    border-radius:2px;
+  }
+  select:focus{outline:2px solid var(--teal); outline-offset:1px;}
+
+  .hide-toggle{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    color:#4A544D;
+    white-space:nowrap;
+    cursor:pointer;
+  }
+  .hide-toggle input{
+    width:15px;
+    height:15px;
+    accent-color:var(--teal);
+    cursor:pointer;
+  }
+  .price-na{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13.5px;
+    color:#9A9488;
+    font-style:italic;
+  }
+
+  .table-scroll{
+    border:1px solid var(--rule);
+    background:var(--white);
+    overflow-x:auto;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:640px;
+  }
+  thead th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#6B756E;
+    padding:14px 16px;
+    border-bottom:1px solid var(--rule);
+    background:#FBFAF6;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  thead th.active{color:var(--teal);}
+  thead th .arrow{margin-left:4px;font-size:10px;}
+  tbody td{
+    padding:14px 16px;
+    border-bottom:1px solid var(--rule);
+    font-size:14.5px;
+    vertical-align:middle;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:#FAF9F4;}
+  .item-name{font-weight:500;}
+  .item-unit{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:#8A9089;
+    margin-top:2px;
+  }
+  .price{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14.5px;
+  }
+  .price-cell{
+    padding:6px 10px;
+    border-radius:3px;
+    display:inline-block;
+  }
+  .win{
+    background:var(--leaf-dim);
+    color:#1E4A26;
+    font-weight:600;
+  }
+  .tie{
+    background:#EFEDE3;
+  }
+  .badge-cheapest{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding:3px 7px;
+    border-radius:2px;
+    background:var(--teal);
+    color:#fff;
+    margin-left:8px;
+  }
+  .savings{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--leaf);
+  }
+  .no-results{
+    padding:48px 16px;
+    text-align:center;
+    color:#7A8079;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+  }
+
+  footer{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid var(--rule);
+    font-size:13px;
+    color:#6B756E;
+    line-height:1.6;
+  }
+  footer b{color:var(--ink);}
+
+  @media (max-width:640px){
+    .ticker{grid-template-columns:1fr;}
+    header.top{padding:40px 20px 28px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="inner">
+    <div class="eyebrow">Cargills Online — vs — Glomark</div>
+    <h1>Find the cheaper trolley, item by item.</h1>
+    <p class="sub">A side-by-side price ledger for Sri Lanka's two online grocery stores, so you know which one to open before you check out.</p>
+    <span class="sample-note">Prices below come from comparison.json, generated by the scraper + matcher scripts. Fuzzy-matched items show a match % — double-check anything under ~85% before trusting it.</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="ticker">
+    <div class="cell">
+      <div class="num" id="stat-items">—</div>
+      <div class="label">Comparable / total items</div>
+    </div>
+    <div class="cell">
+      <div class="num" id="stat-cheaper">—</div>
+      <div class="label">Cheaper more often</div>
+    </div>
+    <div class="cell">
+      <div class="num" id="stat-savings">—</div>
+      <div class="label">Avg. saving when picking cheapest</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search an item… e.g. rice, milk powder, dhal" />
+    <select id="category">
+      <option value="">All categories</option>
+    </select>
+    <select id="sort">
+      <option value="name">Sort: Name (A–Z)</option>
+      <option value="savings">Sort: Biggest savings first</option>
+      <option value="cargills">Sort: Cargills price</option>
+      <option value="glomark">Sort: Glomark price</option>
+    </select>
+    <label class="hide-toggle">
+      <input type="checkbox" id="hideUnavailable" />
+      Hide items missing a price in either store
+    </label>
+  </div>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Cargills Online</th>
+          <th>Glomark</th>
+          <th>You save</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="no-results" id="no-results" style="display:none;">No items match your search.</div>
+  </div>
+
+  <footer>
+    <p><b>How this works:</b> this page loads <code>comparison.json</code>, produced by running <code>scraper_glomark.py</code> → <code>scraper_cargills.py</code> → <code>match_products.py</code> in order (see README.md). Re-run those three scripts periodically (e.g. via a scheduled task) and refresh this page to pick up new prices.</p>
+    <p><b>Note on matching:</b> Cargills and Glomark don't share product IDs, so items are paired by name similarity. Mismatches are possible, especially for generic names or different pack sizes — the match % next to each item is a rough confidence signal, not a guarantee.</p>
+  </footer>
+
+</div>
+
+<script>
+let data = [];
+const fmt = n => "Rs. " + n.toLocaleString("en-LK");
+let sortKey = "name";
+let query = "";
+let category = "";
+let hideUnavailable = false;
+
+// Some rows in comparison.json may have "NA" (or null/missing) for a price
+// when a product genuinely wasn't found on one side. Treat anything that
+// isn't a finite number as "not available" rather than doing math on it.
+function isValidPrice(v){
+  return typeof v === "number" && Number.isFinite(v);
+}
+
+async function loadData(){
+  const tbody = document.getElementById("rows");
+  tbody.innerHTML = `<tr><td colspan="4" class="no-results" style="display:table-cell;">Loading comparison.json…</td></tr>`;
+
+  try {
+    const res = await fetch("comparison.json", {cache:"no-store"});
+    if(!res.ok) throw new Error("comparison.json not found (" + res.status + ")");
+    const raw = await res.json();
+
+    data = raw.map(d => {
+      const cargillsValid = isValidPrice(d.cargills);
+      const glomarkValid = isValidPrice(d.glomark);
+      const bothValid = cargillsValid && glomarkValid;
+
+      let cheaper = "unavailable";
+      let diff = null;
+      let pct = null;
+      if(bothValid){
+        cheaper = d.cargills === d.glomark ? "tie" : (d.cargills < d.glomark ? "cargills" : "glomark");
+        diff = Math.abs(d.cargills - d.glomark);
+        pct = diff / Math.max(d.cargills, d.glomark) * 100;
+      }
+
+      return {...d, cargillsValid, glomarkValid, bothValid, cheaper, diff, pct};
+    });
+
+    // populate category filter now that real categories are known
+    const catSelect = document.getElementById("category");
+    catSelect.innerHTML = '<option value="">All categories</option>';
+    const cats = [...new Set(data.map(d=>d.cat).filter(Boolean))].sort();
+    cats.forEach(c=>{
+      const opt = document.createElement("option");
+      opt.value = c; opt.textContent = c;
+      catSelect.appendChild(opt);
+    });
+
+    renderStats();
+    render();
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="4" class="no-results" style="display:table-cell;">
+      Couldn't load comparison.json (${err.message}). Make sure it's in the same folder as this
+      file and that you're opening this page through a local server (not double-clicking it) —
+      see the README for the one-line "python -m http.server" command.
+    </td></tr>`;
+  }
+}
+
+function render(){
+  let rows = data.filter(d=>{
+    const matchesQuery = d.name.toLowerCase().includes(query.toLowerCase());
+    const matchesCat = !category || d.cat === category;
+    const matchesAvailability = !hideUnavailable || d.bothValid;
+    return matchesQuery && matchesCat && matchesAvailability;
+  });
+
+  rows.sort((a,b)=>{
+    if(sortKey === "name") return a.name.localeCompare(b.name);
+    if(sortKey === "savings"){
+      // Rows without a valid comparison always sort to the bottom,
+      // regardless of ascending logic, since "savings" isn't meaningful for them.
+      if(!a.bothValid && !b.bothValid) return 0;
+      if(!a.bothValid) return 1;
+      if(!b.bothValid) return -1;
+      return b.diff - a.diff;
+    }
+    if(sortKey === "cargills"){
+      if(!a.cargillsValid && !b.cargillsValid) return 0;
+      if(!a.cargillsValid) return 1;
+      if(!b.cargillsValid) return -1;
+      return a.cargills - b.cargills;
+    }
+    if(sortKey === "glomark"){
+      if(!a.glomarkValid && !b.glomarkValid) return 0;
+      if(!a.glomarkValid) return 1;
+      if(!b.glomarkValid) return -1;
+      return a.glomark - b.glomark;
+    }
+  });
+
+  const tbody = document.getElementById("rows");
+  const noResults = document.getElementById("no-results");
+  tbody.innerHTML = "";
+
+  if(rows.length === 0){
+    noResults.style.display = "block";
+  } else {
+    noResults.style.display = "none";
+  }
+
+  rows.forEach(d=>{
+    const tr = document.createElement("tr");
+    const cargillsWin = d.bothValid && d.cheaper === "cargills";
+    const glomarkWin = d.bothValid && d.cheaper === "glomark";
+    const tie = d.bothValid && d.cheaper === "tie";
+
+    const cargillsCell = d.cargillsValid
+      ? `<span class="price price-cell ${tie ? 'tie' : (cargillsWin ? 'win' : '')}">${fmt(d.cargills)}</span>${cargillsWin ? '<span class="badge-cheapest">Cheapest</span>' : ''}`
+      : `<span class="price-na">N/A</span>`;
+
+    const glomarkCell = d.glomarkValid
+      ? `<span class="price price-cell ${tie ? 'tie' : (glomarkWin ? 'win' : '')}">${fmt(d.glomark)}</span>${glomarkWin ? '<span class="badge-cheapest">Cheapest</span>' : ''}`
+      : `<span class="price-na">N/A</span>`;
+
+    const savingsCell = !d.bothValid
+      ? `<span class="price-na">not comparable</span>`
+      : (d.cheaper === "tie" ? '<span class="savings">—</span>' : `<span class="savings">${fmt(d.diff)} (${d.pct.toFixed(1)}%)</span>`);
+
+    const confidenceNote = d.match_confidence ? `match ${d.match_confidence}%` : (d.unit || "");
+    tr.innerHTML = `
+      <td>
+        <span class="item-name">${d.name}</span>
+        <span class="item-unit">${[confidenceNote, d.cat].filter(Boolean).join(" · ")}</span>
+      </td>
+      <td>${cargillsCell}</td>
+      <td>${glomarkCell}</td>
+      <td>${savingsCell}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderStats(){
+  // Savings-related stats only ever make sense over rows where both
+  // prices are actually known — otherwise "avg saving" would be diluted
+  // (or NaN) from items that were never comparable to begin with.
+  const comparable = data.filter(d => d.bothValid);
+  const total = data.length;
+  const cargillsWins = comparable.filter(d=>d.cheaper==="cargills").length;
+  const glomarkWins = comparable.filter(d=>d.cheaper==="glomark").length;
+  const cheaperStore = comparable.length === 0 ? "—" : (cargillsWins > glomarkWins ? "Cargills" : "Glomark");
+  const avgPct = comparable.length === 0 ? "—" : (comparable.reduce((s,d)=>s+d.pct,0) / comparable.length).toFixed(1) + "%";
+
+  document.getElementById("stat-items").textContent = `${comparable.length} / ${total}`;
+  document.getElementById("stat-cheaper").textContent = cheaperStore;
+  document.getElementById("stat-savings").textContent = avgPct;
+}
+
+document.getElementById("search").addEventListener("input", e=>{
+  query = e.target.value;
+  render();
+});
+document.getElementById("category").addEventListener("change", e=>{
+  category = e.target.value;
+  render();
+});
+document.getElementById("sort").addEventListener("change", e=>{
+  sortKey = e.target.value;
+  render();
+});
+document.getElementById("hideUnavailable").addEventListener("change", e=>{
+  hideUnavailable = e.target.checked;
+  render();
+});
+
+loadData();
+</script>
+
+</body>
+</html>
