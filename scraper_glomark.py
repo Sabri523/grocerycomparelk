@@ -217,6 +217,11 @@ def parse_products(html, category_name):
                 name_part  = name_part_list[0]
                 quantity = name_part_list[1].lower()
                 quantity_in_name = True
+            if name_part.endswith("ML"):
+                name_part_list = name_part.rsplit(' ', 1)
+                name_part  = name_part_list[0]
+                quantity = name_part_list[1].lower()
+                quantity_in_name = True
             if name_part.endswith("L"):
                 name_part_list = name_part.rsplit(' ', 1)
                 name_part  = name_part_list[0]

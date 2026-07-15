@@ -156,7 +156,15 @@ def parse_current_page(html):
         if not pid:
             continue
         text = a.get_text(" ", strip=True)
-        by_id.setdefault(pid, {"name_parts": [], "price_parts": [], "quantity": None})
+        href = a.get("href", "")
+        full_url = href if href.startswith("http") else f"https://cargillsonline.com{href}"
+
+        by_id.setdefault(pid, {
+            "name_parts": [],
+            "price_parts": [],
+            "quantity": None,
+            "url": full_url
+        })
 
         if PRICE_RE.search(text):
             by_id[pid]["price_parts"].append(text)
@@ -180,7 +188,7 @@ def parse_current_page(html):
         if not price_match:
             continue
         price = float(price_match.group(1).replace(",", ""))
-        page_items[pid] = {"name": item_name, "price": price, "quantity": parts["quantity"]}
+        page_items[pid] = {"name": item_name, "price": price, "quantity": parts["quantity"], "url": parts["url"]}
 
     return page_items
 
@@ -254,7 +262,7 @@ def scrape_category(page, name, url, save_debug_html=False):
         print(f"  saved last rendered page HTML to {debug_path} for inspection")
 
     items = [
-        {"name": v["name"], "price": v["price"], "quantity": v.get("quantity"), "category": name}
+        {"name": v["name"], "price": v["price"], "quantity": v.get("quantity"), "url": v.get("url"), "category": name}
         for v in all_items_by_id.values()
     ]
     return items

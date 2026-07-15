@@ -150,6 +150,17 @@
     color:#9A9488;
     font-style:italic;
   }
+
+  .price-link{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .price-link:hover{
+    color: var(--teal);
+    text-decoration: underline;
+  }
   .unit-price-hint{
     display:block;
     font-family:'IBM Plex Mono', monospace;
@@ -302,6 +313,7 @@
       <option value="">All categories</option>
     </select>
     <select id="sort">
+      <option value="relevance" selected>Sort: Relevance</option>
       <option value="name">Sort: Name (A–Z)</option>
       <option value="savings">Sort: Biggest savings first</option>
       <option value="cargills">Sort: Cargills price</option>
@@ -339,7 +351,7 @@
 <script>
 let data = [];
 const fmt = n => "Rs. " + n.toLocaleString("en-LK");
-let sortKey = "name";
+let sortKey = "relevance";
 let query = "";
 let category = "";
 let hideUnavailable = false;
@@ -377,10 +389,13 @@ function formatQty(qty, unitType){
 function mainValue(d, side){
   const valid = side === "cargills" ? d.cargillsValid : d.glomarkValid;
   if(!valid) return null;
-  if(d.comparisonBasis === "unit"){
-    const unitVal = side === "cargills" ? d.cargills_unit_price : d.glomark_unit_price;
-    if(isValidPrice(unitVal)) return unitVal;
-  }
+  const unitVal = side === "cargills"
+        ? d.cargills_unit_price
+        : d.glomark_unit_price;
+
+    if(isValidPrice(unitVal))
+        return unitVal;
+  
   return side === "cargills" ? d.cargills : d.glomark;
 }
 
@@ -437,6 +452,7 @@ async function loadData(){
     });
 
     renderStats();
+    
     render();
   } catch (err) {
     tbody.innerHTML = `<tr><td colspan="4" class="no-results" style="display:table-cell;">
@@ -447,6 +463,36 @@ async function loadData(){
   }
 }
 
+function relevanceScore(name, query){
+    query = query.trim().toLowerCase();
+    name = name.toLowerCase();
+
+    if(!query) return 0;
+
+    // Exact match
+    if(name === query) return 10000;
+
+    // Starts with query
+    if(name.startsWith(query)) return 9000;
+
+    // Whole word
+    if(name.includes(" " + query)) return 8000;
+
+    // Contains query
+    if(name.includes(query)) return 7000;
+
+    // Count matching words
+    const qWords = query.split(/\s+/);
+    let score = 0;
+
+    for(const word of qWords){
+      if(name.includes(word))
+        score += word.length * 100;
+    }
+
+    return score;
+  }
+
 function render(){
   let rows = data.filter(d=>{
     const matchesQuery = d.name.toLowerCase().includes(query.toLowerCase());
@@ -456,6 +502,18 @@ function render(){
   });
 
   rows.sort((a,b)=>{
+    if(sortKey === "relevance"){
+      if(!query.trim())
+          return a.name.localeCompare(b.name);
+
+      const sa = relevanceScore(a.name, query);
+      const sb = relevanceScore(b.name, query);
+
+      if(sa !== sb)
+          return sb - sa;
+
+      return a.name.localeCompare(b.name);
+    }
     if(sortKey === "name") return a.name.localeCompare(b.name);
     if(sortKey === "savings"){
       // Rows without a valid comparison always sort to the bottom,
@@ -505,15 +563,16 @@ function render(){
 
     function priceCellHtml(side, valid, win){
       if(!valid) return `<span class="price-na">N/A</span>`;
-
-      const usingUnit = d.comparisonBasis === "unit";
+      
       const rawPrice = side === "cargills" ? d.cargills : d.glomark;
       const unitPriceVal = side === "cargills" ? d.cargills_unit_price : d.glomark_unit_price;
+      const usingUnit = isValidPrice(unitPriceVal);
       const qtyLabel = side === "cargills" ? cargillsQtyLabel : glomarkQtyLabel;
+      const url = side === "cargills" ? d.cargills_url : d.glomark_url;
 
-      const mainText = usingUnit
-        ? `Rs. ${unitPriceVal.toFixed(2)} ${d.unit_label || ''}`
-        : fmt(rawPrice);
+      const displayText = usingUnit ? `Rs. ${unitPriceVal.toFixed(2)} ${d.unit_label || ''}` : fmt(rawPrice);
+
+      const mainText = url ? `<a href="${url}" target="_blank" rel="noopener noreferrer" class="price-link">${displayText}</a>` : displayText;
 
       // Secondary line shows whatever ISN'T the main number: the raw
       // pack price + pack size when comparing by unit price, or just the
