@@ -46,7 +46,7 @@ VOLUME_UNITS = {
 }
 COUNT_UNITS = {
     "pcs": 1, "pc": 1, "piece": 1, "pieces": 1, "pack": 1, "pkt": 1,
-    "nos": 1, "eggs": 1, "egg": 1, "pack(S)": 1,
+    "nos": 1, "eggs": 1, "egg": 1, "pack(s)": 1, "unit": 1, "units": 1,
 }
 
 # e.g. "6 x 200g" / "6x200ml"

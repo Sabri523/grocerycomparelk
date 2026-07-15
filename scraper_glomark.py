@@ -159,6 +159,13 @@ def load_all_products(page, url):
     return page.content()
 
 
+def _is_quantity_class(c):
+    """Match the site's pack-size div class, tolerating the typo it
+    actually ships with ('product-Quanitity' instead of 'product-Quantity')
+    by checking for a class starting with 'product-quan' case-insensitively."""
+    return c and any(cls.lower().startswith("product-quan") for cls in c.split())
+
+
 def parse_products(html, category_name):
     soup = BeautifulSoup(html, "html.parser")
     items = []
@@ -191,16 +198,30 @@ def parse_products(html, category_name):
 
             # Product name is inside the <a>
             name_part = tag.get_text(" ", strip=True)
-
+            quantity_in_name = False
             #if name ends with G then it has grams in the name, so remove the mass. Same for kg and bulk keywords
             if name_part.endswith("G"):
-                name_part = name_part.rsplit(' ', 1)[0]
+                name_part_list = name_part.rsplit(' ', 1)
+                name_part  = name_part_list[0]
+                quantity = name_part_list[1].lower()
+                quantity_in_name = True
             if name_part.endswith("Kg"):
-                name_part = name_part.rsplit(' ', 1)[0]
+                name_part_list = name_part.rsplit(' ', 1)
+                name_part  = name_part_list[0]
+                quantity = name_part_list[1].lower()
+                quantity_in_name = True
             if name_part.endswith("Bulk"):
                 name_part = name_part.rsplit(' ', 2)[0]
             if name_part.endswith("Ml"):
-                name_part = name_part.rsplit(' ', 1)[0]
+                name_part_list = name_part.rsplit(' ', 1)
+                name_part  = name_part_list[0]
+                quantity = name_part_list[1].lower()
+                quantity_in_name = True
+            if name_part.endswith("L"):
+                name_part_list = name_part.rsplit(' ', 1)
+                name_part  = name_part_list[0]
+                quantity = name_part_list[1].lower()
+                quantity_in_name = True
 
             # Change name to Title case from full upper or full lower
             name_part = name_part.title()
@@ -220,17 +241,21 @@ def parse_products(html, category_name):
 
             price = float(price_match.group(1).replace(",", ""))
 
-            # Pack size / quantity lives in a div with id "product-Quantity".
-            # Look inside the product card first; if it's not nested there,
-            # check one level up in case it's a sibling of product-caption
-            # rather than a descendant of it.
-            quantity = None
-            qty_element = product_card.find(id="product-Quantity")
-            if not qty_element and product_card.parent:
-                qty_element = product_card.parent.find(id="product-Quantity")
-            if qty_element:
-                qty_text = qty_element.get_text(" ", strip=True)
-                quantity = qty_text or None
+            # Pack size / quantity lives in a div whose class is meant to be
+            # "product-Quantity" — but the live site actually ships it
+            # misspelled as "product-Quanitity" (extra "i", confirmed by
+            # inspecting the real rendered DOM). Rather than hardcode either
+            # exact spelling and risk breaking again if it changes some
+            # other way, match any class starting with "product-quan"
+            # case-insensitively.
+            if not quantity_in_name:
+                quantity = None
+                qty_element = product_card.find("div", class_=_is_quantity_class)
+                if not qty_element and product_card.parent:
+                    qty_element = product_card.parent.find("div", class_=_is_quantity_class)
+                if qty_element:
+                    qty_text = qty_element.get_text(" ", strip=True)
+                    quantity = qty_text or None
 
             href = tag["href"]
 

@@ -330,6 +330,7 @@
 
   <footer>
     <p><b>How this works:</b> this page loads <code>comparison.json</code>, produced by running <code>scraper_glomark.py</code> → <code>scraper_cargills.py</code> → <code>match_products.py</code> in order (see README.md). Re-run those three scripts periodically (e.g. via a scheduled task) and refresh this page to pick up new prices.</p>
+    <p><b>How "cheapest" is decided:</b> when both stores have a usable pack size, each price cell shows the normalized per-100g/100ml/piece price as the main number — that's what decides "Cheapest" and what the raw pack price + pack size (shown smaller, underneath) get compared on. Only when a per-unit price isn't available on both sides does the main number fall back to the raw pack price directly. The "you save" line says which basis was used.</p>
     <p><b>Note on matching:</b> Cargills and Glomark don't share product IDs, so items are paired by name similarity and, where available, pack size (shown next to each price, e.g. "500g"). Mismatches are still possible, especially for generic names — the match % and pack size next to each item are there so you can double-check before trusting a comparison. A "⚠ size unverified" tag means the pack size couldn't be confirmed on at least one side.</p>
   </footer>
 
@@ -367,6 +368,22 @@ function formatQty(qty, unitType){
   return null;
 }
 
+// The "main" number for a store/row is whichever value the row is
+// actually being compared on: the normalized unit price when the row's
+// comparisonBasis is "unit", otherwise the raw pack price. This keeps the
+// big number, the "Cheapest" badge, and sorting all pointed at the same
+// figure instead of the badge applying to one number while a different
+// one is shown large.
+function mainValue(d, side){
+  const valid = side === "cargills" ? d.cargillsValid : d.glomarkValid;
+  if(!valid) return null;
+  if(d.comparisonBasis === "unit"){
+    const unitVal = side === "cargills" ? d.cargills_unit_price : d.glomark_unit_price;
+    if(isValidPrice(unitVal)) return unitVal;
+  }
+  return side === "cargills" ? d.cargills : d.glomark;
+}
+
 async function loadData(){
   const tbody = document.getElementById("rows");
   tbody.innerHTML = `<tr><td colspan="4" class="no-results" style="display:table-cell;">Loading comparison.json…</td></tr>`;
@@ -381,16 +398,32 @@ async function loadData(){
       const glomarkValid = isValidPrice(d.glomark);
       const bothValid = cargillsValid && glomarkValid;
 
+      const cargillsUnitValid = isValidPrice(d.cargills_unit_price);
+      const glomarkUnitValid = isValidPrice(d.glomark_unit_price);
+      const bothUnitValid = cargillsUnitValid && glomarkUnitValid;
+
+      // Prefer comparing the normalized per-100g/ml/piece price when both
+      // sides have one — that's the fair comparison when pack sizes
+      // differ. Only fall back to comparing raw pack price directly when
+      // a per-unit price isn't available on both sides.
+      const comparisonBasis = bothUnitValid ? "unit" : (bothValid ? "raw" : "none");
+
       let cheaper = "unavailable";
       let diff = null;
       let pct = null;
-      if(bothValid){
+
+      if(comparisonBasis === "unit"){
+        const cVal = d.cargills_unit_price, gVal = d.glomark_unit_price;
+        cheaper = cVal === gVal ? "tie" : (cVal < gVal ? "cargills" : "glomark");
+        diff = Math.abs(cVal - gVal);
+        pct = diff / Math.max(cVal, gVal) * 100;
+      } else if(comparisonBasis === "raw"){
         cheaper = d.cargills === d.glomark ? "tie" : (d.cargills < d.glomark ? "cargills" : "glomark");
         diff = Math.abs(d.cargills - d.glomark);
         pct = diff / Math.max(d.cargills, d.glomark) * 100;
       }
 
-      return {...d, cargillsValid, glomarkValid, bothValid, cheaper, diff, pct};
+      return {...d, cargillsValid, glomarkValid, bothValid, comparisonBasis, cheaper, diff, pct};
     });
 
     // populate category filter now that real categories are known
@@ -427,22 +460,26 @@ function render(){
     if(sortKey === "savings"){
       // Rows without a valid comparison always sort to the bottom,
       // regardless of ascending logic, since "savings" isn't meaningful for them.
-      if(!a.bothValid && !b.bothValid) return 0;
-      if(!a.bothValid) return 1;
-      if(!b.bothValid) return -1;
+      const aComparable = a.comparisonBasis !== "none";
+      const bComparable = b.comparisonBasis !== "none";
+      if(!aComparable && !bComparable) return 0;
+      if(!aComparable) return 1;
+      if(!bComparable) return -1;
       return b.diff - a.diff;
     }
     if(sortKey === "cargills"){
-      if(!a.cargillsValid && !b.cargillsValid) return 0;
-      if(!a.cargillsValid) return 1;
-      if(!b.cargillsValid) return -1;
-      return a.cargills - b.cargills;
+      const av = mainValue(a, "cargills"), bv = mainValue(b, "cargills");
+      if(av === null && bv === null) return 0;
+      if(av === null) return 1;
+      if(bv === null) return -1;
+      return av - bv;
     }
     if(sortKey === "glomark"){
-      if(!a.glomarkValid && !b.glomarkValid) return 0;
-      if(!a.glomarkValid) return 1;
-      if(!b.glomarkValid) return -1;
-      return a.glomark - b.glomark;
+      const av = mainValue(a, "glomark"), bv = mainValue(b, "glomark");
+      if(av === null && bv === null) return 0;
+      if(av === null) return 1;
+      if(bv === null) return -1;
+      return av - bv;
     }
   });
 
@@ -458,29 +495,51 @@ function render(){
 
   rows.forEach(d=>{
     const tr = document.createElement("tr");
-    const cargillsWin = d.bothValid && d.cheaper === "cargills";
-    const glomarkWin = d.bothValid && d.cheaper === "glomark";
-    const tie = d.bothValid && d.cheaper === "tie";
+    const comparable = d.comparisonBasis !== "none";
+    const cargillsWin = comparable && d.cheaper === "cargills";
+    const glomarkWin = comparable && d.cheaper === "glomark";
+    const tie = comparable && d.cheaper === "tie";
 
     const cargillsQtyLabel = formatQty(d.cargills_qty, d.unit_type);
     const glomarkQtyLabel = formatQty(d.glomark_qty, d.unit_type);
 
-    const cargillsHintParts = [cargillsQtyLabel, d.cargills_unit_price ? `Rs. ${d.cargills_unit_price} ${d.unit_label || ''}` : null].filter(Boolean);
-    const glomarkHintParts = [glomarkQtyLabel, d.glomark_unit_price ? `Rs. ${d.glomark_unit_price} ${d.unit_label || ''}` : null].filter(Boolean);
+    function priceCellHtml(side, valid, win){
+      if(!valid) return `<span class="price-na">N/A</span>`;
 
-    const cargillsCell = d.cargillsValid
-      ? `<span class="price price-cell ${tie ? 'tie' : (cargillsWin ? 'win' : '')}">${fmt(d.cargills)}</span>${cargillsWin ? '<span class="badge-cheapest">Cheapest</span>' : ''}${cargillsHintParts.length ? `<span class="unit-price-hint">${cargillsHintParts.join(' · ')}</span>` : ''}`
-      : `<span class="price-na">N/A</span>`;
+      const usingUnit = d.comparisonBasis === "unit";
+      const rawPrice = side === "cargills" ? d.cargills : d.glomark;
+      const unitPriceVal = side === "cargills" ? d.cargills_unit_price : d.glomark_unit_price;
+      const qtyLabel = side === "cargills" ? cargillsQtyLabel : glomarkQtyLabel;
 
-    const glomarkCell = d.glomarkValid
-      ? `<span class="price price-cell ${tie ? 'tie' : (glomarkWin ? 'win' : '')}">${fmt(d.glomark)}</span>${glomarkWin ? '<span class="badge-cheapest">Cheapest</span>' : ''}${glomarkHintParts.length ? `<span class="unit-price-hint">${glomarkHintParts.join(' · ')}</span>` : ''}`
-      : `<span class="price-na">N/A</span>`;
+      const mainText = usingUnit
+        ? `Rs. ${unitPriceVal.toFixed(2)} ${d.unit_label || ''}`
+        : fmt(rawPrice);
 
-    const savingsCell = !d.bothValid
-      ? `<span class="price-na">not comparable</span>`
-      : (d.cheaper === "tie" ? '<span class="savings">—</span>' : `<span class="savings">${fmt(d.diff)} (${d.pct.toFixed(1)}%)</span>`);
+      // Secondary line shows whatever ISN'T the main number: the raw
+      // pack price + pack size when comparing by unit price, or just the
+      // pack size when comparing by raw price (no unit price to show).
+      const secondaryParts = usingUnit
+        ? [qtyLabel, `pack: ${fmt(rawPrice)}`].filter(Boolean)
+        : [qtyLabel].filter(Boolean);
 
-    const sizeWarning = (d.bothValid && d.size_verified === false)
+      return `<span class="price price-cell ${tie ? 'tie' : (win ? 'win' : '')}">${mainText}</span>${win ? '<span class="badge-cheapest">Cheapest</span>' : ''}${secondaryParts.length ? `<span class="unit-price-hint">${secondaryParts.join(' · ')}</span>` : ''}`;
+    }
+
+    const cargillsCell = priceCellHtml("cargills", d.cargillsValid, cargillsWin);
+    const glomarkCell = priceCellHtml("glomark", d.glomarkValid, glomarkWin);
+
+    let savingsCell;
+    if(!comparable){
+      savingsCell = `<span class="price-na">not comparable</span>`;
+    } else if(d.cheaper === "tie"){
+      savingsCell = '<span class="savings">—</span>';
+    } else if(d.comparisonBasis === "unit"){
+      savingsCell = `<span class="savings">Rs. ${d.diff.toFixed(2)} ${d.unit_label || ''} (${d.pct.toFixed(1)}%)</span><span class="unit-price-hint">by unit price</span>`;
+    } else {
+      savingsCell = `<span class="savings">${fmt(d.diff)} (${d.pct.toFixed(1)}%)</span><span class="unit-price-hint">by pack price</span>`;
+    }
+
+    const sizeWarning = (comparable && d.size_verified === false)
       ? `<span class="badge-unverified" title="Pack size couldn't be confirmed as matching on both sides">⚠ size unverified</span>`
       : '';
 
@@ -499,10 +558,11 @@ function render(){
 }
 
 function renderStats(){
-  // Savings-related stats only ever make sense over rows where both
-  // prices are actually known — otherwise "avg saving" would be diluted
-  // (or NaN) from items that were never comparable to begin with.
-  const comparable = data.filter(d => d.bothValid);
+  // Savings-related stats only ever make sense over rows where a real
+  // comparison (unit-price or raw-price) was actually possible —
+  // otherwise "avg saving" would be diluted (or NaN) from items that
+  // were never comparable to begin with.
+  const comparable = data.filter(d => d.comparisonBasis !== "none");
   const total = data.length;
   const cargillsWins = comparable.filter(d=>d.cheaper==="cargills").length;
   const glomarkWins = comparable.filter(d=>d.cheaper==="glomark").length;
