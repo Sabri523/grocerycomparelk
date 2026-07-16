@@ -27,7 +27,7 @@ import json
 import re
 from rapidfuzz import fuzz, process
 
-SIMILARITY_THRESHOLD = 80  # 0-100, raise this if you get bad name matches
+SIMILARITY_THRESHOLD = 85  # 0-100, raise this if you get bad name matches
 
 # How much a matched pair's quantities are allowed to differ and still be
 # considered "the same product" (e.g. 400g vs 500g is fine; 1kg vs 25kg is
@@ -155,10 +155,13 @@ def main():
     for c in cargills:
         # Get several fuzzy candidates, not just the top one, so a
         # size-incompatible best match doesn't block a good second choice.
+        
         candidates = process.extract(
             c["name"], glomark_names, scorer=fuzz.token_sort_ratio, limit=5
         )
-
+    
+        
+        
         chosen = None
         for _, score, idx in candidates:
             if score < SIMILARITY_THRESHOLD:

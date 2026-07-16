@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" ng-app="Module" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
-        <title>Shop Auto Care Products Online | Shop Auto Care Essentials at Cargills Online</title>
-            <meta name="description" content="Order car care essentials from Cargills Online. High - quality products delivered conveniently to your doorstep.">
+        <title>Fresh Dairy Delivered: Milk, Cheese, Yogurt &amp; More | Cargills Online</title>
+            <meta name="description" content="Cargills Online's selection of quality dairy essentials, including milk, yogurt, cheese, and more. Shop top brands, delivered fast.">
     <meta name="keywords" content="online grocery shopping sri lanka, online grocery sri lanka, online supermarket, online supermarket sri lanka, buy groceries online, offers for groceries, grocery delivery, supermarket, fresh vegetables, buy groceries online sri lanka">
 
-        <meta id="_sMetaTitle" property="og:title" content="Auto Care">
-            <meta id="_sMetaDescription" property="og:description" content="Auto Care">
-            <meta id="_sMetaImageSrc" property="og:image" content="https://cargillsonline.com/VendorItems/MenuCategory/84629173-SUB-CAT-IMAGE_Auto-Care.jpg">
+        <meta id="_sMetaTitle" property="og:title" content="Dairy">
+            <meta id="_sMetaDescription" property="og:description" content="Dairy">
+            <meta id="_sMetaImageSrc" property="og:image" content="https://cargillsonline.com/VendorItems/MenuCategory/41290735-SUB-CAT-IMAGE_Dairy.jpg">
 
     <meta id="_sMetaImageSecure" property="og:image:secure_url" content="http://cargillsonline.com/VendorItems/Og-image.png">
     <meta id="_sMetaImageTypePD" property="og:image:type" content="image/png">
@@ -1470,13 +1470,129 @@
 <div id="divM" ng-controller="productCtrl" style="" class="ng-scope">
 
     <div class="row m-0" style="background-color: #f5f5f5;">
-        <h3 class="heading productListHeading" id="h3head" style=""><span style="font-weight: 600;">Showing Products for </span><span style="color: #d90d0e;font-weight: 600;">Auto Care</span></h3>
+        <h3 class="heading productListHeading" id="h3head" style=""><span style="font-weight: 600;">Showing Products for </span><span style="color: #d90d0e;font-weight: 600;">Dairy</span></h3>
     </div>
 
     <div class="clearfix"></div>
 
     <div id="divDynamicSection" style="" class="divDynamicSection">
-        <!-- ngRepeat: DS in DSList -->
+        <!-- ngRepeat: DS in DSList --><div ng-repeat="DS in DSList" class="ng-scope">
+            <div class="need pl-3 pr-3 pt-3 pb-3">
+                <div ng-class="{'divPopCatBox' : DS.SectionType!='Banner'}">
+                    <div class="row popCatHead">
+                        <!-- ngIf: DS.SectionType!='Banner' -->
+                        <div class="divDSViewMore">
+                            <!-- ngIf: DS.IsViewMore=='True' && DS.DataType=='Product' -->
+                            <!-- ngIf: DS.IsViewMore=='True' && DS.DataType!='Product' -->
+                        </div>
+                    </div>
+                    <!-- ngIf: DS.SectionType=='Slider' && DS.DataType=='Product' -->
+                    <!-- ngIf: DS.SectionType=='Slider' && DS.DataType=='Collection' -->
+                    <!-- ngIf: DS.SectionType=='Banner' && DS.DataType=='Collection' --><div class="row indeRow m-0 ng-scope" ng-if="DS.SectionType=='Banner' &amp;&amp; DS.DataType=='Collection'" style="">
+                        <data-owl-carousel class="owl-carousel webCr owl-theme" data-options="{navigation: true, pagination: false, rewindNav : true, stagePadding : 50, items : 4, autoPlay : true, autoplayTimeout : 5000}" style="opacity: 1; display: block;">
+                            <!-- ngRepeat: ban in DS.Data --><div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 3130px; left: 0px; display: block;"><div class="owl-item" style="width: 313px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Alerics?CI=MTQ=&amp;CN=QWxlcmljcw==&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-2nJzVh8ujGalerics.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div><div class="owl-item" style="width: 313px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Cheese?CI=NjU=&amp;CN=Q2hlZXNl&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-uQ4pfBXN0wDairy - Cheese.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div><div class="owl-item" style="width: 313px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Condensed-Milk-Milk-Powder?CI=NjY=&amp;CN=Q29uZGVuc2VkIE1pbGsgJiBNaWxrIFBvd2Rlcg==&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-IyVh8tPF2RDairy - Condensed Milk &amp; Milk Powder.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div><div class="owl-item" style="width: 313px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Yoghurt-Curd?CI=Njc=&amp;CN=WW9naHVydCAmIEN1cmQ=&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-bxTJ6shEtQDairy - Yoghurt &amp; Curd.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div><div class="owl-item" style="width: 313px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Liquid-Milk?CI=Njg=&amp;CN=TGlxdWlkIE1pbGs=&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-Xj0vlH5TgCDairy -Liquid Milk.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div></div></div><!-- end ngRepeat: ban in DS.Data --><!-- end ngRepeat: ban in DS.Data --><!-- end ngRepeat: ban in DS.Data --><!-- end ngRepeat: ban in DS.Data --><!-- end ngRepeat: ban in DS.Data -->
+                        <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div></data-owl-carousel>
+                        <data-owl-carousel class="owl-carousel mobCr owl-theme" data-options="{navigation: true, pagination: false, rewindNav : true, stagePadding : 50, items : 1, singleItem : true, autoPlay : true, autoplayTimeout : 5000}" style="opacity: 0; display: block;">
+                            <!-- ngRepeat: ban in DS.Data --><div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 1000px; left: 0px; display: block;"><div class="owl-item" style="width: 100px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Alerics?CI=MTQ=&amp;CN=QWxlcmljcw==&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-ukG3Se5qMC04.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div><div class="owl-item" style="width: 100px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Cheese?CI=NjU=&amp;CN=Q2hlZXNl&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-JzVh8tjG3SDairy - Cheese.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div><div class="owl-item" style="width: 100px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Condensed-Milk-Milk-Powder?CI=NjY=&amp;CN=Q29uZGVuc2VkIE1pbGsgJiBNaWxrIFBvd2Rlcg==&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-DZPbynKAWiDairy - Condensed Milk &amp; Milk Powder.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div><div class="owl-item" style="width: 100px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Yoghurt-Curd?CI=Njc=&amp;CN=WW9naHVydCAmIEN1cmQ=&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-L8tjG3Se5qDairy - Yoghurt &amp; Curd.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div><div class="owl-item" style="width: 100px;"><div owl-carousel-item="" ng-repeat="ban in DS.Data" class="item ng-scope">
+                                <div>
+                                    <!-- ngIf: ban.BannerType=='1' -->
+                                    <!-- ngIf: ban.BannerType=='2' -->
+                                    <!-- ngIf: ban.BannerType=='3' -->
+                                    <!-- ngIf: ban.BannerType=='4' --><a ng-if="ban.BannerType=='4'" href="/Product/Liquid-Milk?CI=Njg=&amp;CN=TGlxdWlkIE1pbGs=&amp;SI=MTM=&amp;ST=QmFubmVy&amp;DT=Q29sbGVjdGlvbg==&amp;IC=Ng==" class="ng-scope">
+                                        <img src="/VendorItems/Banner/DySec-yUK7WjFvRdDairy -Liquid Milk.png" class="img-fluid hBan">
+                                    </a><!-- end ngIf: ban.BannerType=='4' -->
+                                </div>
+                            </div></div></div></div><!-- end ngRepeat: ban in DS.Data --><!-- end ngRepeat: ban in DS.Data --><!-- end ngRepeat: ban in DS.Data --><!-- end ngRepeat: ban in DS.Data --><!-- end ngRepeat: ban in DS.Data -->
+                        <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div></data-owl-carousel>
+                    </div><!-- end ngIf: DS.SectionType=='Banner' && DS.DataType=='Collection' -->
+
+                    <!-- ngIf: DS.SectionType=='Grid' && DS.DataType=='Collection' -->
+                    <!-- ngIf: DS.SectionType=='Category' && DS.DataType=='Collection' -->
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div><!-- end ngRepeat: DS in DSList -->
     </div>
 
     <div class="product-list pb-4 pl-5 pr-5">
@@ -1493,7 +1609,7 @@
                     <div id="Subcat" class="filterBox" style="">
                         <h4 id="cat">Sub Category</h4>
                         <ul class="filter">
-                            <!-- ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Air Freshner</li><!-- end ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Auto care cleaning</li><!-- end ngRepeat: subcategory in SubCategory -->
+                            <!-- ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Plant Based Milk</li><!-- end ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Butter</li><!-- end ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Condensed Milk &amp; Milk Powder</li><!-- end ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Ice Cream</li><!-- end ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Liquid Milk</li><!-- end ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Milk Mix </li><!-- end ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Paneer, Cheese and Cream</li><!-- end ngRepeat: subcategory in SubCategory --><li ng-repeat="subcategory in SubCategory" style="cursor:pointer;" id="fil1" class="ng-binding ng-scope" ng-click="getProductList(subcategory.EnId, subcategory.SubCategoryName)">Yoghurt &amp; Curd</li><!-- end ngRepeat: subcategory in SubCategory -->
                         </ul>
                     </div>
                     
@@ -1524,7 +1640,7 @@
                     <li>
                         <a href="/Index">Home</a><i class="fa fa-angle-right" aria-hidden="true"></i>
                     </li>
-                    <li><a href="" id="brdName">Auto Care</a></li>
+                    <li><a href="" id="brdName">Dairy</a></li>
                 </ol>
 
                 <div class="row pro-head" id="divNoProducts" style="display:none;">
@@ -1536,409 +1652,19 @@
                     <!-- ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
                         <div class="cargillProdNeed divisSpons">
                             <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/Britol-Car-Wash?ID=Kzqdj7GAmdfx9TdUlOLHJw==">
+                            <a href="/ProductDetails/Dairy/Soyfresh-Soya-Milk-Nature?ID=KQAnasnMPVOH3HYY+on0fw==">
                                 <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/AC20301_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/AC20301_1.jpg">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 --><p ng-if="product.DiscountAmount!=0" class="ng-binding ng-scope">10.00% OFF</p><!-- end ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="Britol Car Wash" class="ng-binding">Britol Car Wash</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">500.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/Britol-Car-Wash?ID=Kzqdj7GAmdfx9TdUlOLHJw==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 468.00 <!-- ngIf: product.Mrp!=0 --><s ng-if="product.Mrp!=0" class="ng-binding ng-scope">MRP: Rs. 520.00</s><!-- end ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB2153" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd2153" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/Aer-Air-Freshner-Gel-Cool?ID=XoMHWLZrDeeiZscvYGR3hA==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/AC12401_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/AC12401_1.jpg">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 --><p ng-if="product.DiscountAmount!=0" class="ng-binding ng-scope">10.00% OFF</p><!-- end ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="Aer Air Freshner Gel Cool" class="ng-binding">Aer Air Freshner Gel Cool</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">9.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/Aer-Air-Freshner-Gel-Cool?ID=XoMHWLZrDeeiZscvYGR3hA==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 1,440.00 <!-- ngIf: product.Mrp!=0 --><s ng-if="product.Mrp!=0" class="ng-binding ng-scope">MRP: Rs. 1600.00</s><!-- end ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB2147" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd2147" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/Dash-Car-Wash?ID=ZvDSMez3H/LVT9w3oH9yoA==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/AC20902_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/AC20902_1.jpg">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 --><p ng-if="product.DiscountAmount!=0" class="ng-binding ng-scope">10.00% OFF</p><!-- end ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="Dash Car Wash" class="ng-binding">Dash Car Wash</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">500.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/Dash-Car-Wash?ID=ZvDSMez3H/LVT9w3oH9yoA==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 486.00 <!-- ngIf: product.Mrp!=0 --><s ng-if="product.Mrp!=0" class="ng-binding ng-scope">MRP: Rs. 540.00</s><!-- end ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB2154" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd2154" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/Dash-Windscreen-Cleaner?ID=yyy4Nz1DR2jz7hB2bE52ng==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/AC70901_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/AC70901_1.jpg">
+                                    <img ng-src="/VendorItems/MenuItems/BV18401_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BV18401_1.jpg">
                                 </div>
 
                                 <div class="dis">
                                     <!-- ngIf: product.DiscountAmount!=0 -->
                                 </div>
                                 <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
                                     <!-- ngIf: product.Type == 'NV'  -->
                                     
-                                    <p title="Dash Windscreen Cleaner" class="ng-binding">Dash Windscreen Cleaner</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">500.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/Dash-Windscreen-Cleaner?ID=yyy4Nz1DR2jz7hB2bE52ng==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 385.00 <!-- ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB2160" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd2160" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/Dash-Original-Shine?ID=jj/+Yuti4YSXF7zhT7dqew==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/AC20905_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/AC20905_1.jpg">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="Dash Original Shine" class="ng-binding">Dash Original Shine</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">200.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/Dash-Original-Shine?ID=jj/+Yuti4YSXF7zhT7dqew==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 605.00 <!-- ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB2155" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd2155" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/STR-Super-Shine-Dashboard-Polish?ID=iR6sQNRT5gBwEH/GcqJZFA==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/ACE0029_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/ACE0029_1.jpg">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="STR Super Shine Dashboard Polish" class="ng-binding">STR Super Shine Dashboard Polish</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">300.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/STR-Super-Shine-Dashboard-Polish?ID=iR6sQNRT5gBwEH/GcqJZFA==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 1,360.00 <!-- ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB635690" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd635690" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/Aer-Click-Car-Fragrance-Gel-Petal?ID=w7yRHuPhuxBkSPzYGlTSsQ==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/AC12403_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/AC12403_1.jpg">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="Aer Click Car Fragrance Gel Petal" class="ng-binding">Aer Click Car Fragrance Gel Petal</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">9.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/Aer-Click-Car-Fragrance-Gel-Petal?ID=w7yRHuPhuxBkSPzYGlTSsQ==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 1,600.00 <!-- ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB637461" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd637461" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/STR-Tyre-Shine?ID=BjxeS7M+d9aAnQnPLbqWfQ==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/ACE0030_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/ACE0030_1.jpg">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="STR Tyre Shine" class="ng-binding">STR Tyre Shine</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">300.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/STR-Tyre-Shine?ID=BjxeS7M+d9aAnQnPLbqWfQ==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 1,375.00 <!-- ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB635691" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd635691" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/STR-Wash-and-Wax?ID=PMCvkQ6yqJan843hVSPs/g==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/ACE0036_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/Assets/Web/img/loading_img1.png">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="STR Wash and Wax" class="ng-binding">STR Wash and Wax</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">550.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/STR-Wash-and-Wax?ID=PMCvkQ6yqJan843hVSPs/g==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 815.00 <!-- ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB646022" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd646022" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/Turbo01-Windscreen-Cleaner?ID=mjj+HR29EivTehS+dtwOSQ==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/ACE0028_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/ACE0028_1.jpg">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="Turbo01 Windscreen Cleaner" class="ng-binding">Turbo01 Windscreen Cleaner</p>
-                                </div>
-                            </a>
-                            
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">250.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
-                            <!-- ngIf: product.MasterSKUCODE -->
-
-                            
-                            <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/Turbo01-Windscreen-Cleaner?ID=mjj+HR29EivTehS+dtwOSQ==">
-                                    <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 340.00 <!-- ngIf: product.Mrp!=0 --></h4>
-                                        <p>(Inclusive of all taxes) </p>
-                                    </div>
-                                </a>
-                                <div class="strike2">
-                                    <div id="lAB635689" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd635689" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
-                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
-                                    <!-- ngIf: product.Quantity!=0 -->
-                                </div>
-                                <!-- ngIf: product.IsRestricted=='True' -->
-                            </div>
-                        </div>
-                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
-                        <div class="cargillProdNeed divisSpons">
-                            <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/STR-Battery-Water?ID=TMbBW6RmeOvChv41A9NCNA==">
-                                <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/ACE0031_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/Assets/Web/img/loading_img1.png">
-                                </div>
-
-                                <div class="dis">
-                                    <!-- ngIf: product.DiscountAmount!=0 -->
-                                </div>
-                                <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
-                                    <!-- ngIf: product.Type == 'NV'  -->
-                                    
-                                    <p title="STR Battery Water" class="ng-binding">STR Battery Water</p>
+                                    <p title="Soyfresh Soya Milk Nature" class="ng-binding">Soyfresh Soya Milk Nature</p>
                                 </div>
                             </a>
                             
@@ -1947,15 +1673,15 @@
 
                             
                             <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/STR-Battery-Water?ID=TMbBW6RmeOvChv41A9NCNA==">
+                                <a href="/ProductDetails/Dairy/Soyfresh-Soya-Milk-Nature?ID=KQAnasnMPVOH3HYY+on0fw==">
                                     <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 250.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <h4 class="txtSmall ng-binding">Rs. 1,710.00 <!-- ngIf: product.Mrp!=0 --></h4>
                                         <p>(Inclusive of all taxes) </p>
                                     </div>
                                 </a>
                                 <div class="strike2">
-                                    <div id="lAB646020" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd646020" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <div id="lAB151" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd151" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
                                     <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
                                     <!-- ngIf: product.Quantity!=0 -->
                                 </div>
@@ -1965,36 +1691,36 @@
                     </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
                         <div class="cargillProdNeed divisSpons">
                             <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/Aer-Click-Car-Fragrance-Gel-Musk?ID=ZqK2UVHHIo947Vo2UYg9yw==">
+                            <a href="/ProductDetails/Dairy/Maliban-Non-Fat-Milk-Powder?ID=aa15OCEWtAFK/fc9vE1ucw==">
                                 <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/AC12404_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/AC12404_1.jpg">
+                                    <img ng-src="/VendorItems/MenuItems/BVE0376_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BVE0376_1.jpg">
                                 </div>
 
                                 <div class="dis">
                                     <!-- ngIf: product.DiscountAmount!=0 -->
                                 </div>
                                 <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
                                     <!-- ngIf: product.Type == 'NV'  -->
                                     
-                                    <p title="Aer Click Car Fragrance Gel Musk" class="ng-binding">Aer Click Car Fragrance Gel Musk</p>
+                                    <p title="Maliban Non Fat Milk Powder" class="ng-binding">Maliban Non Fat Milk Powder</p>
                                 </div>
                             </a>
                             
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">9.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">400.00 g </button><!-- end ngIf: product.MasterSKUCODE=='' -->
                             <!-- ngIf: product.MasterSKUCODE -->
 
                             
                             <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/Aer-Click-Car-Fragrance-Gel-Musk?ID=ZqK2UVHHIo947Vo2UYg9yw==">
+                                <a href="/ProductDetails/Dairy/Maliban-Non-Fat-Milk-Powder?ID=aa15OCEWtAFK/fc9vE1ucw==">
                                     <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 1,600.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <h4 class="txtSmall ng-binding">Rs. 1,150.00 <!-- ngIf: product.Mrp!=0 --></h4>
                                         <p>(Inclusive of all taxes) </p>
                                     </div>
                                 </a>
                                 <div class="strike2">
-                                    <div id="lAB637460" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd637460" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <div id="lAB620672" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd620672" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
                                     <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
                                     <!-- ngIf: product.Quantity!=0 -->
                                 </div>
@@ -2004,19 +1730,204 @@
                     </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
                         <div class="cargillProdNeed divisSpons">
                             <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/STR-Radiator-Coolant?ID=skTmahc9vII0oEtWq3sRXg==">
+                            <a href="/ProductDetails/Dairy/Puredale-Kirithe?ID=o8XbsoChlD//Ttl+lFDvdw==">
                                 <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/ACE0032_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/Assets/Web/img/loading_img1.png">
+                                    <img ng-src="/VendorItems/MenuItems/BVE0319_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BVE0319_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 --><p ng-if="product.DiscountAmount!=0" class="ng-binding ng-scope">6.00% OFF</p><!-- end ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Puredale Kirithe" class="ng-binding">Puredale Kirithe</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">400.00 g </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Puredale-Kirithe?ID=o8XbsoChlD//Ttl+lFDvdw==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 827.20 <!-- ngIf: product.Mrp!=0 --><s ng-if="product.Mrp!=0" class="ng-binding ng-scope">MRP: Rs. 880.00</s><!-- end ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB629490" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd629490" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_DY0402">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Kotmale-Fresh-Milk?ID=4/UEC8iFdjC5f5Fme/JInw==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BV13703_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BV13703_1.jpg">
                                 </div>
 
                                 <div class="dis">
                                     <!-- ngIf: product.DiscountAmount!=0 -->
                                 </div>
                                 <div class="veg">
-                                    <!-- ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
                                     <!-- ngIf: product.Type == 'NV'  -->
                                     
-                                    <p title="STR Radiator Coolant" class="ng-binding">STR Radiator Coolant</p>
+                                    <p title="Kotmale Fresh Milk" class="ng-binding">Kotmale Fresh Milk</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE --><div class="dripers ng-scope" id="ddlDY0402" ng-if="product.MasterSKUCODE">
+                                <div class="dropdown">
+                                    <!-- ngIf: product.selectedSize==''&&product.MasterSKUCODE --><button ng-if="product.selectedSize==''&amp;&amp;product.MasterSKUCODE" ng-click="ShowClubbing(product.MasterSKUCODE)" class="dropbtn ng-binding ng-scope">1.00 l <i style="color:gray" class="fa fa-angle-down" aria-hidden="true"></i></button><!-- end ngIf: product.selectedSize==''&&product.MasterSKUCODE -->
+                                    <!-- ngIf: product.selectedSize&&product.MasterSKUCODE -->
+                                    <div id="myDropdownDY0402" class="dropdown-content">
+                                        <ul>
+                                            <!-- ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="136" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    1.00 l
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 580.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_136" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="135" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    180.00 ml
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 140.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_135" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Kotmale-Fresh-Milk?ID=4/UEC8iFdjC5f5Fme/JInw==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 580.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB136" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd136" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_DY0704">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Ratthi-Full-Cream-Milk-Powder?ID=HmlNZJDF5h3A38okUhJrCw==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BV00903_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BV00903_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Ratthi Full Cream Milk Powder" class="ng-binding">Ratthi Full Cream Milk Powder</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE --><div class="dripers ng-scope" id="ddlDY0704" ng-if="product.MasterSKUCODE">
+                                <div class="dropdown">
+                                    <!-- ngIf: product.selectedSize==''&&product.MasterSKUCODE --><button ng-if="product.selectedSize==''&amp;&amp;product.MasterSKUCODE" ng-click="ShowClubbing(product.MasterSKUCODE)" class="dropbtn ng-binding ng-scope">400.00 g <i style="color:gray" class="fa fa-angle-down" aria-hidden="true"></i></button><!-- end ngIf: product.selectedSize==''&&product.MasterSKUCODE -->
+                                    <!-- ngIf: product.selectedSize&&product.MasterSKUCODE -->
+                                    <div id="myDropdownDY0704" class="dropdown-content">
+                                        <ul>
+                                            <!-- ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="122" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    400.00 g
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 1,200.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_122" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="123" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    1.00 kg
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 2,990.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_123" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Ratthi-Full-Cream-Milk-Powder?ID=HmlNZJDF5h3A38okUhJrCw==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 1,200.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB122" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd122" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Ambewela-Fresh-Milk?ID=B0+7RcPIQbgv7nk2l8NXUw==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BV15201_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BV15201_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Ambewela Fresh Milk" class="ng-binding">Ambewela Fresh Milk</p>
                                 </div>
                             </a>
                             
@@ -2025,15 +1936,15 @@
 
                             
                             <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/STR-Radiator-Coolant?ID=skTmahc9vII0oEtWq3sRXg==">
+                                <a href="/ProductDetails/Dairy/Ambewela-Fresh-Milk?ID=B0+7RcPIQbgv7nk2l8NXUw==">
                                     <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 850.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <h4 class="txtSmall ng-binding">Rs. 580.00 <!-- ngIf: product.Mrp!=0 --></h4>
                                         <p>(Inclusive of all taxes) </p>
                                     </div>
                                 </a>
                                 <div class="strike2">
-                                    <div id="lAB646021" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd646021" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <div id="lAB149" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd149" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
                                     <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
                                     <!-- ngIf: product.Quantity!=0 -->
                                 </div>
@@ -2043,9 +1954,121 @@
                     </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
                         <div class="cargillProdNeed divisSpons">
                             <!-- ngIf: product.IsSponsored == 'True' -->
-                            <a href="/ProductDetails/Auto-Care/Aer-Air-Freshner-Gel-Fresh?ID=2SnUUY+nsA5P77q/g4Ap4w==">
+                            <a href="/ProductDetails/Dairy/Newdale-Set-Plain-Yoghurt?ID=/EX+Mt5+nsplfIxfTo3Xew==">
                                 <div class="cargillProdNeedImg">
-                                    <img ng-src="/VendorItems/MenuItems/AC12402_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/AC12402_1.jpg">
+                                    <img ng-src="/VendorItems/MenuItems/DYD3020_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/DYD3020_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Newdale Set Plain Yoghurt" class="ng-binding">Newdale Set Plain Yoghurt</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">80.00 g </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Newdale-Set-Plain-Yoghurt?ID=/EX+Mt5+nsplfIxfTo3Xew==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 80.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB489" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd489" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_DY0703">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Anchor-Full-Cream-Milk-Powder?ID=mQZIc0lU9Bzm1Ze99BbJuQ==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BV00801_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BV00801_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Anchor Full Cream Milk Powder" class="ng-binding">Anchor Full Cream Milk Powder</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE --><div class="dripers ng-scope" id="ddlDY0703" ng-if="product.MasterSKUCODE">
+                                <div class="dropdown">
+                                    <!-- ngIf: product.selectedSize==''&&product.MasterSKUCODE --><button ng-if="product.selectedSize==''&amp;&amp;product.MasterSKUCODE" ng-click="ShowClubbing(product.MasterSKUCODE)" class="dropbtn ng-binding ng-scope">400.00 g <i style="color:gray" class="fa fa-angle-down" aria-hidden="true"></i></button><!-- end ngIf: product.selectedSize==''&&product.MasterSKUCODE -->
+                                    <!-- ngIf: product.selectedSize&&product.MasterSKUCODE -->
+                                    <div id="myDropdownDY0703" class="dropdown-content">
+                                        <ul>
+                                            <!-- ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="119" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    400.00 g
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 1,200.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_119" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="120" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    1.00 kg
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 2,990.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_120" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Anchor-Full-Cream-Milk-Powder?ID=mQZIc0lU9Bzm1Ze99BbJuQ==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 1,200.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB119" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd119" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Diamond-Full-Cream-Milk-Powder?ID=sQt+N4V+fCezk4DH473WpQ==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BVE0537_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BVE0537_1.jpg">
                                 </div>
 
                                 <div class="dis">
@@ -2055,24 +2078,619 @@
                                     <!-- ngIf: product.Type == 'V'  -->
                                     <!-- ngIf: product.Type == 'NV'  -->
                                     
-                                    <p title="Aer Air Freshner Gel Fresh" class="ng-binding">Aer Air Freshner Gel Fresh</p>
+                                    <p title="Diamond Full Cream Milk Powder" class="ng-binding">Diamond Full Cream Milk Powder</p>
                                 </div>
                             </a>
                             
-                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">9.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">400.00 g </button><!-- end ngIf: product.MasterSKUCODE=='' -->
                             <!-- ngIf: product.MasterSKUCODE -->
 
                             
                             <div class="strike">
-                                <a href="/ProductDetails/Auto-Care/Aer-Air-Freshner-Gel-Fresh?ID=2SnUUY+nsA5P77q/g4Ap4w==">
+                                <a href="/ProductDetails/Dairy/Diamond-Full-Cream-Milk-Powder?ID=sQt+N4V+fCezk4DH473WpQ==">
                                     <div class="strike1">
-                                        <h4 class="txtSmall ng-binding">Rs. 1,600.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <h4 class="txtSmall ng-binding">Rs. 1,150.00 <!-- ngIf: product.Mrp!=0 --></h4>
                                         <p>(Inclusive of all taxes) </p>
                                     </div>
                                 </a>
                                 <div class="strike2">
-                                    <div id="lAB2148" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
-                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd2148" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <div id="lAB636721" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd636721" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Kotmale-Cheese-Wedges-Low-Fat?ID=5hfWK8jVundGb384NNYRNg==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/DYE0233_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/DYE0233_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Kotmale Cheese Wedges Low Fat" class="ng-binding">Kotmale Cheese Wedges Low Fat</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">120.00 g </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Kotmale-Cheese-Wedges-Low-Fat?ID=5hfWK8jVundGb384NNYRNg==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 580.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB634731" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd634731" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_DY0702">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Lakspray-Full-Cream-Milk-Powder-Pouch?ID=+LTRr2+IedVJkW8Dxf7W6Q==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BV00109_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BV00109_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Lakspray Full Cream Milk Powder Pouch" class="ng-binding">Lakspray Full Cream Milk Powder Pouch</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE --><div class="dripers ng-scope" id="ddlDY0702" ng-if="product.MasterSKUCODE">
+                                <div class="dropdown">
+                                    <!-- ngIf: product.selectedSize==''&&product.MasterSKUCODE --><button ng-if="product.selectedSize==''&amp;&amp;product.MasterSKUCODE" ng-click="ShowClubbing(product.MasterSKUCODE)" class="dropbtn ng-binding ng-scope">1.00 kg <i style="color:gray" class="fa fa-angle-down" aria-hidden="true"></i></button><!-- end ngIf: product.selectedSize==''&&product.MasterSKUCODE -->
+                                    <!-- ngIf: product.selectedSize&&product.MasterSKUCODE -->
+                                    <div id="myDropdownDY0702" class="dropdown-content">
+                                        <ul>
+                                            <!-- ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="110" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    1.00 kg
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 2,980.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_110" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="109" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    400.00 g
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 1,200.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_109" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Lakspray-Full-Cream-Milk-Powder-Pouch?ID=+LTRr2+IedVJkW8Dxf7W6Q==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 2,980.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB110" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd110" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Ratthi-3-in-1-Milk-Mix?ID=RZzfQyILeX04l5Gc2ryFQg==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BVE0481_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BVE0481_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Ratthi 3 in 1 Milk Mix" class="ng-binding">Ratthi 3 in 1 Milk Mix</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">200.00 g </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Ratthi-3-in-1-Milk-Mix?ID=RZzfQyILeX04l5Gc2ryFQg==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 440.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB635438" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd635438" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Anchor-Newdale-Drinking-Yoghurt-Low-Fat-Vanilla-Flavoured?ID=uNKgSP4DpnQ6Q45Ok4Lu+Q==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/DYE0130_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/DYE0130_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Anchor Newdale Drinking Yoghurt Low Fat Vanilla Flavoured" class="ng-binding">Anchor Newdale Drinking Yoghurt Low Fat Vanilla Flavoured</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">180.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Anchor-Newdale-Drinking-Yoghurt-Low-Fat-Vanilla-Flavoured?ID=uNKgSP4DpnQ6Q45Ok4Lu+Q==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 180.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB1482" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd1482" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Maliban-UHT-Fresh-Milk?ID=+m3HoM0QUMweV4aM2j+LEw==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BVE0423_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BVE0423_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Maliban UHT Fresh Milk" class="ng-binding">Maliban UHT Fresh Milk</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">1.00 l </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Maliban-UHT-Fresh-Milk?ID=+m3HoM0QUMweV4aM2j+LEw==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 550.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB630271" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd630271" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Newdale-Chocolate-Flavoured-Milk?ID=vVX4JVsrNCkPhOV3mDPuBQ==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BV11541_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BV11541_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Newdale Chocolate Flavoured Milk" class="ng-binding">Newdale Chocolate Flavoured Milk</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">180.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Newdale-Chocolate-Flavoured-Milk?ID=vVX4JVsrNCkPhOV3mDPuBQ==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 140.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB1480" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd1480" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Anchor-Newdale-Drinking-Yoghurt-Low-Fat-Mixed-Berry-Flavoured?ID=6MBtUA6yhiuMdLfi8AUsiA==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/DYE0352_1.png" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/Assets/Web/img/loading_img1.png">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Anchor Newdale Drinking Yoghurt Low Fat Mixed Berry Flavoured" class="ng-binding">Anchor Newdale Drinking Yoghurt Low Fat Mixed Berry Flavoured</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">180.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Anchor-Newdale-Drinking-Yoghurt-Low-Fat-Mixed-Berry-Flavoured?ID=6MBtUA6yhiuMdLfi8AUsiA==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 180.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB646566" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd646566" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_DY0406">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Kotmale-Chox-Food-Drink?ID=h7rYd9/YYr2MiVHF80cI/w==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/BV13801_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/BV13801_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Kotmale Chox Food Drink" class="ng-binding">Kotmale Chox Food Drink</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE --><div class="dripers ng-scope" id="ddlDY0406" ng-if="product.MasterSKUCODE">
+                                <div class="dropdown">
+                                    <!-- ngIf: product.selectedSize==''&&product.MasterSKUCODE --><button ng-if="product.selectedSize==''&amp;&amp;product.MasterSKUCODE" ng-click="ShowClubbing(product.MasterSKUCODE)" class="dropbtn ng-binding ng-scope">180.00 ml <i style="color:gray" class="fa fa-angle-down" aria-hidden="true"></i></button><!-- end ngIf: product.selectedSize==''&&product.MasterSKUCODE -->
+                                    <!-- ngIf: product.selectedSize&&product.MasterSKUCODE -->
+                                    <div id="myDropdownDY0406" class="dropdown-content">
+                                        <ul>
+                                            <!-- ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="146" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    180.00 ml
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 140.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_146" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="148" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    6.00 pcs
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 700.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_148" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="142" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    180.00 ml
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 140.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_142" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="140" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    170.00 ml
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 100.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_140" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="141" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    1.00 l
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 600.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' --><h6 class="unavilable ng-scope" ng-if="product.InventoryArray[$index]&lt;1 || product.IsActiveArray[$index]!='0' &amp;&amp; product.IsActiveArray[$index]!='1'">Unavailable</h6><!-- end ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="635335" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    500.00 ml
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 420.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' --><h6 class="unavilable ng-scope" ng-if="product.InventoryArray[$index]&lt;1 || product.IsActiveArray[$index]!='0' &amp;&amp; product.IsActiveArray[$index]!='1'">Unavailable</h6><!-- end ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Kotmale-Chox-Food-Drink?ID=h7rYd9/YYr2MiVHF80cI/w==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 140.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB146" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd146" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_DY0808">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Ratthi-Set-Yoghurt?ID=0d6MIftdx37+DywPihlD6A==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/DYE0190_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/DYE0190_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Ratthi Set Yoghurt" class="ng-binding">Ratthi Set Yoghurt</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE --><div class="dripers ng-scope" id="ddlDY0808" ng-if="product.MasterSKUCODE">
+                                <div class="dropdown">
+                                    <!-- ngIf: product.selectedSize==''&&product.MasterSKUCODE --><button ng-if="product.selectedSize==''&amp;&amp;product.MasterSKUCODE" ng-click="ShowClubbing(product.MasterSKUCODE)" class="dropbtn ng-binding ng-scope">80.00 g <i style="color:gray" class="fa fa-angle-down" aria-hidden="true"></i></button><!-- end ngIf: product.selectedSize==''&&product.MasterSKUCODE -->
+                                    <!-- ngIf: product.selectedSize&&product.MasterSKUCODE -->
+                                    <div id="myDropdownDY0808" class="dropdown-content">
+                                        <ul>
+                                            <!-- ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="511" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    80.00 g
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 80.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_511" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="629533" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    4.00 pcs
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 310.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' --><h6 class="unavilable ng-scope" ng-if="product.InventoryArray[$index]&lt;1 || product.IsActiveArray[$index]!='0' &amp;&amp; product.IsActiveArray[$index]!='1'">Unavailable</h6><!-- end ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Ratthi-Set-Yoghurt?ID=0d6MIftdx37+DywPihlD6A==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 80.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB511" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd511" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Anchor-Newdale-Drinking-Yoghurt-Low-Fat-Mango-Flavoured?ID=SBlcfR9lkqGt6ngWXLKB4Q==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/DYE0131_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/DYE0131_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Anchor Newdale Drinking Yoghurt Low Fat Mango Flavoured" class="ng-binding">Anchor Newdale Drinking Yoghurt Low Fat Mango Flavoured</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' --><button disabled="" class="dropbtn1 ng-binding ng-scope" ng-if="product.MasterSKUCODE==''">180.00 ml </button><!-- end ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Anchor-Newdale-Drinking-Yoghurt-Low-Fat-Mango-Flavoured?ID=SBlcfR9lkqGt6ngWXLKB4Q==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 180.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB1484" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd1484" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
+                                    <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
+                                    <!-- ngIf: product.Quantity!=0 -->
+                                </div>
+                                <!-- ngIf: product.IsRestricted=='True' -->
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: product in Products --><div class="cargillProd ng-scope" ng-repeat="product in Products" id="card_DY0305">
+                        <div class="cargillProdNeed divisSpons">
+                            <!-- ngIf: product.IsSponsored == 'True' -->
+                            <a href="/ProductDetails/Dairy/Magic-Fresh-Mango-Ice-Cream?ID=tpw3vDwAnDrtthY9NHK5jA==">
+                                <div class="cargillProdNeedImg">
+                                    <img ng-src="/VendorItems/MenuItems/FF74101_1.jpg" class="img-fluid" onerror="this.src = '/Assets/Web/img/loading_img1.png'" src="/VendorItems/MenuItems/FF74101_1.jpg">
+                                </div>
+
+                                <div class="dis">
+                                    <!-- ngIf: product.DiscountAmount!=0 -->
+                                </div>
+                                <div class="veg">
+                                    <!-- ngIf: product.Type == 'V'  --><img ng-if="product.Type == 'V' " src="/Assets/web/img/veg.png" class="img-fluid ng-scope"><!-- end ngIf: product.Type == 'V'  -->
+                                    <!-- ngIf: product.Type == 'NV'  -->
+                                    
+                                    <p title="Magic Fresh Mango Ice Cream" class="ng-binding">Magic Fresh Mango Ice Cream</p>
+                                </div>
+                            </a>
+                            
+                            <!-- ngIf: product.MasterSKUCODE=='' -->
+                            <!-- ngIf: product.MasterSKUCODE --><div class="dripers ng-scope" id="ddlDY0305" ng-if="product.MasterSKUCODE">
+                                <div class="dropdown">
+                                    <!-- ngIf: product.selectedSize==''&&product.MasterSKUCODE --><button ng-if="product.selectedSize==''&amp;&amp;product.MasterSKUCODE" ng-click="ShowClubbing(product.MasterSKUCODE)" class="dropbtn ng-binding ng-scope">1.00 l <i style="color:gray" class="fa fa-angle-down" aria-hidden="true"></i></button><!-- end ngIf: product.selectedSize==''&&product.MasterSKUCODE -->
+                                    <!-- ngIf: product.selectedSize&&product.MasterSKUCODE -->
+                                    <div id="myDropdownDY0305" class="dropdown-content">
+                                        <ul>
+                                            <!-- ngRepeat: id in product.IdArray --><li ng-repeat="id in product.IdArray" value="576" ng-click="onchangeMasterCardSize(product,id,$index)" class="ng-scope">
+                                                <h4 class="ng-binding">
+                                                    1.00 l
+                                                    <!-- ngIf: product.DiscountAmountArray[$index]!=0 -->
+                                                </h4>
+                                                <h5>
+                                                    <span class="gper2 ng-binding">Rs. 790.00</span> <!-- ngIf: product.MrpArray[$index]!=0 -->
+                                                </h5>
+                                                <!-- ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' --><h6 id="crtAdd_576" ng-if="product.QuantityArray[$index]==0 &amp;&amp; product.InventoryArray[$index]&gt;0 &amp;&amp; product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1'" ng-click="changeQuantity(id, product.MinOrderQuantityArray[$index], product.CategoryCodeArray[$index],product.UnitSizeArray[$index],product.PriceArray[$index],product.ItemNameArray[$index],product.SKUCODEArray[$index],product.InventoryArray[$index])" class="ng-scope">
+                                                    ADD
+                                                </h6><!-- end ngIf: product.QuantityArray[$index]==0 && product.InventoryArray[$index]>0 && product.IsActiveArray[$index]=='0' || product.IsActiveArray[$index]=='1' -->
+                                                <!-- ngIf: product.InventoryArray[$index]<1 || product.IsActiveArray[$index]!='0' && product.IsActiveArray[$index]!='1' -->
+                                            </li><!-- end ngRepeat: id in product.IdArray -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: product.MasterSKUCODE -->
+
+                            
+                            <div class="strike">
+                                <a href="/ProductDetails/Dairy/Magic-Fresh-Mango-Ice-Cream?ID=tpw3vDwAnDrtthY9NHK5jA==">
+                                    <div class="strike1">
+                                        <h4 class="txtSmall ng-binding">Rs. 790.00 <!-- ngIf: product.Mrp!=0 --></h4>
+                                        <p>(Inclusive of all taxes) </p>
+                                    </div>
+                                </a>
+                                <div class="strike2">
+                                    <div id="lAB576" class="loaderItem2" style="display:none;"><img src="/Assets/img/ven-loader.gif"></div>
+                                    <!-- ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' --><p id="crtAdd576" ng-if="product.Quantity==0 &amp;&amp; product.Inventory&gt;0 &amp;&amp; product.IsActive=='0' || product.IsActive=='1'" class="ng-scope"><a href="" ng-click="changeQuantity(product.Id, product.MinOrderQuantity, product.CategoryCode,product.UnitSize,product.Price,product.ItemName,product.SKUCODE,product.Inventory)">ADD</a></p><!-- end ngIf: product.Quantity==0 && product.Inventory>0 && product.IsActive=='0' || product.IsActive=='1' -->
                                     <!-- ngIf: product.Inventory<1 || product.IsActive!='0' && product.IsActive!='1' -->
                                     <!-- ngIf: product.Quantity!=0 -->
                                 </div>
@@ -2081,12 +2699,12 @@
                         </div>
                     </div><!-- end ngRepeat: product in Products -->
                     <div class="divPagingProd">
-                        <ul class="pagination ng-isolate-scope ng-not-empty ng-valid" total-items="totalCount" ng-change="pageChanged()" items-per-page="pageSizeSelected1" direction-links="true" ng-model="pageIndex" max-size="maxSize" boundary-links="true" rotate="false" num-pages="numPages">
-  <!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
-  <!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
-  <!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
-  <!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
-  <!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+                        <ul class="pagination ng-isolate-scope ng-not-empty ng-valid ng-dirty ng-valid-parse" total-items="totalCount" ng-change="pageChanged()" items-per-page="pageSizeSelected1" direction-links="true" ng-model="pageIndex" max-size="maxSize" boundary-links="true" rotate="false" num-pages="numPages">
+  <!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+  <!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+  <!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">6</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">7</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">8</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">9</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">10</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">11</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">12</a></li><!-- end ngRepeat: page in pages track by $index -->
+  <!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+  <!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
 </ul>
                     </div>
                 </div>
@@ -2237,9 +2855,9 @@
     <input type="hidden" id="txtUserId" autocomplete="off">
     <input type="hidden" id="txtEncKey" value="8080808080808080" autocomplete="off">
     <input type="hidden" id="txtEncIv" value="8080808080808080" autocomplete="off">
-    <input type="hidden" id="txtCatId" value="Mjk=" autocomplete="off">
+    <input type="hidden" id="txtCatId" value="Ng==" autocomplete="off">
     <input type="hidden" id="txtSubCatId" autocomplete="off">
-    <input type="hidden" id="txtCatName" value="QXV0byBDYXJl" autocomplete="off">
+    <input type="hidden" id="txtCatName" value="RGFpcnk=" autocomplete="off">
     <input type="hidden" id="txtSubCatName" autocomplete="off">
     <input type="hidden" id="txtCatSearch" autocomplete="off">
     <input type="hidden" id="txtBanName" autocomplete="off">

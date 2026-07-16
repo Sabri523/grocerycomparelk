@@ -592,11 +592,23 @@ function render(){
       savingsCell = `<span class="price-na">not comparable</span>`;
     } else if(d.cheaper === "tie"){
       savingsCell = '<span class="savings">—</span>';
-    } else if(d.comparisonBasis === "unit"){
-      savingsCell = `<span class="savings">Rs. ${d.diff.toFixed(2)} ${d.unit_label || ''} (${d.pct.toFixed(1)}%)</span><span class="unit-price-hint">by unit price</span>`;
     } else {
-      savingsCell = `<span class="savings">${fmt(d.diff)} (${d.pct.toFixed(1)}%)</span><span class="unit-price-hint">by pack price</span>`;
+    const warning = d.pct >= 30
+      ? `<span class="unit-price-hint" style="color:#B35A00;">⚠ Unusually large difference. Check that the products, pack sizes, and scraped prices are correct before relying on this comparison.</span>`
+      : "";
+
+    if(d.comparisonBasis === "unit"){
+      savingsCell =
+        `<span class="savings">Rs. ${d.diff.toFixed(2)} ${d.unit_label || ''} (${d.pct.toFixed(1)}%)</span>
+        <span class="unit-price-hint">by unit price</span>
+        ${warning}`;
+    } else {
+      savingsCell =
+        `<span class="savings">${fmt(d.diff)} (${d.pct.toFixed(1)}%)</span>
+        <span class="unit-price-hint">by pack price</span>
+        ${warning}`;
     }
+  }
 
     const sizeWarning = (comparable && d.size_verified === false)
       ? `<span class="badge-unverified" title="Pack size couldn't be confirmed as matching on both sides">⚠ size unverified</span>`
@@ -633,9 +645,13 @@ function renderStats(){
   document.getElementById("stat-savings").textContent = avgPct;
 }
 
-document.getElementById("search").addEventListener("input", e=>{
-  query = e.target.value;
-  render();
+const searchBox = document.getElementById("search");
+
+searchBox.addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    query = searchBox.value.trim();
+    render();
+  }
 });
 document.getElementById("category").addEventListener("change", e=>{
   category = e.target.value;
