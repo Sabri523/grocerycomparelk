@@ -110,32 +110,73 @@ def extract_id(href):
         return None
 
 
-def find_quantity_near(anchor, max_levels=6):
-    """Pull the pack-size text out of the quantity dropdown button
-    (e.g. '500.0 g') near a product's name/price anchor.
+#def find_quantity_near(anchor, max_levels=6):
+#    """Pull the pack-size text out of the quantity dropdown button
+#    (e.g. '500.0 g') near a product's name/price anchor.
+#
+#    Earlier versions assumed the anchor sat inside a wrapping
+#    'div.veg' card and searched within that — but that class was an
+#    unverified guess and doesn't actually exist, so the search silently
+#    found nothing. Looking at the real rendered HTML, the quantity
+#    button is a close sibling of the <a> tag (often just one parent up,
+#    separated only by an Angular "<!--ngIf-->" comment), not nested
+#    inside some specially-named card. So instead this walks upward from
+#    the anchor itself, checking each ancestor level for a
+#    'dropbtn1' button, and stops at the first one found — rather than
+#    requiring a specific container class we can't verify in advance."""
+#    node = anchor
+#    for _ in range(max_levels):
+#        node = node.parent
+#        if node is None:
+#            break
+#        button = node.find("button", class_=lambda c: c and "dropbtn1" in c.split())
+#        if button:
+#            text = button.get_text(" ", strip=True)
+#            if text:
+#                return text
+#    return None
 
-    Earlier versions assumed the anchor sat inside a wrapping
-    'div.veg' card and searched within that — but that class was an
-    unverified guess and doesn't actually exist, so the search silently
-    found nothing. Looking at the real rendered HTML, the quantity
-    button is a close sibling of the <a> tag (often just one parent up,
-    separated only by an Angular "<!--ngIf-->" comment), not nested
-    inside some specially-named card. So instead this walks upward from
-    the anchor itself, checking each ancestor level for a
-    'dropbtn1' button, and stops at the first one found — rather than
-    requiring a specific container class we can't verify in advance."""
+#chatgpt change 17/07/2026
+def find_quantity_near(anchor, max_levels=6):
+    """Return the quantity button associated with this product only.
+
+    Walk upward from the product link, but stop as soon as the current
+    ancestor contains more than one distinct ProductDetails link. At that
+    point we've widened into a container holding multiple product cards,
+    so searching any higher risks picking up another product's quantity.
+    """
     node = anchor
+
     for _ in range(max_levels):
         node = node.parent
         if node is None:
             break
-        button = node.find("button", class_=lambda c: c and "dropbtn1" in c.split())
+
+        # Count distinct product links inside this ancestor.
+        product_ids = {
+            extract_id(a.get("href", ""))
+            for a in node.find_all("a", href=True)
+            if "ProductDetails" in a["href"]
+        }
+        product_ids.discard(None)
+
+        # We've widened into a container holding multiple products.
+        # Don't search any higher.
+        if len(product_ids) > 1:
+            break
+
+        button = node.find(
+            "button",
+            class_=lambda c: c and "ng-binding ng-scope" in c #changed dropbtn1 to dropbtn as general quantity was in button class dropbtn1 but drop buttons were in dropbtn class - it did not work
+        )
+
         if button:
             text = button.get_text(" ", strip=True)
             if text:
                 return text
-    return None
 
+    return None
+#chatgpt end
 
 def parse_current_page(html):
     """Parse whatever products are currently rendered on the page into

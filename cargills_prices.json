@@ -29,7 +29,7 @@
   },
   {
     "name": "Tomato",
-    "price": 270.0,
+    "price": 290.0,
     "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Vegetables/Tomato?ID=9GFndZqeRfzMUmiXHOH9Aw==",
     "category": "Vegetables"
@@ -50,7 +50,7 @@
   },
   {
     "name": "Brinjal",
-    "price": 242.0,
+    "price": 252.0,
     "quantity": "350.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Vegetables/Brinjal?ID=3mG21KixL8tJ5ODV0d302w==",
     "category": "Vegetables"
@@ -113,14 +113,14 @@
   },
   {
     "name": "Beetroot",
-    "price": 93.0,
+    "price": 98.0,
     "quantity": "250.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Vegetables/Beetroot?ID=wWp93RbbN+hrgnNsfM7m+g==",
     "category": "Vegetables"
   },
   {
     "name": "Lime",
-    "price": 123.0,
+    "price": 120.0,
     "quantity": "250.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Vegetables/Lime?ID=80hr1PWo1On2uxMlOgvD3A==",
     "category": "Vegetables"
@@ -148,7 +148,7 @@
   },
   {
     "name": "Japanese Cucumber",
-    "price": 49.0,
+    "price": 56.0,
     "quantity": "350.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Vegetables/Japanese-Cucumber?ID=sHyRV6QdJ3zPZUKcmYzDZw==",
     "category": "Vegetables"
@@ -308,6 +308,13 @@
     "category": "Vegetables"
   },
   {
+    "name": "Curry Mango",
+    "price": 117.5,
+    "quantity": "500.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Vegetables/Curry-Mango?ID=Kjuf4z4L8SedaJkAaE8vVg==",
+    "category": "Vegetables"
+  },
+  {
     "name": "Kakiri",
     "price": 116.0,
     "quantity": "400.00 g",
@@ -323,7 +330,7 @@
   },
   {
     "name": "Good Harvest Tomato",
-    "price": 280.0,
+    "price": 300.0,
     "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Vegetables/Good-Harvest-Tomato?ID=ODBTEXOQvxBiVJ1EmdoKIw==",
     "category": "Vegetables"
@@ -336,17 +343,17 @@
     "category": "Vegetables"
   },
   {
+    "name": "Bell Pepper Green",
+    "price": 475.0,
+    "quantity": "500.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Vegetables/Bell-Pepper-Green?ID=9sP/35n8BEwodZmLyfpJPw==",
+    "category": "Vegetables"
+  },
+  {
     "name": "Tamarind",
     "price": 300.0,
     "quantity": "120.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Vegetables/Tamarind?ID=Jj3lFKYg6HVSh3OpNav+QA==",
-    "category": "Vegetables"
-  },
-  {
-    "name": "Good Harvest Green Beans",
-    "price": 245.0,
-    "quantity": "500.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Vegetables/Good-Harvest-Green-Beans?ID=ypdlQPSKF4CPiIjSkcUTOg==",
     "category": "Vegetables"
   },
   {
@@ -442,7 +449,7 @@
   },
   {
     "name": "Yellow Zucchini",
-    "price": 475.0,
+    "price": 490.0,
     "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Vegetables/Yellow-Zucchini?ID=XQptTJOcTgLsk4wxGdxDkw==",
     "category": "Vegetables"
@@ -525,15 +532,8 @@
     "category": "Vegetables"
   },
   {
-    "name": "Curry Mango",
-    "price": 117.5,
-    "quantity": "500.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Vegetables/Curry-Mango?ID=Kjuf4z4L8SedaJkAaE8vVg==",
-    "category": "Vegetables"
-  },
-  {
     "name": "Good Harvest Japanese Cucumber",
-    "price": 40.0,
+    "price": 45.0,
     "quantity": "250.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Vegetables/Good-Harvest-Japanese-Cucumber?ID=K/aVv1OkhlSvyGD8AGCNBw==",
     "category": "Vegetables"
@@ -546,10 +546,10 @@
     "category": "Vegetables"
   },
   {
-    "name": "Bell Pepper Green",
-    "price": 475.0,
+    "name": "Good Harvest Green Beans",
+    "price": 245.0,
     "quantity": "500.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Vegetables/Bell-Pepper-Green?ID=9sP/35n8BEwodZmLyfpJPw==",
+    "url": "https://cargillsonline.com/ProductDetails/Vegetables/Good-Harvest-Green-Beans?ID=ypdlQPSKF4CPiIjSkcUTOg==",
     "category": "Vegetables"
   },
   {
@@ -658,13 +658,6 @@
     "category": "Fruits"
   },
   {
-    "name": "King Coconut",
-    "price": 217.0,
-    "quantity": "1.00 pc",
-    "url": "https://cargillsonline.com/ProductDetails/Fruits/King-Coconut?ID=7bPlx/Ot1t3Fs6f19d+9Cw==",
-    "category": "Fruits"
-  },
-  {
     "name": "Sugar Plantain Full Hand",
     "price": 131.0,
     "quantity": "1.00 kg",
@@ -687,14 +680,14 @@
   },
   {
     "name": "Sour Plantain",
-    "price": 125.0,
+    "price": 130.0,
     "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Fruits/Sour-Plantain?ID=ePh3f3TIl+1bfkNTFw0Uog==",
     "category": "Fruits"
   },
   {
     "name": "Sour Plantain Full Hand",
-    "price": 300.0,
+    "price": 312.0,
     "quantity": "1.20 kg",
     "url": "https://cargillsonline.com/ProductDetails/Fruits/Sour-Plantain-Full-Hand?ID=Zas6Am0fqUFR9G/foRR9QA==",
     "category": "Fruits"
@@ -756,8 +749,36 @@
     "category": "Fruits"
   },
   {
+    "name": "Mangosteen",
+    "price": 631.0,
+    "quantity": "500.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Fruits/Mangosteen?ID=kpBkEEiqsJdVt+F8fOYsVQ==",
+    "category": "Fruits"
+  },
+  {
+    "name": "Rambutan",
+    "price": 526.0,
+    "quantity": "500.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Fruits/Rambutan?ID=AuKoD4iAdXUrhXCkSsIBVg==",
+    "category": "Fruits"
+  },
+  {
+    "name": "Durian",
+    "price": 1350.0,
+    "quantity": "1.50 Kg",
+    "url": "https://cargillsonline.com/ProductDetails/Fruits/Durian?ID=b6mXE78L2OPGq4l6Thk3Bw==",
+    "category": "Fruits"
+  },
+  {
+    "name": "King Coconut",
+    "price": 217.0,
+    "quantity": "1.00 pc",
+    "url": "https://cargillsonline.com/ProductDetails/Fruits/King-Coconut?ID=7bPlx/Ot1t3Fs6f19d+9Cw==",
+    "category": "Fruits"
+  },
+  {
     "name": "T. J .C. Mango",
-    "price": 520.0,
+    "price": 490.0,
     "quantity": "1.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Fruits/T-J-C-Mango?ID=lCEyvSeM//OxaThhRD7k+Q==",
     "category": "Fruits"
@@ -833,31 +854,10 @@
     "category": "Fruits"
   },
   {
-    "name": "Mangosteen",
-    "price": 631.0,
-    "quantity": "500.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Fruits/Mangosteen?ID=kpBkEEiqsJdVt+F8fOYsVQ==",
-    "category": "Fruits"
-  },
-  {
     "name": "Pol Mango",
     "price": 279.5,
     "quantity": "1.00 Kg",
     "url": "https://cargillsonline.com/ProductDetails/Fruits/Pol-Mango?ID=XpfYcox8htGIvgyqxev6ZA==",
-    "category": "Fruits"
-  },
-  {
-    "name": "Rambutan",
-    "price": 526.0,
-    "quantity": "500.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Fruits/Rambutan?ID=AuKoD4iAdXUrhXCkSsIBVg==",
-    "category": "Fruits"
-  },
-  {
-    "name": "Durian",
-    "price": 1350.0,
-    "quantity": "1.50 Kg",
-    "url": "https://cargillsonline.com/ProductDetails/Fruits/Durian?ID=b6mXE78L2OPGq4l6Thk3Bw==",
     "category": "Fruits"
   },
   {
@@ -876,7 +876,7 @@
   },
   {
     "name": "Pears Pure & Gentle Baby Soap Multipack",
-    "price": 690.0,
+    "price": 448.5,
     "quantity": "325.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Pears-Pure-Gentle-Baby-Soap-Multipack?ID=KO9EEDUjH7ERIwNQMxhXhw==",
     "category": "Baby Products"
@@ -891,7 +891,7 @@
   {
     "name": "Marvel Baby Diapers, Large",
     "price": 3600.0,
-    "quantity": "5.00 pcs",
+    "quantity": "48.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Marvel-Baby-Diapers-Large?ID=IeeYVQYzG3JIAL0ej+AODA==",
     "category": "Baby Products"
   },
@@ -912,7 +912,7 @@
   {
     "name": "Baby Cheramy Diapers,L",
     "price": 1440.0,
-    "quantity": "5.00 pcs",
+    "quantity": "12.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-DiapersL?ID=hTCQt3ROqL8Hg+vvcA6t/g==",
     "category": "Baby Products"
   },
@@ -968,21 +968,21 @@
   {
     "name": "Marvel Baby Diapers, Medium",
     "price": 3600.0,
-    "quantity": "5.00 pcs",
+    "quantity": "48.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Marvel-Baby-Diapers-Medium?ID=DAhUGLup3gJTNLVpB030HQ==",
     "category": "Baby Products"
   },
   {
     "name": "Khomba Baby Soap Floral Multi Pack",
     "price": 540.0,
-    "quantity": "5.00 pcs",
+    "quantity": "4.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Khomba-Baby-Soap-Floral-Multi-Pack?ID=7adHZSn+d5l48vCn/rs51w==",
     "category": "Baby Products"
   },
   {
     "name": "Velona Cuddles Diaper Pants, L",
     "price": 6510.0,
-    "quantity": "5.00 pcs",
+    "quantity": "54.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Velona-Cuddles-Diaper-Pants-L?ID=tGfd8g563ztUBagej9f9FA==",
     "category": "Baby Products"
   },
@@ -1017,7 +1017,7 @@
   {
     "name": "Baby Cheramy Floral Moisturising Soap",
     "price": 200.0,
-    "quantity": "100.00 ml",
+    "quantity": "90.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Floral-Moisturising-Soap?ID=dEaOdSHJefSGZglYfGFSpA==",
     "category": "Baby Products"
   },
@@ -1038,14 +1038,14 @@
   {
     "name": "Velona Cuddles Diaper Pants, Xl",
     "price": 6930.0,
-    "quantity": "100.00 ml",
+    "quantity": "54.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Velona-Cuddles-Diaper-Pants-XL?ID=KrQ8FncW5KTXGF6mYR4lDQ==",
     "category": "Baby Products"
   },
   {
     "name": "Panda Baby Rathmal Soap Value Pack",
     "price": 300.0,
-    "quantity": "100.00 ml",
+    "quantity": "1.00 pc",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Panda-Baby-Rathmal-Soap-Value-Pack?ID=lsGkTM301OZApTtmoy2i5A==",
     "category": "Baby Products"
   },
@@ -1066,7 +1066,7 @@
   {
     "name": "Panda Baby Shampoo",
     "price": 540.0,
-    "quantity": "100.00 ml",
+    "quantity": "200.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Panda-Baby-Shampoo?ID=JU06M7E+MzzTjNMzx7HB3w==",
     "category": "Baby Products"
   },
@@ -1087,14 +1087,14 @@
   {
     "name": "Panda Baby Wash",
     "price": 280.5,
-    "quantity": "100.00 ml",
+    "quantity": "100.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Panda-Baby-Wash?ID=4yOs/VfAeRNud74CCI4ZuQ==",
     "category": "Baby Products"
   },
   {
     "name": "Baby Cheramy Moisturising Soap",
     "price": 200.0,
-    "quantity": "100.00 ml",
+    "quantity": "90.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Moisturising-Soap?ID=zEtXTe2hc4Gpb6CId/ZRjQ==",
     "category": "Baby Products"
   },
@@ -1108,7 +1108,7 @@
   {
     "name": "Velona Cuddles Diaper Pants, M",
     "price": 6075.0,
-    "quantity": "100.00 ml",
+    "quantity": "54.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Velona-Cuddles-Diaper-Pants-M?ID=KFpaHL/dYYu5dHrDxKQCOg==",
     "category": "Baby Products"
   },
@@ -1135,7 +1135,7 @@
   },
   {
     "name": "Panda Baby Mother`S Love Cologne",
-    "price": 434.0,
+    "price": 620.0,
     "quantity": "100.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Panda-Baby-Mothers-Love-Cologne?ID=uvb9/OjzXKgX33irxyqONw==",
     "category": "Baby Products"
@@ -1149,7 +1149,7 @@
   },
   {
     "name": "Panda Baby Cream",
-    "price": 420.0,
+    "price": 294.0,
     "quantity": "100.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Panda-Baby-Cream?ID=V2ezf8sPYBmwvd0rhAhJlA==",
     "category": "Baby Products"
@@ -1171,7 +1171,7 @@
   {
     "name": "Enfagrow A 4 Formula",
     "price": 5600.0,
-    "quantity": "18.00 pcs",
+    "quantity": "800.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Enfagrow-A-4-Formula?ID=Soomim9bYXuT+BEG5EvrHw==",
     "category": "Baby Products"
   },
@@ -1185,14 +1185,14 @@
   {
     "name": "Nangrow 3 Milk Formula For 1-5 Years Children",
     "price": 2000.0,
-    "quantity": "18.00 pcs",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Nangrow-3-Milk-Formula-for-15-Years-Children?ID=B+uNMkK9xEtXHOawJ38u3Q==",
     "category": "Baby Products"
   },
   {
     "name": "Marvel Baby Wet Wipes",
     "price": 675.0,
-    "quantity": "18.00 pcs",
+    "quantity": "80.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Marvel-Baby-Wet-Wipes?ID=kAm1en3IwFeIvXy3sLUeaQ==",
     "category": "Baby Products"
   },
@@ -1206,14 +1206,14 @@
   {
     "name": "Marvel Baby Diapers, Xl",
     "price": 7500.0,
-    "quantity": "18.00 pcs",
+    "quantity": "96.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Marvel-Baby-Diapers-XL?ID=V2srhgJS/4hIsBVqEd0sqA==",
     "category": "Baby Products"
   },
   {
     "name": "Enfagrow A 3 Formula",
     "price": 5600.0,
-    "quantity": "18.00 pcs",
+    "quantity": "800.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Enfagrow-A-3-Formula?ID=wrmOhJ7mmypLxXsvM6JjWQ==",
     "category": "Baby Products"
   },
@@ -1227,21 +1227,21 @@
   {
     "name": "Baby Cheramy Cologne Floral",
     "price": 840.0,
-    "quantity": "18.00 pcs",
+    "quantity": "200.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Cologne-Floral?ID=8sIPiC0y+FlNH7Tgt0rdcA==",
     "category": "Baby Products"
   },
   {
     "name": "Pears Pure & Gentle Baby Soap",
     "price": 200.0,
-    "quantity": "18.00 pcs",
+    "quantity": "90.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Pears-Pure-Gentle-Baby-Soap?ID=v1hwFFubParjUzeVoRmf0w==",
     "category": "Baby Products"
   },
   {
     "name": "Pears Baby Cream Pure & Gentle",
     "price": 370.0,
-    "quantity": "18.00 pcs",
+    "quantity": "100.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Pears-Baby-Cream-Pure-Gentle?ID=EOXlsxm6N2iaaUeAtBgNvQ==",
     "category": "Baby Products"
   },
@@ -1262,7 +1262,7 @@
   {
     "name": "Nan 2 Follow Up Formula",
     "price": 2200.0,
-    "quantity": "18.00 pcs",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Nan-2-Follow-Up-Formula?ID=GfxU/+l5zCzRV+n6EXiqbg==",
     "category": "Baby Products"
   },
@@ -1304,7 +1304,7 @@
   {
     "name": "Nan 1 Hm-0 Starter Formula",
     "price": 3000.0,
-    "quantity": "100.00 ml",
+    "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Nan-1-HM0-Starter-Formula?ID=/TTiMNmR+TAEeOSD8hwP8A==",
     "category": "Baby Products"
   },
@@ -1325,7 +1325,7 @@
   {
     "name": "Baby Cheramy Laundry Wash Powder",
     "price": 890.0,
-    "quantity": "100.00 ml",
+    "quantity": "1.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Laundry-Wash-Powder?ID=VSItnQG5Zbb5QPBBL2VFnw==",
     "category": "Baby Products"
   },
@@ -1379,13 +1379,6 @@
     "category": "Baby Products"
   },
   {
-    "name": "Cow & Gate 6-12 Months",
-    "price": 2480.0,
-    "quantity": "350.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Cow-Gate-612-months?ID=Ykm9h0Csaosad4qLWW3Vzw==",
-    "category": "Baby Products"
-  },
-  {
     "name": "Baby Cheramy Head To Toe Baby Wash Bed Time",
     "price": 340.0,
     "quantity": "100.00 ml",
@@ -1402,7 +1395,7 @@
   {
     "name": "Pampers Baby Diaper Pants, Xl",
     "price": 2550.0,
-    "quantity": "100.00 ml",
+    "quantity": "16.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Pampers-Baby-Diaper-Pants-XL?ID=5ba39G18OPH7htUDq21yYQ==",
     "category": "Baby Products"
   },
@@ -1437,7 +1430,7 @@
   {
     "name": "Marvel Baby Diapers, Small",
     "price": 7200.0,
-    "quantity": "400.00 g",
+    "quantity": "96.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Marvel-Baby-Diapers-Small?ID=MX5XIFXz6zMYLPpgAyScFA==",
     "category": "Baby Products"
   },
@@ -1451,7 +1444,7 @@
   {
     "name": "Baby Cheramy Baby Cologne",
     "price": 595.0,
-    "quantity": "400.00 g",
+    "quantity": "100.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Baby-Cologne?ID=jEawZM4MF1T08HrcOOmSfg==",
     "category": "Baby Products"
   },
@@ -1505,13 +1498,6 @@
     "category": "Baby Products"
   },
   {
-    "name": "Cow & Gate Milk Blue 2 Formula",
-    "price": 3200.0,
-    "quantity": "400.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Cow-Gate-Milk-Blue-2-Formula?ID=nmsNP3rD9t5bd1OnI2VXZw==",
-    "category": "Baby Products"
-  },
-  {
     "name": "Golden Cow Rusk, Banana",
     "price": 450.0,
     "quantity": "125.00 g",
@@ -1521,7 +1507,7 @@
   {
     "name": "Baby Cheramy Baby Cream",
     "price": 390.0,
-    "quantity": "400.00 g",
+    "quantity": "100.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Baby-Cream?ID=1otxCGWsWhfTHqSL4Hcjlg==",
     "category": "Baby Products"
   },
@@ -1591,7 +1577,7 @@
   {
     "name": "Baby Cheramy Floral Baby Cream",
     "price": 390.0,
-    "quantity": "1.00 pc",
+    "quantity": "100.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Floral-Baby-Cream?ID=ovyN8gzDKt4hzzrHQPZCEg==",
     "category": "Baby Products"
   },
@@ -1689,7 +1675,7 @@
   {
     "name": "Pampers Baby Diaper Pants, M",
     "price": 2410.0,
-    "quantity": "1.00 pc",
+    "quantity": "23.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Pampers-Baby-Diaper-Pants-M?ID=TlFxfUb4BEv5Pyeomk5BQA==",
     "category": "Baby Products"
   },
@@ -1710,7 +1696,7 @@
   {
     "name": "Baby Cheramy Kohomba & Venivel Soap",
     "price": 200.0,
-    "quantity": "36.00 pcs",
+    "quantity": "90.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Kohomba-Venivel-Soap?ID=v+QZAHSvEt/Db+FwQf9YRw==",
     "category": "Baby Products"
   },
@@ -1731,7 +1717,7 @@
   {
     "name": "Pampers Baby Diaper Pants, L",
     "price": 1300.0,
-    "quantity": "36.00 pcs",
+    "quantity": "9.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Pampers-Baby-Diaper-Pants-L?ID=CAS+oTgKRxAE6Uochoc1kQ==",
     "category": "Baby Products"
   },
@@ -1801,14 +1787,14 @@
   {
     "name": "Baby Cheramy Pokuru Wada & Sandal Soap",
     "price": 190.0,
-    "quantity": "36.00 pcs",
+    "quantity": "90.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Pokuru-Wada-Sandal-Soap?ID=Lyzwzu7tzn9vxoxfIxZUvg==",
     "category": "Baby Products"
   },
   {
     "name": "Baby Cheramy Baby Shampoo",
     "price": 330.0,
-    "quantity": "36.00 pcs",
+    "quantity": "100.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Baby-Cheramy-Baby-Shampoo?ID=ObNmvzsbHqTiTTCalt/sdA==",
     "category": "Baby Products"
   },
@@ -1817,6 +1803,13 @@
     "price": 2700.0,
     "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Nangrow-4-HM0-Formula?ID=/lRvmHvOX26J6h52ZLd6BA==",
+    "category": "Baby Products"
+  },
+  {
+    "name": "Cow & Gate 6-12 Months",
+    "price": 2480.0,
+    "quantity": "350.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Cow-Gate-612-months?ID=Ykm9h0Csaosad4qLWW3Vzw==",
     "category": "Baby Products"
   },
   {
@@ -1838,6 +1831,13 @@
     "price": 2000.0,
     "quantity": "20.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Lody-Baby-Diaper-Pant-XL-16kg?ID=ra68AE42QGrGr7nGI+Jl0g==",
+    "category": "Baby Products"
+  },
+  {
+    "name": "Cow & Gate Milk Blue 2 Formula",
+    "price": 3200.0,
+    "quantity": "400.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Baby-Products/Cow-Gate-Milk-Blue-2-Formula?ID=nmsNP3rD9t5bd1OnI2VXZw==",
     "category": "Baby Products"
   },
   {
@@ -1864,7 +1864,7 @@
   {
     "name": "Maliban Full Cream Milk Powder Pouch",
     "price": 1149.96,
-    "quantity": "120.00 g",
+    "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Maliban-Full-Cream-Milk-Powder-Pouch?ID=vQIxp1JtRImQG/YqrlvoEg==",
     "category": "Dairy"
   },
@@ -1878,14 +1878,14 @@
   {
     "name": "Magic Chocolate Ice Cream",
     "price": 2200.0,
-    "quantity": "120.00 g",
+    "quantity": "4.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Magic-Chocolate-Ice-Cream?ID=Nh3MXLZDleC5TrfSAokNxQ==",
     "category": "Dairy"
   },
   {
     "name": "Kotmale Butter Salted",
     "price": 1080.0,
-    "quantity": "120.00 g",
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Butter-Salted?ID=ESPTYvr9ZT3Ra8lffEXm+g==",
     "category": "Dairy"
   },
@@ -1899,7 +1899,7 @@
   {
     "name": "Kotmale Mozzarella Cheese",
     "price": 2500.0,
-    "quantity": "120.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Mozzarella-Cheese?ID=pmroP360MLQHi6Qk2XTi3w==",
     "category": "Dairy"
   },
@@ -1955,14 +1955,14 @@
   {
     "name": "Kotmale Swiss Cheese",
     "price": 900.0,
-    "quantity": "120.00 g",
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Swiss-Cheese?ID=R1X4LH8MVZBqCNMFsVazQg==",
     "category": "Dairy"
   },
   {
     "name": "Kotmale Vanilla Ice Cream",
     "price": 1080.0,
-    "quantity": "120.00 g",
+    "quantity": "2.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Vanilla-Ice-Cream?ID=XaBO41nd+EzkRgLCgjj+7g==",
     "category": "Dairy"
   },
@@ -1985,6 +1985,13 @@
     "price": 920.0,
     "quantity": "175.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Cheese-Spread?ID=hiSnd4ik35uJ5IokBEgqlQ==",
+    "category": "Dairy"
+  },
+  {
+    "name": "Ratthi Plain Set Yoghurt",
+    "price": 310.0,
+    "quantity": "4.00 pcs",
+    "url": "https://cargillsonline.com/ProductDetails/Dairy/Ratthi-Plain-Set-Yoghurt?ID=BAfJdFcOagn6D84z0fRxuA==",
     "category": "Dairy"
   },
   {
@@ -2018,7 +2025,7 @@
   {
     "name": "Ratthi Full Cream Milk Powder",
     "price": 1200.0,
-    "quantity": "1.00 l",
+    "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Ratthi-Full-Cream-Milk-Powder?ID=HmlNZJDF5h3A38okUhJrCw==",
     "category": "Dairy"
   },
@@ -2039,7 +2046,7 @@
   {
     "name": "Anchor Full Cream Milk Powder",
     "price": 1200.0,
-    "quantity": "1.00 l",
+    "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Anchor-Full-Cream-Milk-Powder?ID=mQZIc0lU9Bzm1Ze99BbJuQ==",
     "category": "Dairy"
   },
@@ -2060,7 +2067,7 @@
   {
     "name": "Lakspray Full Cream Milk Powder Pouch",
     "price": 2980.0,
-    "quantity": "1.00 l",
+    "quantity": "1.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Lakspray-Full-Cream-Milk-Powder-Pouch?ID=+LTRr2+IedVJkW8Dxf7W6Q==",
     "category": "Dairy"
   },
@@ -2102,15 +2109,8 @@
   {
     "name": "Kotmale Chox Food Drink",
     "price": 140.0,
-    "quantity": "1.00 l",
+    "quantity": "180.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Chox-Food-Drink?ID=h7rYd9/YYr2MiVHF80cI/w==",
-    "category": "Dairy"
-  },
-  {
-    "name": "Ratthi Set Yoghurt",
-    "price": 80.0,
-    "quantity": "1.00 l",
-    "url": "https://cargillsonline.com/ProductDetails/Dairy/Ratthi-Set-Yoghurt?ID=0d6MIftdx37+DywPihlD6A==",
     "category": "Dairy"
   },
   {
@@ -2165,7 +2165,7 @@
   {
     "name": "Richlife Butter Salted",
     "price": 1100.0,
-    "quantity": "400.00 g",
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Richlife-Butter-Salted?ID=55lCQB1I1rAH+jeMlbeHIw==",
     "category": "Dairy"
   },
@@ -2179,7 +2179,7 @@
   {
     "name": "Kotmale Set Yoghurt Multi Pack 80 G",
     "price": 400.0,
-    "quantity": "400.00 g",
+    "quantity": "6.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Set-Yoghurt-Multi-Pack-80-g?ID=euiEMHY2V81WgfyREIZpGA==",
     "category": "Dairy"
   },
@@ -2207,7 +2207,7 @@
   {
     "name": "Magic Vanilla & Chocolate Ice Cream",
     "price": 1450.0,
-    "quantity": "400.00 g",
+    "quantity": "2.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Magic-Vanilla-Chocolate-Ice-Cream?ID=3vR3X0x3k5f/ngLP5b9hbQ==",
     "category": "Dairy"
   },
@@ -2228,7 +2228,7 @@
   {
     "name": "Milkmaid Condensed Milk",
     "price": 790.0,
-    "quantity": "400.00 g",
+    "quantity": "390.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Milkmaid-Condensed-Milk?ID=huAj8MCj8FqpoFjhI7ZvfA==",
     "category": "Dairy"
   },
@@ -2270,21 +2270,21 @@
   {
     "name": "Kotmale Processed Cheese",
     "price": 950.0,
-    "quantity": "120.00 ml",
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Processed-Cheese?ID=6DfzFEKUWMq58vJBm5rPCQ==",
     "category": "Dairy"
   },
   {
     "name": "Kotmale Curd",
-    "price": 400.0,
-    "quantity": "120.00 ml",
+    "price": 300.0,
+    "quantity": "450.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Curd?ID=9+EFU8IlH4k5hMCVYZSxmA==",
     "category": "Dairy"
   },
   {
     "name": "Magic Vanilla Ice Cream",
-    "price": 1250.0,
-    "quantity": "120.00 ml",
+    "price": 937.5,
+    "quantity": "2.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Magic-Vanilla-Ice-Cream?ID=ERqp//YRx+PD1ToD4jFIcw==",
     "category": "Dairy"
   },
@@ -2311,7 +2311,7 @@
   },
   {
     "name": "Kotmale Cheddar Cheese",
-    "price": 910.0,
+    "price": 1300.0,
     "quantity": "250.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Cheddar-Cheese?ID=yqVjZ9USj0TZm4fP1GHtOw==",
     "category": "Dairy"
@@ -2326,28 +2326,28 @@
   {
     "name": "Kotmale Milk Vanilla",
     "price": 600.0,
-    "quantity": "120.00 ml",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Milk-Vanilla?ID=Og4bivo2dRxKICqlqaGeUg==",
     "category": "Dairy"
   },
   {
     "name": "Kotmale Fruit & Nut Ice Cream",
     "price": 850.0,
-    "quantity": "120.00 ml",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Fruit-Nut-Ice-Cream?ID=mFUEH7Hs3UsnQZGjJp8QAA==",
     "category": "Dairy"
   },
   {
     "name": "Magic Butterscotch With Nougat Ice Cream",
-    "price": 1425.0,
-    "quantity": "120.00 ml",
+    "price": 1900.0,
+    "quantity": "2.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Magic-Butterscotch-With-Nougat-Ice-Cream?ID=/fZt+XKLI0mP88+WNZE1gg==",
     "category": "Dairy"
   },
   {
     "name": "Kotmale Faluda Milk Uht",
-    "price": 600.0,
-    "quantity": "120.00 ml",
+    "price": 450.0,
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Faluda-Milk-UHT?ID=gyHIltGS5jF72Ljj8nV8EA==",
     "category": "Dairy"
   },
@@ -2367,7 +2367,7 @@
   },
   {
     "name": "Heavelny Almond Nougat Ice Cream",
-    "price": 1280.0,
+    "price": 1035.0,
     "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Heavelny-Almond-Nougat-Ice-Cream?ID=Vdb85s4mMXAmADwjL7kvzg==",
     "category": "Dairy"
@@ -2424,7 +2424,7 @@
   {
     "name": "Magic Fruit & Nut Ice Cream",
     "price": 1900.0,
-    "quantity": "200.00 g",
+    "quantity": "2.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Magic-Fruit-Nut-Ice-Cream?ID=bgrNc5sp01G9E/Ez+jEySw==",
     "category": "Dairy"
   },
@@ -2613,7 +2613,7 @@
   {
     "name": "Richlife Cheese Slices",
     "price": 560.0,
-    "quantity": "200.00 g",
+    "quantity": "100.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Richlife-Cheese-Slices?ID=VRwuRqxt1sbchuZYYZdmrg==",
     "category": "Dairy"
   },
@@ -2725,7 +2725,7 @@
   {
     "name": "Kotmale Chocolate Ice Cream",
     "price": 1180.0,
-    "quantity": "180.00 ml",
+    "quantity": "2.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Chocolate-Ice-Cream?ID=AyZ/H+10h/O8aDndMiEPWA==",
     "category": "Dairy"
   },
@@ -2800,6 +2800,13 @@
     "category": "Dairy"
   },
   {
+    "name": "Kotmale Pasteurised Full Cream Milk",
+    "price": 200.0,
+    "quantity": "400.00 ml",
+    "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Pasteurised-Full-Cream-Milk?ID=d/YbHtqusYZvdPVChnFr3w==",
+    "category": "Dairy"
+  },
+  {
     "name": "Anchor Uht Whipping Cream",
     "price": 4100.0,
     "quantity": "1.00 l",
@@ -2809,7 +2816,7 @@
   {
     "name": "Alerics Rocky Road Ice Cream",
     "price": 1650.0,
-    "quantity": "180.00 ml",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Alerics-Rocky-Road-Ice-Cream?ID=S0ibpxxzDZq9YB6JaNSZGw==",
     "category": "Dairy"
   },
@@ -2818,13 +2825,6 @@
     "price": 150.0,
     "quantity": "80.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Mixed-Berry-Stirred-Yoghurt?ID=rH7gvl0O+PF2U8PeQ2r1tg==",
-    "category": "Dairy"
-  },
-  {
-    "name": "Anchor Newdale Set Kiri",
-    "price": 380.0,
-    "quantity": "450.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Dairy/Anchor-Newdale-Set-Kiri?ID=Ry2z6YP6s8llFD8MSlIWdQ==",
     "category": "Dairy"
   },
   {
@@ -2928,7 +2928,7 @@
   {
     "name": "Alerics Mint Chocolate Chip Ice Cream",
     "price": 1500.0,
-    "quantity": "800.00 g",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Alerics-Mint-Chocolate-Chip-Ice-Cream?ID=slrpjRpcOfNT+hcDZx83LQ==",
     "category": "Dairy"
   },
@@ -2942,7 +2942,7 @@
   {
     "name": "Alerics Cookie Espresso Ice Cream",
     "price": 1500.0,
-    "quantity": "800.00 g",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Alerics-Cookie-Espresso-Ice-Cream?ID=24qG3SC9rxEoDpAzqlS6Mg==",
     "category": "Dairy"
   },
@@ -2984,7 +2984,7 @@
   {
     "name": "Alerics Salted Caramel & Honeycomb Ice Cream",
     "price": 1500.0,
-    "quantity": "150.00 g",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Alerics-Salted-Caramel-Honeycomb-Ice-Cream?ID=MfnkPquqfLQsqoj3nDmNfA==",
     "category": "Dairy"
   },
@@ -3026,7 +3026,7 @@
   {
     "name": "Happy Hen Eggs Large",
     "price": 590.0,
-    "quantity": "150.00 g",
+    "quantity": "10.00 S",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/HAPPY-HEN-EGGS-LARGE?ID=nc202Yz9F+Lg8tUGrGkZaQ==",
     "category": "Dairy"
   },
@@ -3220,17 +3220,17 @@
     "category": "Dairy"
   },
   {
-    "name": "Kotmale Pasteurised Full Cream Milk",
-    "price": 200.0,
-    "quantity": "200.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Dairy/Kotmale-Pasteurised-Full-Cream-Milk?ID=d/YbHtqusYZvdPVChnFr3w==",
-    "category": "Dairy"
-  },
-  {
     "name": "Happy Cow Cream Cheese",
     "price": 1390.0,
     "quantity": "140.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Happy-Cow-Cream-Cheese?ID=qDqIWEmUu/YHZcxJnilPyw==",
+    "category": "Dairy"
+  },
+  {
+    "name": "Anchor Newdale Set Kiri",
+    "price": 380.0,
+    "quantity": "450.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Dairy/Anchor-Newdale-Set-Kiri?ID=Ry2z6YP6s8llFD8MSlIWdQ==",
     "category": "Dairy"
   },
   {
@@ -3348,7 +3348,7 @@
   {
     "name": "Highland Fresh Milk Uht",
     "price": 230.0,
-    "quantity": "90.00 g",
+    "quantity": "450.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Dairy/Highland-Fresh-Milk-UHT?ID=P6yjO2Kei8IOH2srgztU7g==",
     "category": "Dairy"
   },
@@ -3453,7 +3453,7 @@
   {
     "name": "Nestomalt Malted Beverage Pouch",
     "price": 1120.0,
-    "quantity": "2.00 l",
+    "quantity": "600.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Nestomalt-Malted-Beverage-Pouch?ID=w6dPB65Hj+qqgKVjGOUp3A==",
     "category": "Beverages"
   },
@@ -3467,14 +3467,14 @@
   {
     "name": "Ride Classic Energy Drink",
     "price": 297.5,
-    "quantity": "2.00 l",
+    "quantity": "250.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Ride-Classic-Energy-Drink?ID=9zk1GtA2pWbbVEmJGr8heg==",
     "category": "Beverages"
   },
   {
     "name": "Kist Mixed Fruit Nectar",
     "price": 467.5,
-    "quantity": "2.00 l",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Kist-Mixed-Fruit-Nectar?ID=64BxUqgLTbfhq294tb0YBg==",
     "category": "Beverages"
   },
@@ -3502,14 +3502,14 @@
   {
     "name": "Nestle Coffeemate Jar",
     "price": 1050.0,
-    "quantity": "2.00 l",
+    "quantity": "170.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Nestle-Coffeemate-Jar?ID=uek9axVXtA7h6lJ4FfajAg==",
     "category": "Beverages"
   },
   {
     "name": "Aquafina Drinking Water",
     "price": 150.0,
-    "quantity": "2.00 l",
+    "quantity": "1.50 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Aquafina-Drinking-Water?ID=dQOVQJ2swJ6COSkJOGF6dQ==",
     "category": "Beverages"
   },
@@ -3523,7 +3523,7 @@
   {
     "name": "Md Passiona Passion Fruit Cordial",
     "price": 1500.0,
-    "quantity": "2.00 l",
+    "quantity": "750.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/MD-Passiona-Passion-Fruit-Cordial?ID=g5AHWnAH6/9Gt+jS8AEBbg==",
     "category": "Beverages"
   },
@@ -3537,7 +3537,7 @@
   {
     "name": "Pepsi",
     "price": 420.0,
-    "quantity": "2.00 l",
+    "quantity": "1.50 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Pepsi?ID=qjpViotAYkPQgtvgdFzLqQ==",
     "category": "Beverages"
   },
@@ -3551,7 +3551,7 @@
   {
     "name": "Md Orange Cordial",
     "price": 675.0,
-    "quantity": "2.00 l",
+    "quantity": "400.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/MD-Orange-Cordial?ID=IwENaJL7rN5McCxkNdJscA==",
     "category": "Beverages"
   },
@@ -3572,7 +3572,7 @@
   {
     "name": "Kist Mango Nectar",
     "price": 550.0,
-    "quantity": "500.00 ml",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Kist-Mango-Nectar?ID=0ZqU42TzgKoXetqYsgv/sQ==",
     "category": "Beverages"
   },
@@ -3600,21 +3600,21 @@
   {
     "name": "Knuckles Drinking Water",
     "price": 150.0,
-    "quantity": "500.00 ml",
+    "quantity": "1.50 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Knuckles-Drinking-Water?ID=2JvI72cmKMdu1Cplr/CMug==",
     "category": "Beverages"
   },
   {
     "name": "Kist 100% Juice, Green Apple",
     "price": 1300.0,
-    "quantity": "500.00 ml",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Kist-100-Juice-Green-Apple?ID=hqno9QixTq/8+ACMH3ldQA==",
     "category": "Beverages"
   },
   {
     "name": "Coca Cola-Pet",
     "price": 420.0,
-    "quantity": "500.00 ml",
+    "quantity": "1.50 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Coca-ColaPET?ID=EVnugXllRVFptZA/ObVD4g==",
     "category": "Beverages"
   },
@@ -3648,8 +3648,8 @@
   },
   {
     "name": "Elephant House Ginger Beer",
-    "price": 420.0,
-    "quantity": "500.00 ml",
+    "price": 315.0,
+    "quantity": "1.50 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Elephant-House-Ginger-Beer?ID=eoAmrXrON6M97nKA9bUSzg==",
     "category": "Beverages"
   },
@@ -3663,7 +3663,7 @@
   {
     "name": "Elephant House Orange Crush",
     "price": 420.0,
-    "quantity": "500.00 ml",
+    "quantity": "1.50 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Elephant-House-Orange-Crush?ID=HGudO0GFId9Na1B1CXbI4w==",
     "category": "Beverages"
   },
@@ -3712,7 +3712,7 @@
   {
     "name": "Elephant House Cream Soda",
     "price": 420.0,
-    "quantity": "700.00 ml",
+    "quantity": "1.50 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Elephant-House-Cream-Soda?ID=keGEbY0+p0NcVpa4/fF3UQ==",
     "category": "Beverages"
   },
@@ -3789,7 +3789,7 @@
   {
     "name": "Viva Original Malted Food Drink Pouch",
     "price": 770.0,
-    "quantity": "700.00 ml",
+    "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Viva-Original-Malted-Food-Drink-Pouch?ID=BB2+6bNLDhEaIVCZE9ENJw==",
     "category": "Beverages"
   },
@@ -3815,16 +3815,23 @@
     "category": "Beverages"
   },
   {
+    "name": "Elephant House Soda",
+    "price": 120.0,
+    "quantity": "500.00 ml",
+    "url": "https://cargillsonline.com/ProductDetails/Beverages/Elephant-House-Soda?ID=oStk15/ToSsJXy6fAUykYw==",
+    "category": "Beverages"
+  },
+  {
     "name": "Kist Aloe Vera Nectar",
     "price": 300.0,
-    "quantity": "700.00 ml",
+    "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Kist-Aloe-Vera-Nectar?ID=2NKP2IOCNWsSsBYgyj3VfQ==",
     "category": "Beverages"
   },
   {
     "name": "7 Up",
     "price": 300.0,
-    "quantity": "700.00 ml",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/7-Up?ID=fYxMnEo/UhGa3IUxIAn54A==",
     "category": "Beverages"
   },
@@ -3852,7 +3859,7 @@
   {
     "name": "Elephant House Lemonade",
     "price": 370.0,
-    "quantity": "175.00 g",
+    "quantity": "1.50 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Elephant-House-Lemonade?ID=qJNbr7MqwM+ujXTmB5jSFQ==",
     "category": "Beverages"
   },
@@ -3908,14 +3915,14 @@
   {
     "name": "Red Bull Energy Drink",
     "price": 2880.0,
-    "quantity": "175.00 g",
+    "quantity": "4.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Red-Bull-Energy-Drink?ID=2afU+kwQsYPRe3MvNiYYXA==",
     "category": "Beverages"
   },
   {
     "name": "Sunquick Mango Cordial",
     "price": 1480.0,
-    "quantity": "175.00 g",
+    "quantity": "700.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Sunquick-Mango-Cordial?ID=ByS+RyS7yaNTyAmRlePwoA==",
     "category": "Beverages"
   },
@@ -3929,14 +3936,14 @@
   {
     "name": "Kist Woodapple Nectar",
     "price": 300.0,
-    "quantity": "175.00 g",
+    "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Kist-Woodapple-Nectar?ID=xrGp2btj/6oWCTvk9yGY2w==",
     "category": "Beverages"
   },
   {
     "name": "Sunquick Orange Cordial",
     "price": 720.0,
-    "quantity": "175.00 g",
+    "quantity": "330.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Sunquick-Orange-Cordial?ID=ozd81uFSBFJko8/RxbdDOw==",
     "category": "Beverages"
   },
@@ -3952,13 +3959,6 @@
     "price": 600.0,
     "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Elephant-House-Fit-O-Flavored-Orange-Drink?ID=ADnsHHt22eotbxB1mVPAUQ==",
-    "category": "Beverages"
-  },
-  {
-    "name": "Elephant House Soda",
-    "price": 250.0,
-    "quantity": "175.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Beverages/Elephant-House-Soda?ID=bYXR3oMpuU1cIs/I+hylvw==",
     "category": "Beverages"
   },
   {
@@ -3992,7 +3992,7 @@
   {
     "name": "Kist Apple Nectar",
     "price": 570.0,
-    "quantity": "500.00 ml",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Kist-Apple-Nectar?ID=Xj19tEeAqLg1Y3tRwAjDXw==",
     "category": "Beverages"
   },
@@ -4055,7 +4055,7 @@
   {
     "name": "Sprite-Pet",
     "price": 200.0,
-    "quantity": "500.00 ml",
+    "quantity": "400.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/SpritePET?ID=ml48CeEHFPAo+BDoG2JR8w==",
     "category": "Beverages"
   },
@@ -4244,14 +4244,14 @@
   {
     "name": "Kinley Soda",
     "price": 100.0,
-    "quantity": "500.00 ml",
+    "quantity": "400.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Kinley-Soda?ID=rlUpOzE2pudUYthqvcp5ew==",
     "category": "Beverages"
   },
   {
     "name": "Coca Cola Zero-Pet",
     "price": 200.0,
-    "quantity": "500.00 ml",
+    "quantity": "400.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Coca-Cola-ZeroPET?ID=5AHqKZpZzkZZo3EzSCODDg==",
     "category": "Beverages"
   },
@@ -4334,7 +4334,7 @@
   },
   {
     "name": "Mirinda",
-    "price": 300.0,
+    "price": 400.0,
     "quantity": "1.50 l",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Mirinda?ID=k47UIc0Az02lcG1UwFKwlg==",
     "category": "Beverages"
@@ -4377,7 +4377,7 @@
   {
     "name": "Coca Cola-Pet",
     "price": 200.0,
-    "quantity": "1.50 l",
+    "quantity": "400.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Beverages/Coca-ColaPET?ID=W3qiTTi+wecJUzs81yRcvA==",
     "category": "Beverages"
   },
@@ -4412,14 +4412,14 @@
   {
     "name": "Prima Kottu Mee Multi Pack 85 G",
     "price": 675.0,
-    "quantity": "75.00 g",
+    "quantity": "5.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Prima-Kottu-Mee-Multi-Pack-85-g?ID=tjXvAeQ/GRibNOM2AVrFOQ==",
     "category": "Food Cupboard"
   },
   {
     "name": "Kelloggs Oats",
     "price": 380.0,
-    "quantity": "75.00 g",
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Kelloggs-Oats?ID=xkUAuYK75jETuMTgBI53ZQ==",
     "category": "Food Cupboard"
   },
@@ -4447,7 +4447,7 @@
   {
     "name": "Astra Fat Spread",
     "price": 1120.0,
-    "quantity": "75.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Astra-Fat-Spread?ID=QGDl8AvsXJ2EjxFp7Nupug==",
     "category": "Food Cupboard"
   },
@@ -4461,7 +4461,7 @@
   {
     "name": "Meadowlea Fat Spread",
     "price": 1030.0,
-    "quantity": "75.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Meadowlea-Fat-Spread?ID=ZHCQ4qSpGgV8gLm2k0yNHA==",
     "category": "Food Cupboard"
   },
@@ -4475,7 +4475,7 @@
   {
     "name": "Flora Margarine",
     "price": 1112.0,
-    "quantity": "75.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Flora-Margarine?ID=yFNZjZNeNYcE6Wws/Dfmhg==",
     "category": "Food Cupboard"
   },
@@ -4488,8 +4488,8 @@
   },
   {
     "name": "Marmite Yeast Extract Medium",
-    "price": 600.0,
-    "quantity": "75.00 g",
+    "price": 750.0,
+    "quantity": "100.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Marmite-Yeast-Extract-Medium?ID=lzPxGqCNv5ortVS8FwyvaQ==",
     "category": "Food Cupboard"
   },
@@ -4503,7 +4503,7 @@
   {
     "name": "Prima Kottu Mee Cheese & Onion Noodles",
     "price": 105.0,
-    "quantity": "75.00 g",
+    "quantity": "85.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Prima-Kottu-Mee-Cheese-Onion-Noodles?ID=R6e9UYh6oNOtw0qxLBQahA==",
     "category": "Food Cupboard"
   },
@@ -4524,7 +4524,7 @@
   {
     "name": "Kist Mixed Fruit Jam",
     "price": 467.5,
-    "quantity": "75.00 g",
+    "quantity": "510.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Kist-Mixed-Fruit-Jam?ID=tDtiFn5xT9wBUC4ORv1YKA==",
     "category": "Food Cupboard"
   },
@@ -4671,7 +4671,7 @@
   {
     "name": "Fondre Fat Spread",
     "price": 1088.0,
-    "quantity": "400.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Fondre-Fat-Spread?ID=wH7dWL/Xy+/ngTaRmyning==",
     "category": "Food Cupboard"
   },
@@ -4685,7 +4685,7 @@
   {
     "name": "Kelloggs Corn Flakes",
     "price": 1351.5,
-    "quantity": "400.00 g",
+    "quantity": "475.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Kelloggs-Corn-Flakes?ID=DzHY/qMHL7ghxKG1tN2y6Q==",
     "category": "Food Cupboard"
   },
@@ -4741,7 +4741,7 @@
   {
     "name": "Md Mango Jam",
     "price": 410.0,
-    "quantity": "1.00 kg",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/MD-Mango-Jam?ID=6cCSQqMXVOUwVxGcpnOPkA==",
     "category": "Food Cupboard"
   },
@@ -4783,7 +4783,7 @@
   {
     "name": "Kist Strawberry Flavour Melon Jam",
     "price": 351.0,
-    "quantity": "1.00 kg",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Kist-Strawberry-Flavour-Melon-Jam?ID=bPmrhc84GhUnFTkQzoXkfw==",
     "category": "Food Cupboard"
   },
@@ -4951,21 +4951,21 @@
   {
     "name": "My Choice Green Gram Packet",
     "price": 430.0,
-    "quantity": "1.00 kg",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/My-Choice-Green-Gram-Packet?ID=NCN+4age5SGuhdhoUyjv9Q==",
     "category": "Food Cupboard"
   },
   {
     "name": "Md Pineapple Jam",
     "price": 410.0,
-    "quantity": "1.00 kg",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Md-Pineapple-Jam?ID=8JzBfgFNF4T+Wuk+TuWlMw==",
     "category": "Food Cupboard"
   },
   {
     "name": "Kelloggs Muesli, Fruit & Nut",
     "price": 1351.5,
-    "quantity": "1.00 kg",
+    "quantity": "240.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Kelloggs-Muesli-Fruit-Nut?ID=eKgntgw8TP4iJ9FjpQnybg==",
     "category": "Food Cupboard"
   },
@@ -5112,7 +5112,7 @@
   {
     "name": "Anchor Red Cowpea",
     "price": 850.0,
-    "quantity": "450.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Anchor-Red-Cowpea?ID=kzGYJy09en3icAZQwxW7HA==",
     "category": "Food Cupboard"
   },
@@ -5149,6 +5149,13 @@
     "price": 279.0,
     "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/MD-Tomato-Sauce?ID=VxCn2mu8A8h01pHh/IkQUw==",
+    "category": "Food Cupboard"
+  },
+  {
+    "name": "Havana Brown Egg Large, 10.00 Pcs",
+    "price": 580.0,
+    "quantity": "10.00 pcs",
+    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Havana-Brown-Egg-Large-1000-pcs?ID=aaQCVb4sfKVvQl0oVzLBJQ==",
     "category": "Food Cupboard"
   },
   {
@@ -5210,7 +5217,7 @@
   {
     "name": "Prima Kottu Mee Multi Pack,Chicken 5Pcs",
     "price": 700.0,
-    "quantity": "450.00 g",
+    "quantity": "85.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Prima-Kottu-Mee-Multi-PackChicken-5pcs?ID=3k+bBlTxzlA5Vs9fP1MV6Q==",
     "category": "Food Cupboard"
   },
@@ -5231,14 +5238,14 @@
   {
     "name": "Kelloggs Chocos",
     "price": 1040.0,
-    "quantity": "450.00 g",
+    "quantity": "250.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Kelloggs-Chocos?ID=0wAkxRgK4j5RzAGAkghA3Q==",
     "category": "Food Cupboard"
   },
   {
     "name": "Samaposha",
-    "price": 345.0,
-    "quantity": "450.00 g",
+    "price": 460.0,
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Samaposha?ID=n4y3XImHOT34OR3rSpPhoQ==",
     "category": "Food Cupboard"
   },
@@ -5251,7 +5258,7 @@
   },
   {
     "name": "Roza Spaghetti",
-    "price": 475.0,
+    "price": 332.5,
     "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Roza-Spaghetti?ID=3wwRl7ykahFKmGPJ9GSMkA==",
     "category": "Food Cupboard"
@@ -5265,7 +5272,7 @@
   },
   {
     "name": "Malusoy Devilled Prawn",
-    "price": 160.0,
+    "price": 112.0,
     "quantity": "90.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Malusoy-Devilled-Prawn?ID=OpXqOnZ9xneV9hGQX9HJjg==",
     "category": "Food Cupboard"
@@ -5286,14 +5293,14 @@
   },
   {
     "name": "Prima Stella Chicken Noodles 5 Pack",
-    "price": 650.0,
+    "price": 455.0,
     "quantity": "74.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Prima-Stella-Chicken-Noodles-5-Pack?ID=OfY5blUCT5lQjqkHPrYtvw==",
     "category": "Food Cupboard"
   },
   {
     "name": "Md Strawberry Jam",
-    "price": 1050.0,
+    "price": 787.5,
     "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/MD-Strawberry-Jam?ID=UQG4Wa307XrbqjfuNSwMBA==",
     "category": "Food Cupboard"
@@ -5343,14 +5350,14 @@
   {
     "name": "My Choice Gram Dhal Packet",
     "price": 225.0,
-    "quantity": "400.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/My-Choice-Gram-Dhal-Packet?ID=YwDRZJPgzoT1Rk8BHHRIEA==",
     "category": "Food Cupboard"
   },
   {
     "name": "Supreme Ready To Cook Sprats",
     "price": 550.0,
-    "quantity": "400.00 g",
+    "quantity": "100.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Supreme-Ready-To-Cook-Sprats?ID=qdp89VPrm8VyBoe1TRktJQ==",
     "category": "Food Cupboard"
   },
@@ -5364,7 +5371,7 @@
   {
     "name": "My Choice Chick Peas Packet",
     "price": 545.0,
-    "quantity": "400.00 g",
+    "quantity": "1.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/My-Choice-Chick-Peas-Packet?ID=WsJKbfOYUsn0V4DHx4LsiA==",
     "category": "Food Cupboard"
   },
@@ -5427,7 +5434,7 @@
   {
     "name": "Sethum White Cowpea",
     "price": 997.0,
-    "quantity": "250.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Sethum-White-Cowpea?ID=u+pGt2HclXOQWaw0y3A4qw==",
     "category": "Food Cupboard"
   },
@@ -5448,7 +5455,7 @@
   {
     "name": "Oateo Instant Oats Jar",
     "price": 1550.0,
-    "quantity": "250.00 g",
+    "quantity": "1.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Oateo-Instant-Oats-Jar?ID=9oPs89WRExkIjc4XZ/FJKw==",
     "category": "Food Cupboard"
   },
@@ -5476,7 +5483,7 @@
   {
     "name": "Maggi Chicken Flavour Noodles",
     "price": 120.0,
-    "quantity": "250.00 g",
+    "quantity": "73.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Maggi-Chicken-Flavour-Noodles?ID=n8QUxpL5slUA9V9NFitG9g==",
     "category": "Food Cupboard"
   },
@@ -5490,7 +5497,7 @@
   {
     "name": "Oateo Rolled Oats",
     "price": 900.0,
-    "quantity": "250.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Oateo-Rolled-Oats?ID=OGXdVWyDkOJow5fod31bEA==",
     "category": "Food Cupboard"
   },
@@ -5600,13 +5607,6 @@
     "category": "Food Cupboard"
   },
   {
-    "name": "Nissin Spiced Chicken Cup Noodles",
-    "price": 240.0,
-    "quantity": "45.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Nissin-Spiced-Chicken-Cup-Noodles?ID=biH9ViQvKazYN8AkFZ7qsw==",
-    "category": "Food Cupboard"
-  },
-  {
     "name": "Heinz Tomato Ketchup Pouch",
     "price": 650.0,
     "quantity": "285.00 g",
@@ -5618,6 +5618,13 @@
     "price": 2995.0,
     "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Kelloggs-Muesli-Nuts-Delight?ID=KKD88mb4bThqQQmQuznPaA==",
+    "category": "Food Cupboard"
+  },
+  {
+    "name": "Nissin Spiced Chicken Cup Noodles",
+    "price": 240.0,
+    "quantity": "45.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Nissin-Spiced-Chicken-Cup-Noodles?ID=biH9ViQvKazYN8AkFZ7qsw==",
     "category": "Food Cupboard"
   },
   {
@@ -5798,7 +5805,7 @@
   {
     "name": "Kist Woodapple Jam",
     "price": 390.0,
-    "quantity": "400.00 g",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Kist-Woodapple-Jam?ID=D165FCD9WFvjPHexYoABUg==",
     "category": "Food Cupboard"
   },
@@ -5895,7 +5902,7 @@
   },
   {
     "name": "Lankasoy Curry Flavour",
-    "price": 140.0,
+    "price": 150.0,
     "quantity": "90.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Lankasoy-Curry-Flavour?ID=6nW1qkEFUNxi0Xya9ES8kQ==",
     "category": "Food Cupboard"
@@ -6001,7 +6008,7 @@
   {
     "name": "Prima Kottu Mee Nai Miris Noodles",
     "price": 140.0,
-    "quantity": "350.00 g",
+    "quantity": "80.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Prima-Kottu-Mee-Nai-Miris-Noodles?ID=ammvyCCo46cjlMwRr0krMg==",
     "category": "Food Cupboard"
   },
@@ -6253,7 +6260,7 @@
   {
     "name": "Coopoliva Stuffed Green Olives",
     "price": 1800.0,
-    "quantity": "67.00 g",
+    "quantity": "450.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Coopoliva-Stuffed-Green-Olives?ID=7PAHbzGDaBKxGuy7iKSg2w==",
     "category": "Food Cupboard"
   },
@@ -6785,7 +6792,7 @@
   {
     "name": "San Remo Elbows",
     "price": 1000.0,
-    "quantity": "80.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/San-Remo-Elbows?ID=WWwfTRBT2bUGGopw/7jZfw==",
     "category": "Food Cupboard"
   },
@@ -6808,13 +6815,6 @@
     "price": 1000.0,
     "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/San-Remo-Linguine?ID=3n5jsySW6iJ+G4QeFEF+pw==",
-    "category": "Food Cupboard"
-  },
-  {
-    "name": "Greenland Sweet Corn",
-    "price": 850.0,
-    "quantity": "425.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Greenland-Sweet-Corn?ID=N4JUGp6Bjlwx84Hh+RJHIw==",
     "category": "Food Cupboard"
   },
   {
@@ -6897,15 +6897,8 @@
   {
     "name": "Happy Hen Eggs Xl",
     "price": 618.0,
-    "quantity": "400.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Happy-Hen-Eggs-XL?ID=atAikYejPxzGmTtl2O1iGA==",
-    "category": "Food Cupboard"
-  },
-  {
-    "name": "Cic Besto Omega 3 White Egg Standard",
-    "price": 650.0,
     "quantity": "10.00 pcs",
-    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Cic-Besto-Omega-3-White-Egg-Standard?ID=MSKQn7XUbdnEBww1OcBE1Q==",
+    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Happy-Hen-Eggs-XL?ID=atAikYejPxzGmTtl2O1iGA==",
     "category": "Food Cupboard"
   },
   {
@@ -6916,10 +6909,10 @@
     "category": "Food Cupboard"
   },
   {
-    "name": "Havana Brown Egg Large, 10.00 Pcs",
-    "price": 580.0,
+    "name": "Cic Besto Omega 3 White Egg Standard",
+    "price": 650.0,
     "quantity": "10.00 pcs",
-    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Havana-Brown-Egg-Large-1000-pcs?ID=aaQCVb4sfKVvQl0oVzLBJQ==",
+    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Cic-Besto-Omega-3-White-Egg-Standard?ID=MSKQn7XUbdnEBww1OcBE1Q==",
     "category": "Food Cupboard"
   },
   {
@@ -7049,6 +7042,13 @@
     "category": "Food Cupboard"
   },
   {
+    "name": "Greenland Sweet Corn",
+    "price": 850.0,
+    "quantity": "425.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Food-Cupboard/Greenland-Sweet-Corn?ID=N4JUGp6Bjlwx84Hh+RJHIw==",
+    "category": "Food Cupboard"
+  },
+  {
     "name": "Comfort Fabric Conditioner Super Sensorial Desire",
     "price": 1137.5,
     "quantity": "850.00 ml",
@@ -7058,7 +7058,7 @@
   {
     "name": "Lysol Floral Disinfectant",
     "price": 840.0,
-    "quantity": "850.00 ml",
+    "quantity": "950.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Lysol-Floral-Disinfectant?ID=6Vj9oKk3uysq46PyhOofdA==",
     "category": "Household"
   },
@@ -7100,13 +7100,13 @@
   {
     "name": "Vim Lime Fresh Dishwash Liquid",
     "price": 360.0,
-    "quantity": "850.00 ml",
+    "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Vim-Lime-Fresh-Dishwash-Liquid?ID=gUKrfNLFYDKjP/X8tVDtrQ==",
     "category": "Household"
   },
   {
     "name": "Diva Flowers Rose & Lime",
-    "price": 280.0,
+    "price": 292.0,
     "quantity": "1.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Household/Diva-Flowers-Rose-Lime?ID=BkqxLNzro8fU3arrKNvGoQ==",
     "category": "Household"
@@ -7120,8 +7120,8 @@
   },
   {
     "name": "Sunlight Matic Detergent Liquid",
-    "price": 700.0,
-    "quantity": "850.00 ml",
+    "price": 560.0,
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Household/Sunlight-Matic-Detergent-Liquid?ID=UdGd1ssK/QXBtG7E2P92fQ==",
     "category": "Household"
   },
@@ -7148,7 +7148,7 @@
   },
   {
     "name": "Harpic 10X Refreshing Marine Disinfectant Toilet Cleaner",
-    "price": 450.0,
+    "price": 480.0,
     "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Harpic-10X-Refreshing-Marine-Disinfectant-Toilet-Cleaner?ID=ALXRN51n03eW/ZTGVx35hQ==",
     "category": "Household"
@@ -7163,7 +7163,7 @@
   {
     "name": "Flora Paper Serviettes 1Ply",
     "price": 316.0,
-    "quantity": "850.00 ml",
+    "quantity": "100.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Household/Flora-Paper-Serviettes-1Ply?ID=ZvM6pOPeJ9ymz6vk4aR8wQ==",
     "category": "Household"
   },
@@ -7197,7 +7197,7 @@
   },
   {
     "name": "Lysol Citrus Surface Cleaner",
-    "price": 825.0,
+    "price": 840.0,
     "quantity": "950.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Lysol-Citrus-Surface-Cleaner?ID=qcbWmx8/+vue472eadkkZw==",
     "category": "Household"
@@ -7296,7 +7296,7 @@
   {
     "name": "Hit Aerosol Spray For Cockroaches",
     "price": 875.0,
-    "quantity": "1.00 kg",
+    "quantity": "425.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/HIT-Aerosol-Spray-for-Cockroaches?ID=M4iAyDM2Tqptgf2V+a6NBg==",
     "category": "Household"
   },
@@ -7547,7 +7547,7 @@
   },
   {
     "name": "Harpic Power Cleaner 10X",
-    "price": 450.0,
+    "price": 480.0,
     "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Harpic-Power-Cleaner-10X?ID=VP6YIJPfazpeVrsEOL6lkg==",
     "category": "Household"
@@ -7652,7 +7652,7 @@
   },
   {
     "name": "Gliz Liquid Dish Wash",
-    "price": 420.0,
+    "price": 294.0,
     "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Gliz-Liquid-Dish-Wash?ID=AmyfCMs/lF0s0Wu64WvZMA==",
     "category": "Household"
@@ -7674,14 +7674,14 @@
   {
     "name": "My Choice Liquid Bleach",
     "price": 565.0,
-    "quantity": "1.00 pc",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Household/My-Choice-Liquid-Bleach?ID=v9kVVKxRtDEdIbRR7GE3bA==",
     "category": "Household"
   },
   {
     "name": "Mortein Fast Killer",
     "price": 1300.0,
-    "quantity": "1.00 pc",
+    "quantity": "400.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Mortein-Fast-Killer?ID=PpACDzbZPwKF4njXYVTBVw==",
     "category": "Household"
   },
@@ -7786,7 +7786,7 @@
   {
     "name": "Flora Toilet Rolls 2Ply",
     "price": 570.0,
-    "quantity": "500.00 ml",
+    "quantity": "2.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Household/Flora-Toilet-Rolls-2Ply?ID=WYmlOwOOmywCM15GCWpv2g==",
     "category": "Household"
   },
@@ -7821,7 +7821,7 @@
   {
     "name": "Surf Excel Laundry Detergent Powder, Comfort",
     "price": 595.0,
-    "quantity": "500.00 ml",
+    "quantity": "1.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Household/Surf-Excel-Laundry-Detergent-Powder-Comfort?ID=IpaFJZMXwcocLlhtheG73g==",
     "category": "Household"
   },
@@ -7842,7 +7842,7 @@
   {
     "name": "Comfort Morning Fresh Fabric Conditioner",
     "price": 1260.0,
-    "quantity": "500.00 ml",
+    "quantity": "860.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Comfort-Morning-Fresh-Fabric-Conditioner?ID=xOKm3C6QhhpKSmu3vi1E1g==",
     "category": "Household"
   },
@@ -7856,7 +7856,7 @@
   {
     "name": "Comfort Lily Fresh Fabric Conditioner",
     "price": 1260.0,
-    "quantity": "500.00 ml",
+    "quantity": "860.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Comfort-Lily-Fresh-Fabric-Conditioner?ID=8m96xwn3EQyQBQNxyxanGA==",
     "category": "Household"
   },
@@ -7884,7 +7884,7 @@
   {
     "name": "Sunlight Lemon Fresh Detergent Powder",
     "price": 365.0,
-    "quantity": "500.00 ml",
+    "quantity": "1.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Household/Sunlight-Lemon-Fresh-Detergent-Powder?ID=H1GCJnIYgWlyLLkavxKliA==",
     "category": "Household"
   },
@@ -8072,7 +8072,7 @@
   },
   {
     "name": "Harpic 10X Joyful Jasmine Disinfectant Toilet Cleaner",
-    "price": 450.0,
+    "price": 480.0,
     "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Harpic-10X-Joyful-Jasmine-Disinfectant-Toilet-Cleaner?ID=Jpv4bD3aZt+TiTyYsBihpw==",
     "category": "Household"
@@ -8086,7 +8086,7 @@
   },
   {
     "name": "Diva Fresh Rose & Lime",
-    "price": 190.0,
+    "price": 195.0,
     "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Household/Diva-Fresh-Rose-Lime?ID=HAr6rRyJYaNNPcI4fA9+vQ==",
     "category": "Household"
@@ -8134,17 +8134,17 @@
     "category": "Household"
   },
   {
-    "name": "My Choice Dish Wash Bar + Tub",
-    "price": 140.0,
-    "quantity": "250.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Household/My-Choice-Dish-Wash-Bar-Tub?ID=ZqGtEx3MMFmjMqDiFKmmQA==",
-    "category": "Household"
-  },
-  {
     "name": "Softlux Facial Tissue 50 Sheet",
     "price": 175.0,
     "quantity": "1.00 each",
     "url": "https://cargillsonline.com/ProductDetails/Household/Softlux-Facial-Tissue-50-Sheet?ID=zRRJR7IQg2Z0QIj+6Q/DPQ==",
+    "category": "Household"
+  },
+  {
+    "name": "My Choice Dish Wash Bar + Tub",
+    "price": 140.0,
+    "quantity": "250.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Household/My-Choice-Dish-Wash-Bar-Tub?ID=ZqGtEx3MMFmjMqDiFKmmQA==",
     "category": "Household"
   },
   {
@@ -8381,7 +8381,7 @@
   {
     "name": "My Choice Liquid Bleach, Lemon",
     "price": 572.0,
-    "quantity": "450.00 ml",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Household/My-Choice-Liquid-Bleach-Lemon?ID=+fk1QW9d2RPVLgHhB/MSXg==",
     "category": "Household"
   },
@@ -8465,7 +8465,7 @@
   {
     "name": "Lysol Citronella Surface Cleaner",
     "price": 525.0,
-    "quantity": "10.00 pcs",
+    "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Lysol-Citronella-Surface-Cleaner?ID=q0Izv1XiDbT/yXfQcHYQiQ==",
     "category": "Household"
   },
@@ -8528,7 +8528,7 @@
   {
     "name": "Brightex Tough Scourer",
     "price": 170.0,
-    "quantity": "10.00 pcs",
+    "quantity": "20.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Household/Brightex-Tough-Scourer?ID=tLWWavHETO3dF93qNeQEGQ==",
     "category": "Household"
   },
@@ -8687,13 +8687,6 @@
     "category": "Household"
   },
   {
-    "name": "My Choice Toilet Rolls 2Ply",
-    "price": 400.0,
-    "quantity": "2.00 pcs",
-    "url": "https://cargillsonline.com/ProductDetails/Household/My-Choice-Toilet-Rolls-2Ply?ID=Ap9BNCdniGc2Vqov5SH04Q==",
-    "category": "Household"
-  },
-  {
     "name": "Selpak 3Ply Kitchen Towel",
     "price": 980.0,
     "quantity": "2.00 pcs",
@@ -8710,7 +8703,7 @@
   {
     "name": "Mortein Flying Insect Killer",
     "price": 1100.0,
-    "quantity": "50.00 g",
+    "quantity": "250.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Mortein-Flying-Insect-Killer?ID=60ZEzFnTboRTbmYyy8GGdA==",
     "category": "Household"
   },
@@ -8787,7 +8780,7 @@
   {
     "name": "Shock Black Shoe Polish",
     "price": 495.0,
-    "quantity": "12.00 pcs",
+    "quantity": "75.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Shock-Black-Shoe-Polish?ID=X6Ryoi5Ze/yI9nZlx+Z2xQ==",
     "category": "Household"
   },
@@ -8836,7 +8829,7 @@
   {
     "name": "Bio Clean Toilet Cleaner",
     "price": 450.0,
-    "quantity": "12.00 pcs",
+    "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Household/Bio-Clean-Toilet-Cleaner?ID=TAsHpgG2d4flCIHuZsxc9w==",
     "category": "Household"
   },
@@ -9200,7 +9193,7 @@
   {
     "name": "Sunlight Naturals Matic Detergent Liquid",
     "price": 700.0,
-    "quantity": "750.00 ml",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Household/Sunlight-Naturals-Matic-Detergent-Liquid?ID=X5v+Rt1drXVUIUcMzouupg==",
     "category": "Household"
   },
@@ -9256,7 +9249,7 @@
   {
     "name": "Sunlight Rose Fresh Detergent Powder",
     "price": 612.0,
-    "quantity": "1.00 kg",
+    "quantity": "2.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Household/Sunlight-Rose-Fresh-Detergent-Powder?ID=QopW9cjRdtZfLiGxMyRF5A==",
     "category": "Household"
   },
@@ -9265,6 +9258,13 @@
     "price": 380.0,
     "quantity": "1.00 pc",
     "url": "https://cargillsonline.com/ProductDetails/Household/My-Choice-Facial-Tissues?ID=f3mAb5GwEEjOK+8Pt3SNOA==",
+    "category": "Household"
+  },
+  {
+    "name": "My Choice Toilet Rolls 2Ply",
+    "price": 400.0,
+    "quantity": "2.00 pcs",
+    "url": "https://cargillsonline.com/ProductDetails/Household/My-Choice-Toilet-Rolls-2Ply?ID=Ap9BNCdniGc2Vqov5SH04Q==",
     "category": "Household"
   },
   {
@@ -9312,21 +9312,21 @@
   {
     "name": "Fortune Rbd Palm Olein Cooking Oil",
     "price": 2149.0,
-    "quantity": "1.00 l",
+    "quantity": "2.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Fortune-RBD-Palm-Olein-Cooking-Oil?ID=EuFB0wT8jPvZTSD6I5WKDA==",
     "category": "Cooking Essentials"
   },
   {
     "name": "Colo Coconut Milk Powder",
     "price": 970.0,
-    "quantity": "1.00 l",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Colo-Coconut-Milk-Powder?ID=SH+y+w+YNuPlOEkwYAHjLA==",
     "category": "Cooking Essentials"
   },
   {
     "name": "Maggi Coconut Milk Powder",
     "price": 990.0,
-    "quantity": "1.00 l",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Maggi-Coconut-Milk-Powder?ID=kDaeIruTuHRFOr5zmxFNvA==",
     "category": "Cooking Essentials"
   },
@@ -9340,7 +9340,7 @@
   {
     "name": "Fragata Olive Oil",
     "price": 3409.0,
-    "quantity": "1.00 l",
+    "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Fragata-Olive-Oil?ID=4M7LjHae81ADtB5Slr7YRw==",
     "category": "Cooking Essentials"
   },
@@ -9431,7 +9431,7 @@
   {
     "name": "Silvermill Pure Coconut Oil",
     "price": 1660.0,
-    "quantity": "200.00 g",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Silvermill-Pure-Coconut-Oil?ID=8/1arJQitKh7nLqDtM3MFg==",
     "category": "Cooking Essentials"
   },
@@ -9445,7 +9445,7 @@
   {
     "name": "Bcc White Coconut Oil",
     "price": 1890.0,
-    "quantity": "200.00 g",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/BCC-White-Coconut-Oil?ID=/cdC4aZQGE/fOc1+whZkCg==",
     "category": "Cooking Essentials"
   },
@@ -9473,7 +9473,7 @@
   {
     "name": "N-Joy Pure Coconut Oil",
     "price": 1225.0,
-    "quantity": "200.00 g",
+    "quantity": "650.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/NJoy-Pure-Coconut-Oil?ID=q60TZ4Qz/ekEi++xor5UaQ==",
     "category": "Cooking Essentials"
   },
@@ -9487,7 +9487,7 @@
   {
     "name": "Renuka Coconut Milk Powder",
     "price": 1280.0,
-    "quantity": "200.00 g",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Renuka-Coconut-Milk-Powder?ID=ljXcjPZ/hYikVhHAwyd9FA==",
     "category": "Cooking Essentials"
   },
@@ -9508,7 +9508,7 @@
   {
     "name": "Raigam Isi Cooking Salt",
     "price": 150.0,
-    "quantity": "200.00 g",
+    "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Raigam-Isi-Cooking-Salt?ID=LPts/a29wjGlRYuHzpCkMA==",
     "category": "Cooking Essentials"
   },
@@ -9536,7 +9536,7 @@
   {
     "name": "Maggi Chicken Flavored Seasoning Cubes",
     "price": 90.0,
-    "quantity": "200.00 g",
+    "quantity": "16.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/MAGGI-Chicken-Flavored-Seasoning-Cubes?ID=9SwEaAnDLKp9b4md8Agpag==",
     "category": "Cooking Essentials"
   },
@@ -9613,7 +9613,7 @@
   {
     "name": "Marina Coconut Oil",
     "price": 1450.0,
-    "quantity": "50.00 g",
+    "quantity": "675.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Marina-Coconut-Oil?ID=nvhNCSQbzvkLWnWtaPbnhw==",
     "category": "Cooking Essentials"
   },
@@ -9662,14 +9662,14 @@
   {
     "name": "Sera Real Coconut Milk",
     "price": 210.0,
-    "quantity": "50.00 g",
+    "quantity": "180.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Sera-Real-Coconut-Milk?ID=7rZ9FctoGFNGMH9lnQvN+Q==",
     "category": "Cooking Essentials"
   },
   {
     "name": "My Choice Table Salt",
     "price": 223.0,
-    "quantity": "50.00 g",
+    "quantity": "1.00 kg",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/My-Choice-Table-Salt?ID=bjOu+QyfHZJFTboGhd09Hw==",
     "category": "Cooking Essentials"
   },
@@ -9697,7 +9697,7 @@
   {
     "name": "Coopoliva Extra Virgin Olive Oil",
     "price": 2890.0,
-    "quantity": "50.00 g",
+    "quantity": "250.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Coopoliva-Extra-Virgin-Olive-Oil?ID=opsFqkHIyGTH6DM+TOYg9Q==",
     "category": "Cooking Essentials"
   },
@@ -9718,7 +9718,7 @@
   {
     "name": "Kist Soya Sauce",
     "price": 238.0,
-    "quantity": "400.00 g",
+    "quantity": "350.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Kist-Soya-Sauce?ID=UVmP45R8dtDO11bWwqcAcw==",
     "category": "Cooking Essentials"
   },
@@ -9739,7 +9739,7 @@
   {
     "name": "Knorr Seasoning Cubes Pantry Pack",
     "price": 365.0,
-    "quantity": "400.00 g",
+    "quantity": "3.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Knorr-Seasoning-Cubes-Pantry-Pack?ID=WbusFRW/kStWWSFjINhy0A==",
     "category": "Cooking Essentials"
   },
@@ -9816,7 +9816,7 @@
   {
     "name": "Edinborough Mustard Cream",
     "price": 380.0,
-    "quantity": "400.00 g",
+    "quantity": "165.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Edinborough-Mustard-Cream?ID=0le8NQGu5LWmlfm0zeTaRA==",
     "category": "Cooking Essentials"
   },
@@ -9837,7 +9837,7 @@
   {
     "name": "Coopoliva Olive Oil",
     "price": 4890.0,
-    "quantity": "400.00 g",
+    "quantity": "500.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Coopoliva-Olive-Oil?ID=UJykL2nhVOpACs2jqhm8Aw==",
     "category": "Cooking Essentials"
   },
@@ -10362,7 +10362,7 @@
   {
     "name": "Pelwatte Pure Ghee",
     "price": 1280.0,
-    "quantity": "20.00 pcs",
+    "quantity": "230.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Cooking-Essentials/Pelwatte-Pure-Ghee?ID=QHkLNGNGMjaF0rZ0C5gE2Q==",
     "category": "Cooking Essentials"
   },
@@ -10467,7 +10467,7 @@
   {
     "name": "Tiara Chocolate Layer Cake",
     "price": 580.0,
-    "quantity": "100.00 g",
+    "quantity": "310.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Bakery/Tiara-Chocolate-Layer-Cake?ID=Z6lRdGrkvOE8a7txSp/MZA==",
     "category": "Bakery"
   },
@@ -10497,13 +10497,6 @@
     "price": 390.0,
     "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Bakery/Little-Lion-Soft-Log-Coffee-Flavoured?ID=0oYuTZa6fTNEdH9hJP8p1g==",
-    "category": "Bakery"
-  },
-  {
-    "name": "Little Lion Madeira Cake",
-    "price": 558.0,
-    "quantity": "325.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Bakery/Little-Lion-Madeira-Cake?ID=w2bhLNVzwbg0g9AtmOlocw==",
     "category": "Bakery"
   },
   {
@@ -10605,6 +10598,13 @@
     "category": "Bakery"
   },
   {
+    "name": "Little Lion Madeira Cake",
+    "price": 558.0,
+    "quantity": "325.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Bakery/Little-Lion-Madeira-Cake?ID=w2bhLNVzwbg0g9AtmOlocw==",
+    "category": "Bakery"
+  },
+  {
     "name": "Prima White Bread",
     "price": 510.0,
     "quantity": "500.00 g",
@@ -10670,7 +10670,7 @@
   {
     "name": "Spring Home Spring Roll Pastry",
     "price": 1287.3,
-    "quantity": "10.00 pcs",
+    "quantity": "40.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Spring-Home-Spring-Roll-Pastry?ID=IULWuVUBHdG5lePil40BsQ==",
     "category": "Frozen Food"
   },
@@ -10698,7 +10698,7 @@
   {
     "name": "Crescent Chicken Kochchi Bites",
     "price": 1485.0,
-    "quantity": "10.00 pcs",
+    "quantity": "450.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Crescent-Chicken-Kochchi-Bites?ID=4hUDSYdEpRst4qWLQ66/Yw==",
     "category": "Frozen Food"
   },
@@ -10740,7 +10740,7 @@
   {
     "name": "Sam`S Chicken Kochchi Bites",
     "price": 1420.0,
-    "quantity": "10.00 pcs",
+    "quantity": "450.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Sams-Chicken-Kochchi-Bites?ID=e1OZ93udb9zL5D98STMinQ==",
     "category": "Frozen Food"
   },
@@ -10774,14 +10774,14 @@
   },
   {
     "name": "Sam`S French Fries",
-    "price": 1150.0,
-    "quantity": "450.00 g",
+    "price": 862.5,
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Sams-French-Fries?ID=GDq2Sc4KOdF6+ttjJC0DRg==",
     "category": "Frozen Food"
   },
   {
     "name": "Crescent Chicken Mini Kievs",
-    "price": 1550.0,
+    "price": 1085.0,
     "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Crescent-Chicken-Mini-Kievs?ID=998XIs2+wfHJMpL5XEBBYA==",
     "category": "Frozen Food"
@@ -10789,28 +10789,28 @@
   {
     "name": "Sam`S Chicken Nuggets",
     "price": 1198.5,
-    "quantity": "450.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Sams-Chicken-Nuggets?ID=Gf8bwkjl6eA/s8ccRfnawg==",
     "category": "Frozen Food"
   },
   {
     "name": "Sam`S Chicken Drumsticks",
     "price": 1340.0,
-    "quantity": "450.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Sams-Chicken-Drumsticks?ID=dIvelxFvq9oT2fjwKI8PLw==",
     "category": "Frozen Food"
   },
   {
     "name": "Crescent Chicken Nuggets",
     "price": 640.0,
-    "quantity": "450.00 g",
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Crescent-Chicken-Nuggets?ID=4FDzePV4XhGaZNJR5WVkNg==",
     "category": "Frozen Food"
   },
   {
     "name": "Crescent Golden Drummers",
     "price": 755.0,
-    "quantity": "450.00 g",
+    "quantity": "250.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Crescent-Golden-Drummers?ID=6vA651G41z3blIdFrqx6zw==",
     "category": "Frozen Food"
   },
@@ -10964,7 +10964,7 @@
   {
     "name": "Sam`S Chicken Chinese Rolls",
     "price": 820.0,
-    "quantity": "1.00 kg",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Sams-Chicken-Chinese-Rolls?ID=paoe5HgAOIuovg5X8OXUtQ==",
     "category": "Frozen Food"
   },
@@ -10999,7 +10999,7 @@
   {
     "name": "Sam`S Fish Fingers",
     "price": 670.0,
-    "quantity": "1.00 kg",
+    "quantity": "240.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Sams-Fish-Fingers?ID=uH0UottOLssY0IdsjcN4mw==",
     "category": "Frozen Food"
   },
@@ -11020,21 +11020,21 @@
   {
     "name": "Sam`S Fish Chinese Rolls",
     "price": 810.0,
-    "quantity": "1.00 kg",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Sams-Fish-Chinese-Rolls?ID=grhdC+IjTnfl52n8ylMRtw==",
     "category": "Frozen Food"
   },
   {
     "name": "Farm Fresh French Fries",
     "price": 1310.0,
-    "quantity": "1.00 kg",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Farm-Fresh-French-Fries?ID=a7MBRnaixYfB5SglBvIiqg==",
     "category": "Frozen Food"
   },
   {
     "name": "Mdk Parata Rotti",
     "price": 585.0,
-    "quantity": "1.00 kg",
+    "quantity": "5.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/MDK-Parata-Rotti?ID=cMu3A4GfdO4afSw89t3yqQ==",
     "category": "Frozen Food"
   },
@@ -11461,7 +11461,7 @@
   {
     "name": "Rancrisp Cooking Cashew",
     "price": 2250.0,
-    "quantity": "500.00 g",
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Frozen-Food/Rancrisp-Cooking-Cashew?ID=GDxo9MBTDXqVFiFS2m8oYw==",
     "category": "Frozen Food"
   },
@@ -11502,8 +11502,8 @@
   },
   {
     "name": "Bairaha Chicken Sausages",
-    "price": 1050.0,
-    "quantity": "200.00 g",
+    "price": 735.0,
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Meats/Bairaha-Chicken-Sausages?ID=wxAJE+HxJGymNHez4YeZhA==",
     "category": "Meats"
   },
@@ -11594,7 +11594,7 @@
   {
     "name": "Finest Chicken Bockwurst",
     "price": 1480.0,
-    "quantity": "200.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Meats/Finest-Chicken-Bockwurst?ID=qbkPWsX/xnEFDWQLnoUVUw==",
     "category": "Meats"
   },
@@ -11614,7 +11614,7 @@
   },
   {
     "name": "Keells Chicken Meat Balls",
-    "price": 308.0,
+    "price": 440.0,
     "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Meats/Keells-Chicken-Meat-Balls?ID=/RZtzEv+HmtsNsWwBv+P0g==",
     "category": "Meats"
@@ -11622,7 +11622,7 @@
   {
     "name": "Goldi Supreme Chicken Sausages",
     "price": 1000.0,
-    "quantity": "200.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Meats/Goldi-Supreme-Chicken-Sausages?ID=unNhlNB2SLI1myOlNsMapg==",
     "category": "Meats"
   },
@@ -11699,7 +11699,7 @@
   {
     "name": "Goldi Kochchi Chicken Sausages",
     "price": 1490.0,
-    "quantity": "575.00 g",
+    "quantity": "600.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Meats/Goldi-Kochchi-Chicken-Sausages?ID=RU3/Yd9SDST2rOiBjzzrkA==",
     "category": "Meats"
   },
@@ -11783,7 +11783,7 @@
   {
     "name": "Finest Chicken Garlic Sausages",
     "price": 1326.0,
-    "quantity": "330.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Meats/Finest-Chicken-Garlic-Sausages?ID=mKiSKAAHbR/qSMPMbzmiGA==",
     "category": "Meats"
   },
@@ -11803,7 +11803,7 @@
   },
   {
     "name": "Elephant House Corned Mutton",
-    "price": 1450.0,
+    "price": 1660.0,
     "quantity": "250.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Meats/Elephant-House-Corned-Mutton?ID=QJ/wFEBkLcmFx9fxI9aYwg==",
     "category": "Meats"
@@ -11811,7 +11811,7 @@
   {
     "name": "Goldi Hot & Spicy Chicken Meatballs",
     "price": 340.0,
-    "quantity": "330.00 g",
+    "quantity": "160.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Meats/Goldi-Hot-Spicy-Chicken-Meatballs?ID=0Cb+kOYk4/b8L7P/M4q9lA==",
     "category": "Meats"
   },
@@ -12265,7 +12265,7 @@
   },
   {
     "name": "Maliban Smart Cream Cracker",
-    "price": 336.0,
+    "price": 480.0,
     "quantity": "490.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Snacks-Confectionery/Maliban-Smart-Cream-Cracker?ID=4VK3mFMVujTebsD8HARbzQ==",
     "category": "Snacks & Confectionery"
@@ -12398,7 +12398,7 @@
   },
   {
     "name": "Kist Chocolate Cream",
-    "price": 360.0,
+    "price": 376.0,
     "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Snacks-Confectionery/Kist-Chocolate-Cream?ID=7VL2ik9X5oTbQxQYxLvLlw==",
     "category": "Snacks & Confectionery"
@@ -12706,7 +12706,7 @@
   },
   {
     "name": "Kandos Choconuts",
-    "price": 290.0,
+    "price": 203.0,
     "quantity": "115.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Snacks-Confectionery/Kandos-Choconuts?ID=Np/C3cLF4Lhgb7eLt6GOFg==",
     "category": "Snacks & Confectionery"
@@ -13220,13 +13220,6 @@
     "price": 420.0,
     "quantity": "220.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Snacks-Confectionery/Maliban-Sugar-Free-Biscuit?ID=akLjLHy8xLRS8W6riF1JTQ==",
-    "category": "Snacks & Confectionery"
-  },
-  {
-    "name": "My Choice Marshmallows",
-    "price": 298.0,
-    "quantity": "125.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Snacks-Confectionery/My-Choice-Marshmallows?ID=AQogr/e3d35yEpwG4Dq5ig==",
     "category": "Snacks & Confectionery"
   },
   {
@@ -14134,7 +14127,7 @@
   },
   {
     "name": "Anuga Devilled Cashew",
-    "price": 1240.0,
+    "price": 1340.0,
     "quantity": "100.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Snacks-Confectionery/Anuga-Devilled-Cashew?ID=BZT+Raqr0yZ+7PVLzkbHrQ==",
     "category": "Snacks & Confectionery"
@@ -14795,6 +14788,13 @@
     "price": 260.0,
     "quantity": "240.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Snacks-Confectionery/Maliban-Gold-Marie?ID=1a+I6nVEp+Tb5piih1U0bg==",
+    "category": "Snacks & Confectionery"
+  },
+  {
+    "name": "My Choice Marshmallows",
+    "price": 298.0,
+    "quantity": "125.00 g",
+    "url": "https://cargillsonline.com/ProductDetails/Snacks-Confectionery/My-Choice-Marshmallows?ID=AQogr/e3d35yEpwG4Dq5ig==",
     "category": "Snacks & Confectionery"
   },
   {
@@ -16368,7 +16368,7 @@
   {
     "name": "Motha Jelly Strawberry Flavour",
     "price": 374.0,
-    "quantity": "100.00 g",
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Motha-Jelly-Strawberry-Flavour?ID=Vmv3RRxVbaO0AadxoLQcEQ==",
     "category": "Desserts & Ingredients"
   },
@@ -16494,7 +16494,7 @@
   {
     "name": "Kist Kithul Treacle",
     "price": 550.0,
-    "quantity": "50.00 g",
+    "quantity": "340.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Kist-Kithul-Treacle?ID=fsOpMtETm85BmpqFvtQ+wQ==",
     "category": "Desserts & Ingredients"
   },
@@ -16599,7 +16599,7 @@
   {
     "name": "My Choice Premium Dates",
     "price": 600.0,
-    "quantity": "50.00 g",
+    "quantity": "400.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/My-Choice-Premium-Dates?ID=FWfOmWt/qhby1YlJ3BbgSg==",
     "category": "Desserts & Ingredients"
   },
@@ -16641,7 +16641,7 @@
   {
     "name": "Motha Vanilla Flavour",
     "price": 220.0,
-    "quantity": "100.00 g",
+    "quantity": "28.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Motha-Vanilla-Flavour?ID=bCxiOMQBUjEp65aEiwrSaw==",
     "category": "Desserts & Ingredients"
   },
@@ -16711,13 +16711,13 @@
   {
     "name": "My Choice Sultana",
     "price": 780.0,
-    "quantity": "100.00 g",
+    "quantity": "250.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/My-Choice-Sultana?ID=LXgZU001Trxx6k/4rpwPGg==",
     "category": "Desserts & Ingredients"
   },
   {
     "name": "Star Brand Vanilla Essence",
-    "price": 215.0,
+    "price": 260.0,
     "quantity": "28.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Star-Brand-Vanilla-Essence?ID=G2Z0ccHxkNKP0lgQmotzUw==",
     "category": "Desserts & Ingredients"
@@ -16739,7 +16739,7 @@
   {
     "name": "Rancrisp Raw Cashew Pieces",
     "price": 4500.0,
-    "quantity": "100.00 g",
+    "quantity": "500.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Rancrisp-Raw-Cashew-Pieces?ID=YnIXtzDiFp6qUnl4m1MUrg==",
     "category": "Desserts & Ingredients"
   },
@@ -16850,7 +16850,7 @@
   },
   {
     "name": "Star Brand Rose Essence",
-    "price": 215.0,
+    "price": 250.0,
     "quantity": "28.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Star-Brand-Rose-Essence?ID=jdrL+4mAfSH2I8to6hf6CQ==",
     "category": "Desserts & Ingredients"
@@ -16914,13 +16914,13 @@
   {
     "name": "Upul Dates",
     "price": 600.0,
-    "quantity": "28.00 ml",
+    "quantity": "300.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Upul-Dates?ID=zU0pRxl+KpNEHQ1Ac2u8AA==",
     "category": "Desserts & Ingredients"
   },
   {
     "name": "Star Brand Apple Colouring",
-    "price": 205.0,
+    "price": 240.0,
     "quantity": "28.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Star-Brand-Apple-Colouring?ID=YwYVmCbfe8ceGoOhGNfYLw==",
     "category": "Desserts & Ingredients"
@@ -16969,7 +16969,7 @@
   },
   {
     "name": "Star Brand Egg Yellow Colouring",
-    "price": 205.0,
+    "price": 240.0,
     "quantity": "28.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Star-Brand-Egg-Yellow-Colouring?ID=6mOAl3TgfTEmLphxgFnDEQ==",
     "category": "Desserts & Ingredients"
@@ -17032,7 +17032,7 @@
   },
   {
     "name": "Star Brand Essence Almond",
-    "price": 215.0,
+    "price": 250.0,
     "quantity": "28.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Star-Brand-Essence-Almond?ID=bV5PjL4Ml87F4SRPvwHpzw==",
     "category": "Desserts & Ingredients"
@@ -17221,7 +17221,7 @@
   },
   {
     "name": "Star Brand Chocolate Brown Colour",
-    "price": 205.0,
+    "price": 240.0,
     "quantity": "28.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Desserts-Ingredients/Star-Brand-Chocolate-Brown-Colour?ID=oVY1lY4nz3kxmc+QLRFOWw==",
     "category": "Desserts & Ingredients"
@@ -17599,7 +17599,7 @@
   },
   {
     "name": "Dilmah Premium Tea",
-    "price": 511.0,
+    "price": 730.0,
     "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Tea-Coffee/Dilmah-Premium-Tea?ID=N8EfMmFq3BQjQaJ1vBgwYg==",
     "category": "Tea & Coffee"
@@ -18291,17 +18291,17 @@
     "category": "Party Shop"
   },
   {
-    "name": "Balloon Metallic Rose 10Pcs",
-    "price": 360.0,
-    "quantity": "1.00 each",
-    "url": "https://cargillsonline.com/ProductDetails/Party-Shop/Balloon-Metallic-Rose-10pcs?ID=PYBUu6MuT25VrnC3KEApeA==",
-    "category": "Party Shop"
-  },
-  {
     "name": "Pastel Balloons Assorte 12Pcs",
     "price": 300.0,
     "quantity": "1.00 each",
     "url": "https://cargillsonline.com/ProductDetails/Party-Shop/Pastel-Balloons-Assorte-12pcs?ID=YVem1mEuIV+EWFZ2qfYOUw==",
+    "category": "Party Shop"
+  },
+  {
+    "name": "Balloon Metallic Rose 10Pcs",
+    "price": 360.0,
+    "quantity": "1.00 each",
+    "url": "https://cargillsonline.com/ProductDetails/Party-Shop/Balloon-Metallic-Rose-10pcs?ID=PYBUu6MuT25VrnC3KEApeA==",
     "category": "Party Shop"
   },
   {
@@ -18607,14 +18607,14 @@
   },
   {
     "name": "Eva Dritex Wings",
-    "price": 297.5,
-    "quantity": "180.00 ml",
+    "price": 425.0,
+    "quantity": "16.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Eva-Dritex-Wings?ID=56U/dn2scBNcXHxenNWKWQ==",
     "category": "Health & Beauty"
   },
   {
     "name": "Sunsilk Soft & Smooth Shampoo",
-    "price": 645.0,
+    "price": 483.75,
     "quantity": "180.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Sunsilk-Soft-Smooth-Shampoo?ID=9oK0LpfKB3mNN7ptohRTPA==",
     "category": "Health & Beauty"
@@ -18622,7 +18622,7 @@
   {
     "name": "Signal Fighter Medium Toothbrush Double",
     "price": 221.0,
-    "quantity": "160.00 g",
+    "quantity": "2.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Signal-Fighter-Medium-Toothbrush-Double?ID=TqWt8JWp1WHHa61SJLhqkw==",
     "category": "Health & Beauty"
   },
@@ -18657,7 +18657,7 @@
   {
     "name": "Sensodyne Fresh Mint Toothpaste",
     "price": 875.0,
-    "quantity": "160.00 g",
+    "quantity": "75.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Sensodyne-Fresh-Mint-Toothpaste?ID=mb5vmnafvhcCibFNpv4yRQ==",
     "category": "Health & Beauty"
   },
@@ -18713,7 +18713,7 @@
   {
     "name": "Sunsilk Soft & Smooth Conditioner",
     "price": 600.0,
-    "quantity": "160.00 g",
+    "quantity": "180.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Sunsilk-Soft-Smooth-Conditioner?ID=mWxutUpkcadZOXE2jb9gbA==",
     "category": "Health & Beauty"
   },
@@ -18734,7 +18734,7 @@
   {
     "name": "Sensodyne Fresh Gel Toothpaste",
     "price": 743.75,
-    "quantity": "160.00 g",
+    "quantity": "75.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Sensodyne-Fresh-Gel-Toothpaste?ID=zqQ69e1xOWjwvjaceeeyCw==",
     "category": "Health & Beauty"
   },
@@ -18748,7 +18748,7 @@
   {
     "name": "Dettol Liquid",
     "price": 1700.0,
-    "quantity": "160.00 g",
+    "quantity": "1.00 l",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Dettol-Liquid?ID=CTj0qKkjo6b037elE3RZJw==",
     "category": "Health & Beauty"
   },
@@ -18797,7 +18797,7 @@
   {
     "name": "Link Sudantha Toothpaste",
     "price": 275.0,
-    "quantity": "1.00 pc",
+    "quantity": "120.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Link-Sudantha-Toothpaste?ID=qqhgsvvfHaur90bHcJ+qbw==",
     "category": "Health & Beauty"
   },
@@ -18832,7 +18832,7 @@
   {
     "name": "Gillette Blue 2 Plus Razor",
     "price": 950.0,
-    "quantity": "1.00 pc",
+    "quantity": "5.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Gillette-Blue-2-Plus-Razor?ID=Thsfi0x3OloZFQsYgUpu8w==",
     "category": "Health & Beauty"
   },
@@ -18993,7 +18993,7 @@
   {
     "name": "Vaseline Aloe Fresh Body Lotion",
     "price": 1728.0,
-    "quantity": "120.00 g",
+    "quantity": "400.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Vaseline-Aloe-Fresh-Body-Lotion?ID=E3IujU/r9JBd2WNnLmVdRw==",
     "category": "Health & Beauty"
   },
@@ -19007,7 +19007,7 @@
   {
     "name": "Bic 3 Razor",
     "price": 190.0,
-    "quantity": "120.00 g",
+    "quantity": "1.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Bic-3-Razor?ID=F/qE6FEhY6x5btwphWhD4g==",
     "category": "Health & Beauty"
   },
@@ -19091,7 +19091,7 @@
   {
     "name": "Gillette Blue 3 Simple Razor",
     "price": 280.5,
-    "quantity": "120.00 ml",
+    "quantity": "1.00 pc",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Gillette-Blue-3-Simple-Razor?ID=snSyQ4oO5HyExVtAMGmoxA==",
     "category": "Health & Beauty"
   },
@@ -19105,14 +19105,14 @@
   {
     "name": "Nature`S Secrets Cucumber Face Wash",
     "price": 405.0,
-    "quantity": "120.00 ml",
+    "quantity": "100.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Natures-Secrets-Cucumber-Face-Wash?ID=bSNMBLD7q9VTPV/xgCf3yg==",
     "category": "Health & Beauty"
   },
   {
     "name": "Vaseline Deep Restore Body Lotion",
     "price": 1620.0,
-    "quantity": "120.00 ml",
+    "quantity": "400.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Vaseline-Deep-Restore-Body-Lotion?ID=YLpwTu9w5Kh1Z99UDwqzeQ==",
     "category": "Health & Beauty"
   },
@@ -19126,14 +19126,14 @@
   {
     "name": "Vaseline Healthy Bright Body Lotion",
     "price": 675.0,
-    "quantity": "120.00 ml",
+    "quantity": "200.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Vaseline-Healthy-Bright-Body-Lotion?ID=NxZflh27g2AKVbFuAMYJxw==",
     "category": "Health & Beauty"
   },
   {
     "name": "Nature`S Secrets Godapara Anti Dandruff Shampoo",
     "price": 760.0,
-    "quantity": "120.00 ml",
+    "quantity": "200.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Natures-Secrets-Godapara-Anti-Dandruff-Shampoo?ID=jXoPFgoBQGXAJ7uVclZbSA==",
     "category": "Health & Beauty"
   },
@@ -19210,7 +19210,7 @@
   {
     "name": "Eva Cotton Feel Wings",
     "price": 425.0,
-    "quantity": "100.00 ml",
+    "quantity": "16.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Eva-Cotton-Feel-Wings?ID=sVVlcos4r1vsNR1yZebTxQ==",
     "category": "Health & Beauty"
   },
@@ -19329,7 +19329,7 @@
   {
     "name": "Fems Superior Heavy Flow",
     "price": 565.0,
-    "quantity": "90.00 g",
+    "quantity": "16.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Fems-Superior-Heavy-Flow?ID=3WkNXTRv8d2DQxdnWQVSkg==",
     "category": "Health & Beauty"
   },
@@ -19567,7 +19567,7 @@
   {
     "name": "Nature`S Secrets Carrot Face Wash",
     "price": 750.0,
-    "quantity": "8.00 pcs",
+    "quantity": "225.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Natures-Secrets-Carrot-Face-Wash?ID=fTYaxZwIxiE6L6bI+EsA+w==",
     "category": "Health & Beauty"
   },
@@ -19628,17 +19628,17 @@
     "category": "Health & Beauty"
   },
   {
-    "name": "Emami Hair Oil 7 Oils In One Aloe Vera",
-    "price": 256.0,
-    "quantity": "100.00 ml",
-    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Emami-Hair-Oil-7-Oils-In-One-Aloe-Vera?ID=TGK4yTPA8Rr3jfFif4eaoQ==",
-    "category": "Health & Beauty"
-  },
-  {
     "name": "Mucro Light Protective Advance Sun Lotion Spf 50+",
     "price": 1792.0,
     "quantity": "100.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Mucro-Light-Protective-Advance-Sun-Lotion-SPF-50?ID=pK/Tc701RLubelFPhCYvrw==",
+    "category": "Health & Beauty"
+  },
+  {
+    "name": "Emami Hair Oil 7 Oils In One Aloe Vera",
+    "price": 256.0,
+    "quantity": "100.00 ml",
+    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Emami-Hair-Oil-7-Oils-In-One-Aloe-Vera?ID=TGK4yTPA8Rr3jfFif4eaoQ==",
     "category": "Health & Beauty"
   },
   {
@@ -19749,7 +19749,7 @@
   {
     "name": "Eva Cotton Feel Heavy Flow Wings",
     "price": 300.0,
-    "quantity": "50.00 ml",
+    "quantity": "8.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Eva-Cotton-Feel-Heavy-Flow-Wings?ID=UFDMguorhkL5T6WeJXtUEQ==",
     "category": "Health & Beauty"
   },
@@ -19777,7 +19777,7 @@
   {
     "name": "Eva Dritex Heavy Flow Wings",
     "price": 300.0,
-    "quantity": "50.00 ml",
+    "quantity": "8.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Eva-Dritex-Heavy-Flow-Wings?ID=x4WWB9vJBqdxpDUaOsC/5w==",
     "category": "Health & Beauty"
   },
@@ -19790,8 +19790,8 @@
   },
   {
     "name": "Signal Strong Teeth Toothpaste",
-    "price": 365.0,
-    "quantity": "50.00 ml",
+    "price": 273.75,
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Signal-Strong-Teeth-Toothpaste?ID=MxQmsDrqZav4DfIBVMDbQg==",
     "category": "Health & Beauty"
   },
@@ -19819,7 +19819,7 @@
   {
     "name": "Siddhalepa Balm",
     "price": 330.0,
-    "quantity": "50.00 ml",
+    "quantity": "15.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Siddhalepa-Balm?ID=ZZUoNLj2Runk9V/QVy5FoA==",
     "category": "Health & Beauty"
   },
@@ -19861,7 +19861,7 @@
   {
     "name": "Clogard Toothpaste",
     "price": 273.75,
-    "quantity": "50.00 ml",
+    "quantity": "200.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Clogard-Toothpaste?ID=ndCBl+havdxwBIoz8uS8CQ==",
     "category": "Health & Beauty"
   },
@@ -19875,7 +19875,7 @@
   {
     "name": "Emami He Body Perfume Passion",
     "price": 1352.0,
-    "quantity": "50.00 ml",
+    "quantity": "120.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Emami-He-Body-Perfume-Passion?ID=/jXfioY/jIXBpvZSSYoe3Q==",
     "category": "Health & Beauty"
   },
@@ -19889,7 +19889,7 @@
   {
     "name": "Gillette Regular Shaving Foam",
     "price": 1450.0,
-    "quantity": "25.00 g",
+    "quantity": "196.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Gillette-Regular-Shaving-Foam?ID=lb+UulNEF3gIYP06YSmeHg==",
     "category": "Health & Beauty"
   },
@@ -19930,7 +19930,7 @@
   },
   {
     "name": "Beam Citronella Oil",
-    "price": 650.0,
+    "price": 455.0,
     "quantity": "30.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Beam-Citronella-Oil?ID=4Dn8mwSwCSD8iODkIYdEzw==",
     "category": "Health & Beauty"
@@ -20050,7 +20050,7 @@
   {
     "name": "Lux Magical Orchid Bodywash",
     "price": 670.0,
-    "quantity": "100.00 ml",
+    "quantity": "240.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Lux-Magical-Orchid-Bodywash?ID=e8WSkYYa/SFx2i7Nk8BTFw==",
     "category": "Health & Beauty"
   },
@@ -20099,7 +20099,7 @@
   {
     "name": "Rexona Powder Dry Roll-On Deodorant",
     "price": 850.0,
-    "quantity": "100.00 ml",
+    "quantity": "50.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Rexona-Powder-Dry-Rollon-Deodorant?ID=5Zi/a5Tqoxpy3rZ2SsDvSA==",
     "category": "Health & Beauty"
   },
@@ -20162,7 +20162,7 @@
   {
     "name": "Vaseline Advanced Repair Body Lotion",
     "price": 3550.0,
-    "quantity": "175.00 ml",
+    "quantity": "400.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Vaseline-Advanced-Repair-Body-Lotion?ID=exkFtBrSoPgbem9xUwAVuw==",
     "category": "Health & Beauty"
   },
@@ -20204,7 +20204,7 @@
   {
     "name": "Signal Triple Protection 123 Toothpaste",
     "price": 360.0,
-    "quantity": "175.00 ml",
+    "quantity": "120.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Signal-Triple-Protection-123-Toothpaste?ID=o1Zdamo1bUpCPxlxi+SyKw==",
     "category": "Health & Beauty"
   },
@@ -20246,7 +20246,7 @@
   {
     "name": "Ayush Total Oral Care Toothpaste",
     "price": 295.0,
-    "quantity": "175.00 ml",
+    "quantity": "120.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Ayush-Total-Oral-Care-Toothpaste?ID=lQm62iLlBW1sTtnKPclwcw==",
     "category": "Health & Beauty"
   },
@@ -20447,6 +20447,13 @@
     "category": "Health & Beauty"
   },
   {
+    "name": "Denver Deodorant Body Spray  Hamilton",
+    "price": 1350.0,
+    "quantity": "165.00 ml",
+    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Denver-Deodorant-Body-spray-Hamilton?ID=fkFlzgNUKQGaP6tFrcT0PQ==",
+    "category": "Health & Beauty"
+  },
+  {
     "name": "Denver Sporting Club Deodorant Body Spray  Champ",
     "price": 1350.0,
     "quantity": "165.00 ml",
@@ -20458,13 +20465,6 @@
     "price": 1350.0,
     "quantity": "165.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Denver-Deodorant-Body-spray-Honour?ID=mbtmVb024Oj/eu1PP6hMRw==",
-    "category": "Health & Beauty"
-  },
-  {
-    "name": "Denver Deodorant Body Spray  Hamilton",
-    "price": 1350.0,
-    "quantity": "165.00 ml",
-    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Denver-Deodorant-Body-spray-Hamilton?ID=fkFlzgNUKQGaP6tFrcT0PQ==",
     "category": "Health & Beauty"
   },
   {
@@ -20498,7 +20498,7 @@
   {
     "name": "Velona Venus Sanitary Napkins Heavy Flow Wings",
     "price": 550.0,
-    "quantity": "165.00 ml",
+    "quantity": "16.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Velona-Venus-Sanitary-Napkins-Heavy-Flow-Wings?ID=LkxUjsy+Eqs/mWC7NBwabg==",
     "category": "Health & Beauty"
   },
@@ -20617,7 +20617,7 @@
   {
     "name": "Marvel Adult Diapers - M",
     "price": 1800.0,
-    "quantity": "25.00 ml",
+    "quantity": "10.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Marvel-Adult-Diapers-M?ID=xggKTYKqS6hsadELIZjezA==",
     "category": "Health & Beauty"
   },
@@ -20715,14 +20715,14 @@
   {
     "name": "Fems Cotton Feel Wings",
     "price": 425.0,
-    "quantity": "25.00 ml",
+    "quantity": "16.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Fems-Cotton-Feel-Wings?ID=5KWD36ph8k3zp1ZT4CE7Jg==",
     "category": "Health & Beauty"
   },
   {
     "name": "Whisper Ultra Clean Xl Plus",
     "price": 790.0,
-    "quantity": "122.00 ml",
+    "quantity": "15.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Whisper-Ultra-Clean-XL-Plus?ID=HetmwwKbgZoojMwu0EKqWw==",
     "category": "Health & Beauty"
   },
@@ -20846,6 +20846,13 @@
     "category": "Health & Beauty"
   },
   {
+    "name": "Vaseline Cocoa Glow Body Lotion",
+    "price": 820.0,
+    "quantity": "100.00 ml",
+    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Vaseline-Cocoa-Glow-Body-Lotion?ID=Fa7V0gD2jcDbvstx1VUxdA==",
+    "category": "Health & Beauty"
+  },
+  {
     "name": "Velvet Soap Rose Petals And Milk Multi Pack,350G",
     "price": 525.0,
     "quantity": "5.00 pcs",
@@ -20890,7 +20897,7 @@
   {
     "name": "Safeguard Adult Diapers Medium",
     "price": 1700.0,
-    "quantity": "80.00 g",
+    "quantity": "10.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Safeguard-Adult-Diapers-Medium?ID=knvEsCVHKRA8ETQhlibJmg==",
     "category": "Health & Beauty"
   },
@@ -20911,7 +20918,7 @@
   {
     "name": "Fems Drytex Wings",
     "price": 425.0,
-    "quantity": "80.00 g",
+    "quantity": "16.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Fems-Drytex-Wings?ID=EuOpt5tRTZBzWnXLgI/Cwg==",
     "category": "Health & Beauty"
   },
@@ -20951,13 +20958,6 @@
     "category": "Health & Beauty"
   },
   {
-    "name": "Vaseline Cocoa Glow Body Lotion",
-    "price": 3020.0,
-    "quantity": "80.00 g",
-    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Vaseline-Cocoa-Glow-Body-Lotion?ID=/v7W4gnGdSv77O5Et9ODWg==",
-    "category": "Health & Beauty"
-  },
-  {
     "name": "Ayush Natural Glow & Protect Face Wash",
     "price": 290.0,
     "quantity": "50.00 ml",
@@ -20981,7 +20981,7 @@
   {
     "name": "Vaseline Ice Cool Hydration Body Gel",
     "price": 800.0,
-    "quantity": "80.00 g",
+    "quantity": "200.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Vaseline-Ice-Cool-Hydration-Body-Gel?ID=FmEC2U/Qd6zNNEl8Dmtz1g==",
     "category": "Health & Beauty"
   },
@@ -21156,7 +21156,7 @@
   {
     "name": "Dettol Cool Soap",
     "price": 190.0,
-    "quantity": "50.00 ml",
+    "quantity": "100.00 g",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Dettol-Cool-Soap?ID=6LjQMu8HmiiwQi8GDxpArQ==",
     "category": "Health & Beauty"
   },
@@ -21312,13 +21312,6 @@
     "price": 540.0,
     "quantity": "70.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Mucro-Advance-Calamine-Lotion-Smart?ID=yWfMueVI/qYnR8ZgyJN4WA==",
-    "category": "Health & Beauty"
-  },
-  {
-    "name": "Zincovit Syrup",
-    "price": 895.33,
-    "quantity": "200.00 ml",
-    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Zincovit-Syrup?ID=msR5IPnqA5bIYO5+Ma2aSQ==",
     "category": "Health & Beauty"
   },
   {
@@ -21604,7 +21597,7 @@
   {
     "name": "Adfit Adult Diaper Pants M",
     "price": 3150.0,
-    "quantity": "200.00 ml",
+    "quantity": "10.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Adfit-Adult-Diaper-Pants-M?ID=PrC7Ay66AtSQKOti8/wW6Q==",
     "category": "Health & Beauty"
   },
@@ -21625,7 +21618,7 @@
   {
     "name": "Eva Cotton Feel Non Wings",
     "price": 275.0,
-    "quantity": "200.00 ml",
+    "quantity": "10.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Eva-Cotton-Feel-Non-Wings?ID=p8ydy2g0SNBZXlBfeOD9kg==",
     "category": "Health & Beauty"
   },
@@ -21996,14 +21989,14 @@
   {
     "name": "Moods Allnight",
     "price": 950.0,
-    "quantity": "250.00 ml",
+    "quantity": "12.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Moods-Allnight?ID=1tp4zGp/fj7Qoe6WCEV8zw==",
     "category": "Health & Beauty"
   },
   {
     "name": "Moods Ultra Thin",
     "price": 950.0,
-    "quantity": "250.00 ml",
+    "quantity": "12.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Moods-Ultra-Thin?ID=lPz++r524o3ZsSU4z7V+KA==",
     "category": "Health & Beauty"
   },
@@ -22190,13 +22183,6 @@
     "category": "Health & Beauty"
   },
   {
-    "name": "Fadna Tummy Tea Bags",
-    "price": 975.0,
-    "quantity": "15.00 pcs",
-    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Fadna-Tummy-Tea-Bags?ID=YY5xEIuAb5KJEK8gYg0GCw==",
-    "category": "Health & Beauty"
-  },
-  {
     "name": "Dreamron Black Henna",
     "price": 490.0,
     "quantity": "22.00 g",
@@ -22234,7 +22220,7 @@
   {
     "name": "No Pain, Pain Killer Spray",
     "price": 600.0,
-    "quantity": "60.00 pcs",
+    "quantity": "50.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/No-Pain-Pain-Killer-Spray?ID=Vax9EZGEV0KSSLsP4+Wc2A==",
     "category": "Health & Beauty"
   },
@@ -22353,7 +22339,7 @@
   {
     "name": "Accu-Check Active Test Strips",
     "price": 2805.0,
-    "quantity": "48.00 pcs",
+    "quantity": "25.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/AccuCheck-Active-Test-Strips?ID=SyFGLCJxGFJ3kcHrlvH41A==",
     "category": "Health & Beauty"
   },
@@ -22640,7 +22626,7 @@
   {
     "name": "Moods Dotted",
     "price": 950.0,
-    "quantity": "7.00 g",
+    "quantity": "12.00 pcs",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Moods-Dotted?ID=6lxn90SsdNXZBsK9wQQNlg==",
     "category": "Health & Beauty"
   },
@@ -22969,7 +22955,7 @@
   {
     "name": "Eco Balm Oil",
     "price": 400.0,
-    "quantity": "1.00 pc",
+    "quantity": "6.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Eco-Balm-Oil?ID=Uc65P6hjuXy/a6kO+QG/8g==",
     "category": "Health & Beauty"
   },
@@ -22997,7 +22983,7 @@
   {
     "name": "Iso Propyl Alcohol",
     "price": 100.0,
-    "quantity": "1.00 pc",
+    "quantity": "30.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/ISO-Propyl-Alcohol?ID=l6xKsGhsOv5Q+R9KbPe6zQ==",
     "category": "Health & Beauty"
   },
@@ -23856,6 +23842,13 @@
     "category": "Health & Beauty"
   },
   {
+    "name": "Zincovit Syrup",
+    "price": 895.33,
+    "quantity": "200.00 ml",
+    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Zincovit-Syrup?ID=msR5IPnqA5bIYO5+Ma2aSQ==",
+    "category": "Health & Beauty"
+  },
+  {
     "name": "Ketoplus Shampoo",
     "price": 1183.0,
     "quantity": "60.00 ml",
@@ -23888,6 +23881,13 @@
     "price": 9800.0,
     "quantity": "50.00 ml",
     "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Cetaphil-Sun-SPF-50-Light-Gel?ID=5qDUTbmhqNPzloPpThGVZg==",
+    "category": "Health & Beauty"
+  },
+  {
+    "name": "Fadna Tummy Tea Bags",
+    "price": 975.0,
+    "quantity": "15.00 pcs",
+    "url": "https://cargillsonline.com/ProductDetails/Health-Beauty/Fadna-Tummy-Tea-Bags?ID=YY5xEIuAb5KJEK8gYg0GCw==",
     "category": "Health & Beauty"
   },
   {
