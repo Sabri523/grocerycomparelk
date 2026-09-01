@@ -746,6 +746,756 @@ document.getElementById("hideUnavailable").addEventListener("change", e=>{
 loadData();
 </script>
 
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grocery Compare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F3EC;
+    --ink:#1C2A22;
+    --teal:#2F6B5E;
+    --teal-dim:#DCE8E4;
+    --mango:#E2932A;
+    --mango-dim:#F8E6CB;
+    --leaf:#3F7D4A;
+    --leaf-dim:#E1EEDE;
+    --rule:#D8D3C4;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px 80px;}
+
+  header.top{
+    padding:56px 24px 32px;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:36px;
+  }
+  header.top .inner{max-width:1080px;margin:0 auto;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(34px,5vw,54px);
+    line-height:1.05;
+    margin:0 0 16px;
+    max-width:14ch;
+  }
+  .sub{
+    max-width:58ch;
+    font-size:16px;
+    line-height:1.6;
+    color:#3E4A42;
+    margin:0 0 4px;
+  }
+  .sample-note{
+    display:inline-block;
+    margin-top:18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:#8A6A2E;
+    background:var(--mango-dim);
+    border:1px solid #E9C685;
+    padding:8px 12px;
+    border-radius:3px;
+  }
+
+  .ticker{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    margin-bottom:36px;
+  }
+  .ticker .cell{
+    background:var(--white);
+    padding:20px 22px;
+  }
+  .ticker .num{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:30px;
+    line-height:1;
+  }
+  .ticker .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#6B756E;
+    margin-top:8px;
+  }
+
+  .controls{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:20px;
+    align-items:center;
+  }
+  input[type="text"]{
+    flex:1;
+    min-width:200px;
+    padding:12px 14px;
+    border:1px solid var(--rule);
+    background:var(--white);
+    font-family:'IBM Plex Sans';
+    font-size:14.5px;
+    color:var(--ink);
+    border-radius:2px;
+  }
+  input[type="text"]:focus{outline:2px solid var(--teal); outline-offset:1px;}
+  select{
+    padding:12px 14px;
+    border:1px solid var(--rule);
+    background:var(--white);
+    font-family:'IBM Plex Sans';
+    font-size:14.5px;
+    color:var(--ink);
+    border-radius:2px;
+  }
+  select:focus{outline:2px solid var(--teal); outline-offset:1px;}
+
+  .hide-toggle{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    color:#4A544D;
+    white-space:nowrap;
+    cursor:pointer;
+  }
+  .hide-toggle input{
+    width:15px;
+    height:15px;
+    accent-color:var(--teal);
+    cursor:pointer;
+  }
+  .price-na{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13.5px;
+    color:#9A9488;
+    font-style:italic;
+  }
+
+  .price-link{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .price-link:hover{
+    color: var(--teal);
+    text-decoration: underline;
+  }
+  .unit-price-hint{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:#8A9089;
+    margin-top:2px;
+  }
+  .badge-unverified{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:.03em;
+    padding:2px 6px;
+    border-radius:2px;
+    background:var(--mango-dim);
+    color:#8A6A2E;
+    border:1px solid #E9C685;
+    margin-left:6px;
+    white-space:nowrap;
+  }
+
+  .table-scroll{
+    border:1px solid var(--rule);
+    background:var(--white);
+    overflow-x:auto;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:960px;
+  }
+  thead th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#6B756E;
+    padding:14px 16px;
+    border-bottom:1px solid var(--rule);
+    background:#FBFAF6;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  thead th.active{color:var(--teal);}
+  thead th .arrow{margin-left:4px;font-size:10px;}
+  tbody td{
+    padding:14px 16px;
+    border-bottom:1px solid var(--rule);
+    font-size:14.5px;
+    vertical-align:middle;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:#FAF9F4;}
+  .item-name{font-weight:500;}
+  .item-unit{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:#8A9089;
+    margin-top:2px;
+  }
+  .price{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14.5px;
+  }
+  .price-cell{
+    padding:6px 10px;
+    border-radius:3px;
+    display:inline-block;
+  }
+  .price-wrap{
+    position:relative;
+    display:inline-block;
+  }
+  .discount-tag{
+    position:absolute;
+    top:-9px;
+    left:-9px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    font-weight:600;
+    line-height:1;
+    letter-spacing:.02em;
+    white-space:nowrap;
+    padding:2px 5px;
+    border-radius:2px;
+    background:var(--mango);
+    color:#fff;
+    box-shadow:0 1px 2px rgba(0,0,0,.18);
+    z-index:1;
+  }
+  .win{
+    background:var(--leaf-dim);
+    color:#1E4A26;
+    font-weight:600;
+  }
+  .tie{
+    background:#EFEDE3;
+  }
+  .badge-cheapest{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding:3px 7px;
+    border-radius:2px;
+    background:var(--teal);
+    color:#fff;
+    margin-left:8px;
+  }
+  .savings{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--leaf);
+  }
+  .no-results{
+    padding:48px 16px;
+    text-align:center;
+    color:#7A8079;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+  }
+
+  footer{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid var(--rule);
+    font-size:13px;
+    color:#6B756E;
+    line-height:1.6;
+  }
+  footer b{color:var(--ink);}
+
+  @media (max-width:640px){
+    .ticker{grid-template-columns:1fr;}
+    header.top{padding:40px 20px 28px;}
+  }
+</style>
+</head>
+<body>
+  
+<header class="top">
+  <div class="inner">
+    <div class="eyebrow"><h2>GroceryCompare.lk</h2></div>
+    <p class="sub">A side-by-side price ledger for Sri Lanka's online grocery stores, so you know which one to open before you check out.</p>
+    <span class="sample-note">The website is still in the early stages of development. There may be inaccuracies in the data. The table updates everyday at around 8:00 AM. Please double check the data before making any purchase decisions.</span>
+    <p>If you find the website useful, consider supporting it by sharing it with others or making a small donation. <a href="https://www.buymeacoffee.com/boulder">Please support the project</a></p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="ticker">
+    <div class="cell">
+      <div class="num" id="stat-items">—</div>
+      <div class="label">Comparable / total items</div>
+    </div>
+    <div class="cell">
+      <div class="num" id="stat-cheaper">—</div>
+      <div class="label">Cheaper more often</div>
+    </div>
+    <div class="cell">
+      <div class="num" id="stat-savings">—</div>
+      <div class="label">Avg. saving when picking cheapest</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search an item… e.g. rice, milk powder, dhal" />
+    <select id="category">
+      <option value="">All categories</option>
+    </select>
+    <select id="sort">
+      <option value="relevance" selected>Sort: Relevance</option>
+      <option value="name">Sort: Name (A–Z)</option>
+      <option value="savings">Sort: Biggest savings first</option>
+      <option value="cargills">Sort: Cargills price</option>
+      <option value="glomark">Sort: Glomark price</option>
+      <option value="keells">Sort: Keells price</option>
+      <option value="spar2u">Sort: SPAR2U price</option>
+    </select>
+    <label class="hide-toggle">
+      <input type="checkbox" id="hideUnavailable" />
+      Hide items that can't be compared (price in fewer than 2 stores)
+    </label>
+  </div>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Cargills Online</th>
+          <th>Glomark</th>
+          <th>Keells Online</th>
+          <th>SPAR2U</th>
+          <th>You save</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="no-results" id="no-results" style="display:none;">No items match your search.</div>
+  </div>
+
+  <footer>
+  </footer>
+
+</div>
+
+<script>
+// The stores this page knows how to display. Order here controls column
+// order in the table and tie-break order when picking a "cheaper more
+// often" store in renderStats(). Adding a 4th store later just means
+// adding one entry here (plus, on the Python side, wiring it into
+// match_products.py's matching passes) — everything below reads this
+// list rather than hardcoding "cargills"/"glomark" individually.
+const STORES = [
+  { key: "cargills", label: "Cargills Online" },
+  { key: "glomark", label: "Glomark" },
+  { key: "keells", label: "Keells Online" },
+  { key: "spar2u", label: "SPAR2U" },
+];
+
+let data = [];
+const fmt = n => "Rs. " + n.toLocaleString("en-LK");
+let sortKey = "relevance";
+let query = "";
+let category = "";
+let hideUnavailable = false;
+
+// Some rows in comparison.json may have "NA" (or null/missing) for a price
+// when a product genuinely wasn't found on one side. Treat anything that
+// isn't a finite number as "not available" rather than doing math on it.
+function isValidPrice(v){
+  return typeof v === "number" && Number.isFinite(v);
+}
+
+// match_products.py stores quantities normalized to grams (weight),
+// millilitres (volume), or a plain count — turn that back into something
+// readable, e.g. 500 -> "500g", 1500 -> "1.5kg", 6 -> "6 pcs".
+function formatQty(qty, unitType){
+  if(qty === null || qty === undefined || !unitType) return null;
+  if(unitType === "weight"){
+    return qty >= 1000 ? `${(qty/1000).toFixed(qty % 1000 === 0 ? 0 : 1)}kg` : `${qty}g`;
+  }
+  if(unitType === "volume"){
+    return qty >= 1000 ? `${(qty/1000).toFixed(qty % 1000 === 0 ? 0 : 1)}L` : `${qty}ml`;
+  }
+  if(unitType === "count"){
+    return `${qty} ${qty === 1 ? "pc" : "pcs"}`;
+  }
+  return null;
+}
+
+// Return the first available quantity from the stores, in display order.
+function firstValidQty(d){
+  for(const store of STORES){
+    const qty = d[`${store.key}_qty`];
+    if(qty !== null && qty !== undefined && Number.isFinite(Number(qty))){
+      return formatQty(Number(qty), d.unit_type);
+    }
+  }
+  return null;
+}
+
+// The "main" number for a store/row is whichever value the row is
+// actually being compared on: the normalized unit price when the row's
+// comparisonBasis is "unit", otherwise the raw pack price. This keeps the
+// big number, the "Cheapest" badge, and sorting all pointed at the same
+// figure instead of the badge applying to one number while a different
+// one is shown large.
+function mainValue(d, side){
+  if(!d[`${side}Valid`]) return null;
+  const unitVal = d[`${side}_unit_price`];
+  if(isValidPrice(unitVal)) return unitVal;
+  return d[side];
+}
+
+async function loadData(){
+  const tbody = document.getElementById("rows");
+  tbody.innerHTML = `<tr><td colspan="7" class="no-results" style="display:table-cell;">Loading comparison.json…</td></tr>`;
+
+  try {
+    const res = await fetch("comparison.json", {cache:"no-store"});
+    if(!res.ok) throw new Error("comparison.json not found (" + res.status + ")");
+    const raw = await res.json();
+
+    data = raw.map(d => {
+      const perStore = {};
+      STORES.forEach(s => {
+        perStore[`${s.key}Valid`] = isValidPrice(d[s.key]);
+        perStore[`${s.key}UnitValid`] = isValidPrice(d[`${s.key}_unit_price`]);
+      });
+
+      const validStores = STORES.filter(s => perStore[`${s.key}Valid`]);
+      // Only use unit-price comparison if EVERY store that's present on
+      // this row also has a usable unit price — mixing a unit price
+      // against a raw pack price would compare apples to oranges.
+      const allHaveUnit = validStores.length > 0 && validStores.every(s => perStore[`${s.key}UnitValid`]);
+      const comparisonBasis = validStores.length < 2 ? "none" : (allHaveUnit ? "unit" : "raw");
+
+      let cheaper = "unavailable";
+      let tiedKeys = [];
+      let diff = null;
+      let pct = null;
+
+      if(comparisonBasis !== "none"){
+        const valueFor = s => allHaveUnit ? d[`${s.key}_unit_price`] : d[s.key];
+        const sorted = [...validStores].sort((a, b) => valueFor(a) - valueFor(b));
+        const lowestVal = valueFor(sorted[0]);
+        const EPS = 0.005; // guard against float rounding when checking for ties
+        tiedKeys = sorted.filter(s => Math.abs(valueFor(s) - lowestVal) < EPS).map(s => s.key);
+        cheaper = tiedKeys.length > 1 ? "tie" : sorted[0].key;
+
+        const secondVal = valueFor(sorted[1]);
+        diff = Math.abs(secondVal - lowestVal);
+        pct = secondVal === 0 ? 0 : (diff / secondVal * 100);
+      }
+
+      // "bothValid" name kept for continuity with earlier 2-store rows —
+      // now means "comparable across at least 2 of the stores present",
+      // which is what the "hide unavailable" toggle actually needs.
+      const bothValid = validStores.length >= 2;
+
+      return {...d, ...perStore, comparisonBasis, cheaper, tiedKeys, diff, pct, bothValid};
+    });
+
+    // populate category filter now that real categories are known
+    const catSelect = document.getElementById("category");
+    catSelect.innerHTML = '<option value="">All categories</option>';
+    const cats = [...new Set(data.map(d=>d.cat).filter(Boolean))].sort();
+    cats.forEach(c=>{
+      const opt = document.createElement("option");
+      opt.value = c; opt.textContent = c;
+      catSelect.appendChild(opt);
+    });
+
+    renderStats();
+    
+    render();
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="7" class="no-results" style="display:table-cell;">
+      Couldn't load comparison.json (${err.message}). Make sure it's in the same folder as this
+      file and that you're opening this page through a local server (not double-clicking it) —
+      see the README for the one-line "python -m http.server" command.
+    </td></tr>`;
+  }
+}
+
+function relevanceScore(name, query){
+    query = query.trim().toLowerCase();
+    name = name.toLowerCase();
+
+    if(!query) return 0;
+
+    // Exact match
+    if(name === query) return 10000;
+
+    // Starts with query
+    if(name.startsWith(query)) return 9000;
+
+    // Whole word
+    if(name.includes(" " + query)) return 8000;
+
+    // Contains query
+    if(name.includes(query)) return 7000;
+
+    // Count matching words
+    const qWords = query.split(/\s+/);
+    let score = 0;
+
+    for(const word of qWords){
+      if(name.includes(word))
+        score += word.length * 100;
+    }
+
+    return score;
+  }
+
+// Each store's "{store}_discount" field carries whatever the scraper
+// found verbatim (e.g. "20.00% OFF", "5% OFF", "11% Off", or "0" when
+// there's genuinely no discount). Pull just the number out for the tag,
+// and treat "0", missing, null, or anything without a parseable
+// percentage as "no discount" — nothing should render in those cases.
+function discountPercent(discountStr){
+  if(discountStr === null || discountStr === undefined) return null;
+  const s = String(discountStr).trim();
+  if(s === "" || s === "0") return null;
+  const m = s.match(/(\d+(?:\.\d+)?)\s*%/);
+  if(!m) return null;
+  const val = parseFloat(m[1]);
+  if(!Number.isFinite(val) || val <= 0) return null;
+  // Whole numbers show as "20%"; anything with a fraction shows one
+  // decimal place, e.g. "12.5%".
+  return val % 1 === 0 ? String(val) : val.toFixed(1);
+}
+
+function priceCellHtml(d, side, tie){
+  const valid = d[`${side}Valid`];
+  if(!valid) return `<span class="price-na">N/A</span>`;
+
+  const win = d.tiedKeys && d.tiedKeys.length === 1 && d.tiedKeys[0] === side;
+  const isTied = tie && d.tiedKeys && d.tiedKeys.includes(side);
+
+  const rawPrice = d[side];
+  const unitPriceVal = d[`${side}_unit_price`];
+  const usingUnit = isValidPrice(unitPriceVal);
+  const qtyLabel = formatQty(d[`${side}_qty`], d.unit_type);
+  const url = d[`${side}_url`];
+
+  const displayText = usingUnit ? `Rs. ${unitPriceVal.toFixed(2)} ${d.unit_label || ''}` : fmt(rawPrice);
+
+  const mainText = url ? `<a href="${url}" target="_blank" rel="noopener noreferrer" class="price-link">${displayText}</a>` : displayText;
+
+  // Secondary line shows whatever ISN'T the main number: the raw
+  // pack price + pack size when comparing by unit price, or just the
+  // pack size when comparing by raw price (no unit price to show).
+  const secondaryParts = usingUnit
+    ? [qtyLabel, `pack: ${fmt(rawPrice)}`].filter(Boolean)
+    : [qtyLabel].filter(Boolean);
+
+  const discPct = discountPercent(d[`${side}_discount`]);
+  const discountTag = discPct !== null ? `<span class="discount-tag">-${discPct}%</span>` : '';
+
+  return `<span class="price-wrap">${discountTag}<span class="price price-cell ${isTied ? 'tie' : (win ? 'win' : '')}">${mainText}</span></span>${win ? '<span class="badge-cheapest">Cheapest</span>' : ''}${secondaryParts.length ? `<span class="unit-price-hint">${secondaryParts.join(' · ')}</span>` : ''}`;
+}
+
+function render(){
+  let rows = data.filter(d=>{
+    const searchableText = [d.brand, d.name].filter(Boolean).join(" ").toLowerCase();
+    const matchesQuery = searchableText.includes(query.toLowerCase());
+    const matchesCat = !category || d.cat === category;
+    const matchesAvailability = !hideUnavailable || d.bothValid;
+    return matchesQuery && matchesCat && matchesAvailability;
+  });
+
+  rows.sort((a,b)=>{
+    if(sortKey === "relevance"){
+      if(!query.trim())
+          return a.name.localeCompare(b.name);
+
+      const sa = relevanceScore([a.brand, a.name].filter(Boolean).join(" "), query);
+      const sb = relevanceScore([b.brand, b.name].filter(Boolean).join(" "), query);
+
+      if(sa !== sb)
+          return sb - sa;
+
+      return a.name.localeCompare(b.name);
+    }
+    if(sortKey === "name") return a.name.localeCompare(b.name);
+    if(sortKey === "savings"){
+      // Rows without a valid comparison always sort to the bottom,
+      // regardless of ascending logic, since "savings" isn't meaningful for them.
+      const aComparable = a.comparisonBasis !== "none";
+      const bComparable = b.comparisonBasis !== "none";
+      if(!aComparable && !bComparable) return 0;
+      if(!aComparable) return 1;
+      if(!bComparable) return -1;
+      return b.diff - a.diff;
+    }
+    if(STORES.some(s => s.key === sortKey)){
+      const av = mainValue(a, sortKey), bv = mainValue(b, sortKey);
+      if(av === null && bv === null) return 0;
+      if(av === null) return 1;
+      if(bv === null) return -1;
+      return av - bv;
+    }
+  });
+
+  const tbody = document.getElementById("rows");
+  const noResults = document.getElementById("no-results");
+  tbody.innerHTML = "";
+
+  if(rows.length === 0){
+    noResults.style.display = "block";
+  } else {
+    noResults.style.display = "none";
+  }
+
+  rows.forEach(d=>{
+    const tr = document.createElement("tr");
+    const comparable = d.comparisonBasis !== "none";
+    const tie = comparable && d.cheaper === "tie";
+
+    const storeCells = STORES.map(s => `<td>${priceCellHtml(d, s.key, tie)}</td>`).join("");
+    const quantityLabel = firstValidQty(d);
+    const quantityCell = quantityLabel
+      ? `<span class="price">${quantityLabel}</span>`
+      : `<span class="price-na">N/A</span>`;
+
+    let savingsCell;
+    if(!comparable){
+      savingsCell = `<span class="price-na">not comparable</span>`;
+    } else if(d.cheaper === "tie"){
+      savingsCell = '<span class="savings">—</span>';
+    } else {
+    const warning = d.pct >= 30
+      ? `<span class="unit-price-hint" style="color:#B35A00;">⚠ Unusually large difference. Check that the products, pack sizes, and scraped prices are correct before relying on this comparison.</span>`
+      : "";
+
+    if(d.comparisonBasis === "unit"){
+      savingsCell =
+        `<span class="savings">Rs. ${d.diff.toFixed(2)} ${d.unit_label || ''} (${d.pct.toFixed(1)}%)</span>
+        <span class="unit-price-hint">by unit price, vs next-cheapest</span>
+        ${warning}`;
+    } else {
+      savingsCell =
+        `<span class="savings">${fmt(d.diff)} (${d.pct.toFixed(1)}%)</span>
+        <span class="unit-price-hint">by pack price, vs next-cheapest</span>
+        ${warning}`;
+    }
+  }
+
+    const sizeWarning = (comparable && d.size_verified === false)
+      ? `<span class="badge-unverified" title="Pack size couldn't be confirmed as matching across every store present in this row">⚠ size unverified</span>`
+      : '';
+
+    const confidenceNote = d.match_confidence ? `match ${d.match_confidence}%` : (d.unit || "");
+    tr.innerHTML = `
+      <td>
+        <span class="item-name">${[d.brand, d.name].filter(Boolean).join(" ")}</span>
+        <span class="item-unit">${[confidenceNote, d.cat].filter(Boolean).join(" · ")}${sizeWarning}</span>
+      </td>
+      <td>${quantityCell}</td>
+      ${storeCells}
+      <td>${savingsCell}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderStats(){
+  // Savings-related stats only ever make sense over rows where a real
+  // comparison (unit-price or raw-price) was actually possible —
+  // otherwise "avg saving" would be diluted (or NaN) from items that
+  // were never comparable to begin with.
+  const comparable = data.filter(d => d.comparisonBasis !== "none");
+  const total = data.length;
+
+  const counts = {};
+  STORES.forEach(s => { counts[s.key] = comparable.filter(d => d.cheaper === s.key).length; });
+
+  // Pick the store that was cheapest most often. Ties fall to whichever
+  // store comes first in STORES (same "first wins ties" behavior as the
+  // original 2-store version, just generalized to however many stores
+  // are configured).
+  let cheaperStore = "—";
+  if(comparable.length){
+    let best = STORES[0];
+    STORES.forEach(s => { if(counts[s.key] > counts[best.key]) best = s; });
+    cheaperStore = best.label;
+  }
+
+  const avgPct = comparable.length === 0 ? "—" : (comparable.reduce((s,d)=>s+d.pct,0) / comparable.length).toFixed(1) + "%";
+
+  document.getElementById("stat-items").textContent = `${comparable.length} / ${total}`;
+  document.getElementById("stat-cheaper").textContent = cheaperStore;
+  document.getElementById("stat-savings").textContent = avgPct;
+}
+
+const searchBox = document.getElementById("search");
+
+searchBox.addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    query = searchBox.value.trim();
+    render();
+  }
+});
+document.getElementById("category").addEventListener("change", e=>{
+  category = e.target.value;
+  render();
+});
+document.getElementById("sort").addEventListener("change", e=>{
+  sortKey = e.target.value;
+  render();
+});
+document.getElementById("hideUnavailable").addEventListener("change", e=>{
+  hideUnavailable = e.target.checked;
+  render();
+});
+
+loadData();
+</script>
+
 <script>
   window.va = window.va || function () {
     (window.vaq = window.vaq || []).push(arguments);
