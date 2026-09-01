@@ -69,6 +69,57 @@ MANUAL_CATEGORY_PAGES = {
 
 PRICE_RE = re.compile(r"Rs\.?\s?([\d,]+(?:\.\d{1,2})?)")
 
+# Text found inside div.dis > p (see the "20.00% OFF" screenshot). Kept
+# separate from PRICE_RE since it's a percentage, not a currency amount.
+DISCOUNT_RE = re.compile(r"[\d.]+\s?%\s?OFF", re.IGNORECASE)
+
+# Known brand names to split out of the product name into their own field.
+# This list is necessarily incomplete for Cargills' full catalog — extend
+# it as you spot brands in the scraped output that weren't picked up.
+# Matching is case-insensitive and whole-word; longer names (e.g.
+# "Coca-Cola") are tried before shorter ones so they win over any
+# accidental substring match.
+KNOWN_BRANDS_FILE = "known_brand_list.txt"
+
+with open(KNOWN_BRANDS_FILE, "r", encoding="utf-8") as f:
+    KNOWN_BRANDS = [
+        line.strip()
+        for line in f
+        if line.strip()
+    ]
+
+_BRAND_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(b) for b in sorted(KNOWN_BRANDS, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
+
+
+def extract_brand(name):
+    """Find a known brand inside a raw product name and split it out.
+
+    Returns (brand, name_without_brand). If no known brand is matched,
+    returns ("", name) unchanged — the item still gets a "brand" column
+    in the output JSON, just empty, so downstream code doesn't need to
+    special-case missing brands.
+    """
+    if not name:
+        return "", name
+
+    match = _BRAND_PATTERN.search(name)
+    if not match:
+        return "", name
+
+    matched_text = match.group(1)
+    # Re-map to the canonical spelling from KNOWN_BRANDS (case-insensitive)
+    # so e.g. matching "nestle" in a lowercase listing still outputs "Nestle".
+    brand = next((b for b in KNOWN_BRANDS if b.lower() == matched_text.lower()), matched_text)
+
+    cleaned = name[:match.start()] + name[match.end():]
+    # Collapse doubled spaces and stray leftover separators (" - ", ", ")
+    # left behind where the brand used to sit.
+    cleaned = re.sub(r"\s{2,}", " ", cleaned).strip(" -,")
+    return brand, cleaned
+
 # Candidate ways "Next page" might be exposed. Tried in order on every page.
 NEXT_TEXT_CANDIDATES = ["Next", "next", ">", "»", "Next Page", "Next »"]
 NEXT_SELECTOR_CANDIDATES = [
@@ -178,11 +229,70 @@ def find_quantity_near(anchor, max_levels=6):
     return None
 #chatgpt end
 
+
+def find_discount_near(anchor, max_levels=6):
+    """Return this product's discount text (e.g. "20.00% OFF") from its
+    div.dis container (see the ng-if="product.DiscountAmount!=0"
+    screenshot), or "0" if a div.dis exists for this product but has no
+    discount, or None if no div.dis is found in scope at all.
+
+    Uses the same "stop widening once we've crossed into more than one
+    product's container" boundary as find_quantity_near, since div.dis
+    lives in the same per-product card as the quantity button.
+
+    IMPORTANT: this must run BEFORE the div.dis elements are decomposed
+    (see parse_current_page) — decomposing happens afterwards purely to
+    keep that promo text out of the name/price extraction.
+    """
+    node = anchor
+    for _ in range(max_levels):
+        node = node.parent
+        if node is None:
+            break
+
+        product_ids = {
+            extract_id(a.get("href", ""))
+            for a in node.find_all("a", href=True)
+            if "ProductDetails" in a["href"]
+        }
+        product_ids.discard(None)
+
+        if len(product_ids) > 1:
+            break
+
+        dis_div = node.find("div", class_="dis")
+        if dis_div:
+            # Angular's ng-if removes the <p> from the rendered DOM
+            # entirely when DiscountAmount == 0, so an empty/missing <p>
+            # here means "no discount", not "discount not found yet".
+            p = dis_div.find("p")
+            if p:
+                text = p.get_text(" ", strip=True)
+                if text:
+                    return text
+            return "0"
+
+    return None
+# end find_discount_near
+
+
 def parse_current_page(html):
     """Parse whatever products are currently rendered on the page into
-    {pid: {"name": ..., "price": ..., "quantity": ...}}. Does NOT
-    accumulate across pages — that happens in scrape_category."""
+    {pid: {"name": ..., "brand": ..., "price": ..., "quantity": ...,
+    "discount": ...}}. Does NOT accumulate across pages — that happens
+    in scrape_category."""
     soup = BeautifulSoup(html, "html.parser")
+
+    # --- Pass 1: discount, BEFORE the div.dis elements are removed ---
+    # find_discount_near needs the div.dis nodes still in the tree, so
+    # this has to happen before the decompose step below.
+    discount_by_id = {}
+    for a in soup.find_all("a", href=lambda h: h and "ProductDetails" in h):
+        pid = extract_id(a["href"])
+        if not pid or pid in discount_by_id:
+            continue
+        disc = find_discount_near(a)
+        discount_by_id[pid] = disc if disc is not None else "0"
 
     # temporarily removes discount div (avoids picking up promo/MRP text
     # as if it were the real price or name)
@@ -224,12 +334,21 @@ def parse_current_page(html):
     for pid, parts in by_id.items():
         if not parts["name_parts"] or not parts["price_parts"]:
             continue
-        item_name = max(parts["name_parts"], key=len).title()  # longest candidate text
+        raw_name = max(parts["name_parts"], key=len)  # longest candidate text
+        brand, name_without_brand = extract_brand(raw_name)
+        item_name = name_without_brand.title()
         price_match = PRICE_RE.search(parts["price_parts"][0])
         if not price_match:
             continue
         price = float(price_match.group(1).replace(",", ""))
-        page_items[pid] = {"name": item_name, "price": price, "quantity": parts["quantity"], "url": parts["url"]}
+        page_items[pid] = {
+            "name": item_name,
+            "brand": brand,
+            "price": price,
+            "quantity": parts["quantity"],
+            "discount": discount_by_id.get(pid, "0"),
+            "url": parts["url"],
+        }
 
     return page_items
 
@@ -303,7 +422,15 @@ def scrape_category(page, name, url, save_debug_html=False):
         print(f"  saved last rendered page HTML to {debug_path} for inspection")
 
     items = [
-        {"name": v["name"], "price": v["price"], "quantity": v.get("quantity"), "url": v.get("url"), "category": name}
+        {
+            "name": v["name"],
+            "brand": v.get("brand", ""),
+            "price": v["price"],
+            "quantity": v.get("quantity"),
+            "discount": v.get("discount", "0"),
+            "url": v.get("url"),
+            "category": name,
+        }
         for v in all_items_by_id.values()
     ]
     return items

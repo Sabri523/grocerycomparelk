@@ -16,12 +16,34 @@ This version:
      trailing-name quantity all land in this same field) — Glomark is
      currently the only scraper without one, so it always falls back to
      parsing its name.
-  2. Only accepts a fuzzy name match if the two items' quantities are
-     compatible (same unit type, and not wildly different scale — e.g.
-     won't match a 1kg bag against a 25kg bulk sack).
+  2. Standardizes each item's brand (case/whitespace-normalized — see
+     standardize_brand()) using the "brand" field each scraper now emits
+     separately from the name. Brand and quantity are then both treated
+     as HARD, near-literal gates on top of the fuzzy name score, not
+     fuzzy signals themselves:
+       - Quantity must match the same unit type (weight/volume/count)
+         and be within QTY_EXACT_TOLERANCE of each other (a small
+         allowance for rounding, e.g. a site labeling something "1kg"
+         vs another labeling the same item "1000g") — this is a strict
+         near-equality check, not the old wide 0.4x-2.5x "plausibly the
+         same product line" range.
+       - Brand must match exactly (case/whitespace-insensitive) whenever
+         BOTH sides have one. If either side's brand couldn't be
+         identified (empty string), the brand check is skipped for that
+         pair rather than blocking the match outright — same "can't
+         verify, don't block, but it's lower-confidence" treatment
+         already used for unparseable quantities.
+     Only the product NAME is fuzzy-matched (via SIMILARITY_THRESHOLD);
+     since brand text is no longer part of that name (each scraper
+     strips it into its own field before writing its JSON), the fuzzy
+     match is comparing product description to product description, not
+     accidentally being helped or hurt by brand-name overlap.
   3. Computes a normalized unit price (per 100g / per 100ml / per piece)
      for every item, so even legitimately different pack sizes of "the
      same" product can be compared fairly instead of comparing raw prices.
+  4. Carries each store's "discount" field (as scraped — e.g. "20.00%
+     OFF", "5% OFF", "11% Off", or "0" when there's no discount) through
+     into comparison.json as a "{store}_discount" column per row.
 
 N-way matching approach:
   Rather than a proper N-way assignment (which would need something like
@@ -56,13 +78,14 @@ import json
 import re
 from rapidfuzz import fuzz, process
 
-SIMILARITY_THRESHOLD = 85  # 0-100, raise this if you get bad name matches
+SIMILARITY_THRESHOLD = 85  # 0-100, raise this if you get bad name matches — applies to the NAME ONLY
 
-# How much a matched pair's quantities are allowed to differ and still be
-# considered "the same product" (e.g. 400g vs 500g is fine; 1kg vs 25kg is
-# not). 0.4-2.5x means one item can be up to 2.5x the size of the other.
-MIN_QTY_RATIO = 0.4
-MAX_QTY_RATIO = 2.5
+# How much a matched pair's standardized quantities are allowed to differ
+# and STILL be treated as a literal match (a small allowance for rounding
+# across sites, e.g. "1kg" vs "1000g", or "400g" vs "399g"). This is
+# intentionally tight — it is NOT the old "plausibly the same product
+# line, could be a different pack size" range. 0.02 = 2%.
+QTY_EXACT_TOLERANCE = 0.02
 
 WEIGHT_UNITS = {
     "g": 1, "gram": 1, "grams": 1, "gm": 1, "gms": 1,
@@ -147,18 +170,46 @@ def unit_label(unit_type):
 
 
 def quantities_compatible(type_a, qty_a, type_b, qty_b):
-    """True if two quantities can be considered 'the same product, maybe
-    a different pack size' rather than genuinely different products."""
+    """True if two standardized quantities are close enough to count as a
+    literal match (same pack size, modulo rounding), NOT merely 'a
+    plausible pack-size variant of the same product line'."""
     if type_a is None or type_b is None:
         # Can't verify — allow the name match through, but the caller
-        # should treat this as lower-confidence (flagged in the output).
+        # should treat this as lower-confidence (flagged in the output
+        # via size_verified).
         return True
     if type_a != type_b:
         return False
     if qty_a <= 0 or qty_b <= 0:
         return False
+    if type_a == "count":
+        # Counts are discrete (e.g. "10 pcs" vs "12 pcs" are genuinely
+        # different products) — no rounding tolerance applies.
+        return qty_a == qty_b
     ratio = qty_a / qty_b
-    return MIN_QTY_RATIO <= ratio <= MAX_QTY_RATIO
+    return abs(ratio - 1) <= QTY_EXACT_TOLERANCE
+
+
+def standardize_brand(brand):
+    """Normalize a brand string for literal comparison: trim whitespace,
+    lowercase, and collapse internal whitespace, so e.g. "Nestle " and
+    "nestle" (or "Nestle" vs "NESTLE") are recognized as identical."""
+    if not brand:
+        return ""
+    return re.sub(r"\s+", " ", brand.strip().lower())
+
+
+def brands_compatible(brand_a, brand_b):
+    """True if two items' brands can be considered the same, using an
+    exact (post-standardization) comparison — not a fuzzy one. If either
+    side has no identified brand, the check is skipped (can't verify,
+    don't block the match) rather than treated as a mismatch, same
+    "unknown means unverified, not incompatible" pattern used for
+    quantities above."""
+    a, b = standardize_brand(brand_a), standardize_brand(brand_b)
+    if not a or not b:
+        return True
+    return a == b
 
 
 def load_optional(path):
@@ -186,15 +237,23 @@ def enrich(item):
         "base_qty": base_qty,
         "unit_price": unit_price(item["price"], unit_type, base_qty),
         "qty_source": "quantity_field" if item.get("quantity") else "name",
+        "brand_norm": standardize_brand(item.get("brand")),
     }
 
 
 def best_match(item, pool, pool_names, used_indices, stats):
-    """Return (matched_item, idx, score) for the best not-yet-used,
-    fuzzy-and-size-compatible match of `item` in `pool`, or None if
-    nothing qualifies. `stats['rejected_for_size']` is incremented for
-    every otherwise-good-enough candidate that got turned down purely for
-    an incompatible pack size, so main() can report that count."""
+    """Return (matched_item, idx, score) for the best not-yet-used
+    candidate that clears ALL THREE gates: a fuzzy name score >=
+    SIMILARITY_THRESHOLD, a compatible (near-literal) quantity, and a
+    compatible (literal, once standardized) brand — or None if nothing
+    qualifies. `stats['rejected_for_size']` / `stats['rejected_for_brand']`
+    count otherwise-good-enough candidates turned down purely for an
+    incompatible pack size or brand, so main() can report those counts.
+
+    Brand is checked before quantity since it's the cheaper/more
+    decisive check (most mismatches are different brands entirely,
+    not same-brand-different-size), but a candidate must pass both to
+    be accepted."""
     if not pool_names:
         return None
     candidates = process.extract(item["name"], pool_names, scorer=fuzz.token_sort_ratio, limit=8)
@@ -204,20 +263,26 @@ def best_match(item, pool, pool_names, used_indices, stats):
         if score < SIMILARITY_THRESHOLD:
             continue
         candidate = pool[idx]
-        if quantities_compatible(item["unit_type"], item["base_qty"], candidate["unit_type"], candidate["base_qty"]):
-            return candidate, idx, score
-        stats["rejected_for_size"] += 1
+        if not brands_compatible(item.get("brand"), candidate.get("brand")):
+            stats["rejected_for_brand"] += 1
+            continue
+        if not quantities_compatible(item["unit_type"], item["base_qty"], candidate["unit_type"], candidate["base_qty"]):
+            stats["rejected_for_size"] += 1
+            continue
+        return candidate, idx, score
     return None
 
 
 def na_fields(store):
-    """The {store}/{store}_url/{store}_qty/{store}_unit_price fields to
-    use when a row has no match on that side."""
+    """The {store}/{store}_url/{store}_qty/{store}_unit_price/
+    {store}_discount fields to use when a row has no match on that
+    side."""
     return {
         store: "NA",
         f"{store}_url": None,
         f"{store}_qty": None,
         f"{store}_unit_price": None,
+        f"{store}_discount": None,
     }
 
 
@@ -227,6 +292,10 @@ def present_fields(store, item):
         f"{store}_url": item.get("url"),
         f"{store}_qty": item["base_qty"],
         f"{store}_unit_price": item["unit_price"],
+        # "0" (as scraped) when there's genuinely no discount, vs None
+        # (above) when the store isn't present on this row at all — kept
+        # distinct so "no discount" and "no match" aren't conflated.
+        f"{store}_discount": item.get("discount", "0"),
     }
 
 
@@ -234,7 +303,7 @@ def main():
     loaded = {store: [enrich(x) for x in load_optional(STORE_FILES[store])] for store in STORE_ORDER}
     names = {store: [x["name"] for x in loaded[store]] for store in STORE_ORDER}
     used = {store: set() for store in STORE_ORDER}
-    stats = {"rejected_for_size": 0}
+    stats = {"rejected_for_size": 0, "rejected_for_brand": 0}
 
     matched = []
 
@@ -249,7 +318,7 @@ def main():
             if idx in used[anchor_store]:
                 continue  # already claimed as a match by an earlier-anchored row
 
-            row = {"name": item["name"], "cat": item.get("category", "")}
+            row = {"name": item["name"], "brand": item.get("brand", ""), "cat": item.get("category", "")}
             for earlier in earlier_stores:
                 row.update(na_fields(earlier))
             row.update(present_fields(anchor_store, item))
@@ -302,6 +371,7 @@ def main():
     print(f"Rows with at least one fuzzy match made (confidence >= {SIMILARITY_THRESHOLD}): {total_matched}")
     print(f"  of which size-verified (quantity checked across every store present on the row): {verified}")
     print(f"Items with quantity from an explicit field (not guessed from name): {from_field}")
+    print(f"Fuzzy candidates rejected for incompatible brand: {stats['rejected_for_brand']}")
     print(f"Fuzzy candidates rejected for incompatible pack size: {stats['rejected_for_size']}")
     print("Review comparison.json — rows with size_verified=false had a quantity that")
     print("couldn't be parsed on at least one present side, so the size check was skipped there.")

@@ -77,6 +77,79 @@ STOP_SECTION_MARKERS = {
 MAX_CLICKS = 100          # safety cap so a stuck page can't loop forever
 SHOW_MORE_TEXT = "Show More"
 
+# Known brand names to split out of the product name into their own field.
+# Shared with scraper_cargills.py via the same external file, so both
+# scrapers stay in sync — add new brands to the file, not here.
+KNOWN_BRANDS_FILE = "known_brand_list.txt"
+
+with open(KNOWN_BRANDS_FILE, "r", encoding="utf-8") as f:
+    KNOWN_BRANDS = [
+        line.strip()
+        for line in f
+        if line.strip()
+    ]
+
+# Longer names (e.g. "Coca-Cola") are tried before shorter ones so they
+# win over any accidental substring match. Matching is case-insensitive
+# and whole-word.
+_BRAND_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(b) for b in sorted(KNOWN_BRANDS, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
+
+
+def extract_brand(name):
+    """Find a known brand inside a raw product name and split it out.
+
+    Returns (brand, name_without_brand). If no known brand is matched,
+    returns ("", name) unchanged — the item still gets a "brand" column
+    in the output JSON, just empty, so downstream code doesn't need to
+    special-case missing brands.
+    """
+    if not name:
+        return "", name
+
+    match = _BRAND_PATTERN.search(name)
+    if not match:
+        return "", name
+
+    matched_text = match.group(1)
+    # Re-map to the canonical spelling from KNOWN_BRANDS (case-insensitive)
+    # so e.g. matching "nestle" in an all-caps listing still outputs "Nestle".
+    brand = next((b for b in KNOWN_BRANDS if b.lower() == matched_text.lower()), matched_text)
+
+    cleaned = name[:match.start()] + name[match.end():]
+    # Collapse doubled spaces and stray leftover separators (" - ", ", ")
+    # left behind where the brand used to sit.
+    cleaned = re.sub(r"\s{2,}", " ", cleaned).strip(" -,")
+    return brand, cleaned
+
+
+def extract_discount(product_card):
+    """Return the discount text from a product's div.topleft badge (see
+    the "5% / OFF" screenshot), or "0" if that badge is absent or empty.
+
+    The badge sits above the "product-caption" block (image + a
+    percentage/OFF overlay), not inside it, so this checks the card
+    itself first and then its immediate parent — the usual product-tile
+    wrapper — rather than assuming a fixed nesting depth.
+    """
+    for scope in (product_card, product_card.parent):
+        if scope is None:
+            continue
+        topleft = scope.find("div", class_="topleft")
+        if not topleft:
+            continue
+        rate = topleft.find("div", class_="topleft-discount-rate")
+        if not rate:
+            return "0"
+        spans = [s.get_text(" ", strip=True) for s in rate.find_all("span")]
+        spans = [s for s in spans if s]
+        if not spans:
+            return "0"
+        return " ".join(spans)
+    return "0"
+
 
 def discover_categories(page):
     """Load the homepage and pull out every real category listing link
@@ -228,6 +301,11 @@ def parse_products(html, category_name):
                 quantity = name_part_list[1].lower()
                 quantity_in_name = True
 
+            # Split the brand out before title-casing, same as
+            # scraper_cargills.py, so KNOWN_BRANDS matching isn't thrown
+            # off by the site's inconsistent original casing.
+            brand, name_part = extract_brand(name_part)
+
             # Change name to Title case from full upper or full lower
             name_part = name_part.title()
 
@@ -263,11 +341,14 @@ def parse_products(html, category_name):
                     quantity = qty_text or None
 
             href = tag["href"]
+            discount = extract_discount(product_card)
 
             items.append({
                 "name": name_part,
+                "brand": brand,
                 "price": price,
                 "quantity": quantity,
+                "discount": discount,
                 "url": href if href.startswith("http") else f"https://glomark.lk{href}",
                 "category": category_name,
             })

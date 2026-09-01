@@ -99,6 +99,55 @@ TRAILING_QTY_RE = re.compile(
     re.I,
 )
 
+# Known brand names to split out of the product name into their own field.
+# Shared with scraper_cargills.py / scraper_glomark.py / scraper_spar2u.py
+# via the same external file, so all scrapers stay in sync — add new
+# brands to the file, not here.
+KNOWN_BRANDS_FILE = "known_brand_list.txt"
+
+with open(KNOWN_BRANDS_FILE, "r", encoding="utf-8") as f:
+    KNOWN_BRANDS = [
+        line.strip()
+        for line in f
+        if line.strip()
+    ]
+
+# Longer names (e.g. "Coca-Cola") are tried before shorter ones so they
+# win over any accidental substring match. Matching is case-insensitive
+# and whole-word.
+_BRAND_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(b) for b in sorted(KNOWN_BRANDS, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
+
+
+def extract_brand(name):
+    """Find a known brand inside a raw product name and split it out.
+
+    Returns (brand, name_without_brand). If no known brand is matched,
+    returns ("", name) unchanged — the item still gets a "brand" column
+    in the output JSON, just empty, so downstream code doesn't need to
+    special-case missing brands.
+    """
+    if not name:
+        return "", name
+
+    match = _BRAND_PATTERN.search(name)
+    if not match:
+        return "", name
+
+    matched_text = match.group(1)
+    # Re-map to the canonical spelling from KNOWN_BRANDS (case-insensitive)
+    # so e.g. matching "nestle" in a lowercase listing still outputs "Nestle".
+    brand = next((b for b in KNOWN_BRANDS if b.lower() == matched_text.lower()), matched_text)
+
+    cleaned = name[:match.start()] + name[match.end():]
+    # Collapse doubled spaces and stray leftover separators (" - ", ", ")
+    # left behind where the brand used to sit.
+    cleaned = re.sub(r"\s{2,}", " ", cleaned).strip(" -,")
+    return brand, cleaned
+
+
 # --- "View All" candidates -------------------------------------------------
 VIEW_ALL_TEXT_CANDIDATES = [
     "View All", "View all", "VIEW ALL", "Show All", "See All", "See all",
@@ -492,6 +541,48 @@ def _extract_img_src(node):
     return img["src"] if img else None
 
 
+def _extract_discount(node):
+    """Return this product's discount text from its
+    div.product-card-promotion-badge-two (see the "11 / % / Off"
+    screenshot), or None if that badge isn't in this node so
+    _search_card_and_ancestors keeps widening outward.
+
+    The badge splits the discount across several small divs — a
+    percentage number (product-card-promotion-badge-percentageV2) and
+    one-or-more suffix pieces (product-card-promotion-badge-suffixV2,
+    e.g. "%" then "Off") — so this reassembles them into one string
+    ("11% Off") rather than a single get_text() call, which would insert
+    an unwanted space between the number and the "%" sign.
+    """
+    badge = node.find("div", class_=lambda c: c and "product-card-promotion-badge-two" in c.split())
+    if not badge:
+        return None  # let the caller widen to the next ancestor level
+
+    percentage_div = badge.find(
+        class_=lambda c: c and "product-card-promotion-badge-percentageV2" in c.split()
+    )
+    percentage = percentage_div.get_text(strip=True) if percentage_div else ""
+
+    suffix_divs = badge.find_all(
+        class_=lambda c: c and "product-card-promotion-badge-suffixV2" in c.split()
+    )
+    suffixes = [s.get_text(strip=True) for s in suffix_divs if s.get_text(strip=True)]
+
+    parts = []
+    if percentage and suffixes:
+        parts.append(percentage + suffixes[0])  # "11" + "%" -> "11%"
+        parts.extend(suffixes[1:])              # remaining suffix(es), e.g. "Off"
+    elif percentage:
+        parts.append(percentage)
+    else:
+        parts.extend(suffixes)
+
+    discount = " ".join(p for p in parts if p).strip()
+    # The badge div exists but had nothing usable in it — that's a
+    # definite "no discount" for this product, not "keep looking".
+    return discount if discount else "0"
+
+
 def build_deterministic_url(raw_name, item_code):
     """Confirmed real URL pattern (from devtools): the item's numeric
     code plus its name with spaces replaced by underscores, e.g.
@@ -535,9 +626,9 @@ def resolve_product_url(card, raw_name, category_url):
 
 def parse_current_page(html, category_url):
     """Parse whatever products are currently rendered into
-    {key: {"name", "price", "quantity", "url"}}, using the confirmed
-    product-card-nameV2 / product-card-price-containerV2 /
-    product-card-final-priceV2 structure.
+    {key: {"name", "brand", "price", "quantity", "discount", "url"}},
+    using the confirmed product-card-nameV2 / product-card-price-
+    containerV2 / product-card-final-priceV2 structure.
 
     Returns (items, unresolved, link_stats):
       - unresolved: list of {"key", "raw_name"} for items whose URL
@@ -581,16 +672,23 @@ def parse_current_page(html, category_url):
         # (e.g. "Milk Powder 400g") — prefer that when present, since
         # it's more specific than a generic unit like "KG".
         clean_name, name_qty = split_trailing_quantity(raw_name)
+        brand, clean_name = extract_brand(clean_name)  # strip brand before title-casing
+        clean_name = clean_name.title()
         quantity = name_qty or price_unit
+        quantity = quantity.replace("/", "1") if quantity else None  # strip any literal backslash
+
+        discount = _search_card_and_ancestors(card, _extract_discount) or "0"
 
         url, status = resolve_product_url(card, raw_name, category_url)
         link_stats[status] += 1
 
         key = url if status != "needs_click" else f"{clean_name}|{price}"
         items[key] = {
-            "name": clean_name.title(),
+            "name": clean_name,
+            "brand": brand,
             "price": price,
             "quantity": quantity,
+            "discount": discount,
             "url": url,
         }
         if status == "needs_click":
@@ -779,8 +877,8 @@ def scrape_category(page, name, url):
           f"{link_totals['href']} real href/click-resolved, {link_totals['needs_click']} category-fallback")
 
     return [
-        {"name": v["name"], "price": v["price"], "quantity": v.get("quantity"),
-         "url": v.get("url"), "category": name}
+        {"name": v["name"], "brand": v.get("brand", ""), "price": v["price"], "quantity": v.get("quantity"),
+         "discount": v.get("discount", "0"), "url": v.get("url"), "category": name}
         for v in all_items.values()
     ]
 

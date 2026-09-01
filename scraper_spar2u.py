@@ -130,6 +130,27 @@ NAME_HEADING_SELECTOR = "[class*='card__heading']"
 PRICE_SALE_SELECTOR = "[class*='price-item--sale']"
 FOOTER_LIST_SELECTOR = "ul[class*='footer-block__details-content']"
 
+# Known brand names to split out of the product name into their own field.
+# Shared with scraper_cargills.py / scraper_glomark.py via the same
+# external file, so all scrapers stay in sync — add new brands to the
+# file, not here.
+KNOWN_BRANDS_FILE = "known_brand_list.txt"
+
+with open(KNOWN_BRANDS_FILE, "r", encoding="utf-8") as f:
+    KNOWN_BRANDS = [
+        line.strip()
+        for line in f
+        if line.strip()
+    ]
+
+# Longer names (e.g. "Coca-Cola") are tried before shorter ones so they
+# win over any accidental substring match. Matching is case-insensitive
+# and whole-word.
+_BRAND_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(b) for b in sorted(KNOWN_BRANDS, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
+
 
 def get_soup(url, params=None):
     resp = requests.get(url, headers=HEADERS, params=params, timeout=20)
@@ -226,6 +247,68 @@ def resolve_full_name(heading, link_text):
         node = parent
     return link_text
 
+def extract_brand(name):
+    """Find a known brand inside a raw product name and split it out.
+
+    Returns (brand, name_without_brand). If no known brand is matched,
+    returns ("", name) unchanged — the item still gets a "brand" column
+    in the output JSON, just empty, so downstream code doesn't need to
+    special-case missing brands.
+    """
+    if not name:
+        return "", name
+
+    match = _BRAND_PATTERN.search(name)
+    if not match:
+        return "", name
+
+    matched_text = match.group(1)
+    # Re-map to the canonical spelling from KNOWN_BRANDS (case-insensitive)
+    # so e.g. matching "nestle" in a lowercase listing still outputs "Nestle".
+    brand = next((b for b in KNOWN_BRANDS if b.lower() == matched_text.lower()), matched_text)
+
+    cleaned = name[:match.start()] + name[match.end():]
+    # Collapse doubled spaces and stray leftover separators (" - ", ", ")
+    # left behind where the brand used to sit.
+    cleaned = re.sub(r"\s{2,}", " ", cleaned).strip(" -,")
+    return brand, cleaned
+
+
+def extract_discount(heading):
+    """Return this product's discount text from its
+    div.product-custom_sale-label badge (see the "SALE / 5% / OFF"
+    screenshot), skipping the literal "SALE" line and joining whatever's
+    left (e.g. "5%" and "OFF") into one string. Returns "0" if the badge
+    is absent, or all it contains is the "SALE" label with nothing else.
+
+    Walks up from the heading the same way the price lookup does,
+    stopping once we've widened into a container holding more than one
+    product's heading, so we don't pick up a neighboring product's
+    discount badge instead of this product's own.
+    """
+    node = heading
+    for _ in range(6):
+        badge = node.find(class_=lambda c: c and "product-custom_sale-label" in c.split())
+        if badge:
+            # Pull all the badge's text in one shot rather than iterating
+            # its <p> tags individually — the site nests a "OFF" <p>
+            # inside the "5%" <p> (see the screenshot), so per-tag
+            # .get_text() would count "OFF" twice: once as part of its
+            # parent <p>'s text, once again as its own match.
+            text = badge.get_text(" ", strip=True)
+            text = re.sub(r"\bSALE\b", "", text, flags=re.I)
+            text = re.sub(r"\s{2,}", " ", text).strip()
+            return text if text else "0"
+
+        parent = node.parent
+        if parent is None:
+            break
+        if len(parent.select(NAME_HEADING_SELECTOR)) > 1:
+            break  # widened into a container with multiple products
+        node = parent
+
+    return "0"
+
 
 def parse_products(html, category_name):
     soup = BeautifulSoup(html, "html.parser")
@@ -267,7 +350,16 @@ def parse_products(html, category_name):
             continue
         price = float(price_match.group(1).replace(",", ""))
 
+        discount = extract_discount(heading)
+
         clean_name, quantity = split_trailing_quantity(raw_name)
+        clean_name = clean_name.title()
+        brand, name_without_brand = extract_brand(clean_name) # strip brand from name, if present
+
+
+        # special cases.        
+        if name_without_brand == "7UP":
+            name_without_brand = "7 Up"  # special case for this brand's stylized spelling
 
         # The site renders two duplicate card structures per product
         # (same URL, same price) — resolve_full_name() usually recovers
@@ -276,13 +368,15 @@ def parse_products(html, category_name):
         # let it overwrite an already-good, more complete entry for the
         # same URL just because it happened to be parsed second.
         existing = items.get(url)
-        if existing and len(clean_name) <= len(existing["name"]):
+        if existing and len(name_without_brand) <= len(existing["name"]):
             continue
 
         items[url] = {
-            "name": clean_name,
+            "name": name_without_brand,
+            "brand": brand,
             "price": price,
             "quantity": quantity,
+            "discount": discount,
             "url": url,
             "category": category_name,
         }
