@@ -173,7 +173,7 @@
   {
     "name": "Nectar Mango",
     "brand": "Smak",
-    "price": 570.0,
+    "price": 590.0,
     "quantity": "1l",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-mango-1l/p/12685",
@@ -182,7 +182,7 @@
   {
     "name": "Nectar Woodapple",
     "brand": "Smak",
-    "price": 570.0,
+    "price": 590.0,
     "quantity": "1l",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-woodapple-1l/p/12621",
@@ -218,7 +218,7 @@
   {
     "name": "Nectar Woodapple",
     "brand": "Smak",
-    "price": 320.0,
+    "price": 340.0,
     "quantity": "500ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-woodapple-500ml/p/11725",
@@ -236,7 +236,7 @@
   {
     "name": "Nectar Mixed Fruit",
     "brand": "Smak",
-    "price": 570.0,
+    "price": 590.0,
     "quantity": "1l",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-mixed-fruit-1l/p/11713",
@@ -272,7 +272,7 @@
   {
     "name": "Nectar Aloe Vera",
     "brand": "Smak",
-    "price": 150.0,
+    "price": 160.0,
     "quantity": "200ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-aloe-vera-200ml/p/11639",
@@ -326,7 +326,7 @@
   {
     "name": "Nectar Woodapple",
     "brand": "Smak",
-    "price": 150.0,
+    "price": 160.0,
     "quantity": "200ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-woodapple-200ml/p/10618",
@@ -335,7 +335,7 @@
   {
     "name": "Nectar Mixed Fruit",
     "brand": "Smak",
-    "price": 320.0,
+    "price": 340.0,
     "quantity": "500ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-mixed-fruit-500ml/p/10616",
@@ -380,7 +380,7 @@
   {
     "name": "Nectar Mango",
     "brand": "Smak",
-    "price": 320.0,
+    "price": 340.0,
     "quantity": "500ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-mango-500ml/p/9612",
@@ -407,7 +407,7 @@
   {
     "name": "Nectar Mango",
     "brand": "Smak",
-    "price": 150.0,
+    "price": 160.0,
     "quantity": "200ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-mango-200ml/p/8693",
@@ -416,7 +416,7 @@
   {
     "name": "Nectar Woodapple Tp",
     "brand": "Smak",
-    "price": 140.0,
+    "price": 150.0,
     "quantity": "200ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-woodapple-tp-200ml/p/8674",
@@ -443,7 +443,7 @@
   {
     "name": "Nectar Aloe Vera",
     "brand": "Smak",
-    "price": 320.0,
+    "price": 340.0,
     "quantity": "500ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-aloe-vera-500ml/p/7762",
@@ -470,7 +470,7 @@
   {
     "name": "Nectar Mixed Fruit",
     "brand": "Smak",
-    "price": 150.0,
+    "price": 160.0,
     "quantity": "200ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-mixed-fruit-200ml/p/7749",
@@ -488,7 +488,7 @@
   {
     "name": "Nectar Mixed Fruit Tp",
     "brand": "Smak",
-    "price": 140.0,
+    "price": 150.0,
     "quantity": "200ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-mixed-fruit-tp-200ml/p/7661",
@@ -614,7 +614,7 @@
   {
     "name": "Nectar Mango Tp",
     "brand": "Smak",
-    "price": 140.0,
+    "price": 150.0,
     "quantity": "200ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-nectar-mango-tp-200ml/p/6479",
@@ -3330,6 +3330,15 @@
     "category": "Soft Drinks"
   },
   {
+    "name": "Zero Coke",
+    "brand": "Coca Cola",
+    "price": 525.0,
+    "quantity": "320ml",
+    "discount": "0",
+    "url": "https://glomark.lk/coca-cola-zero-coke-320ml/p/12673",
+    "category": "Soft Drinks"
+  },
+  {
     "name": "Zero Pet",
     "brand": "Coca-Cola",
     "price": 200.0,
@@ -5580,6 +5589,24 @@
     "category": "Rtd Single Consumption"
   },
   {
+    "name": "Watermelon Ade",
+    "brand": "Oncup",
+    "price": 760.0,
+    "quantity": "230ml",
+    "discount": "0",
+    "url": "https://glomark.lk/oncup-watermelon-ade-230ml/p/140836",
+    "category": "Rtd Single Consumption"
+  },
+  {
+    "name": "Blueberry Ade",
+    "brand": "Oncup",
+    "price": 760.0,
+    "quantity": "230ml",
+    "discount": "0",
+    "url": "https://glomark.lk/oncup-blueberry-ade-230ml/p/140832",
+    "category": "Rtd Single Consumption"
+  },
+  {
     "name": "My Juicee Aloe Vera",
     "brand": "",
     "price": 130.0,
@@ -5616,15 +5643,6 @@
     "category": "Rtd Single Consumption"
   },
   {
-    "name": "Watermelon Ade",
-    "brand": "Oncup",
-    "price": 760.0,
-    "quantity": "230ml",
-    "discount": "0",
-    "url": "https://glomark.lk/oncup-watermelon-ade-230ml/p/140836",
-    "category": "Rtd Single Consumption"
-  },
-  {
     "name": "Peach Iced Tea",
     "brand": "Oncup",
     "price": 760.0,
@@ -5649,15 +5667,6 @@
     "quantity": "230ml",
     "discount": "0",
     "url": "https://glomark.lk/oncup-green-grape-ade-230ml/p/140833",
-    "category": "Rtd Single Consumption"
-  },
-  {
-    "name": "Blueberry Ade",
-    "brand": "Oncup",
-    "price": 760.0,
-    "quantity": "230ml",
-    "discount": "0",
-    "url": "https://glomark.lk/oncup-blueberry-ade-230ml/p/140832",
     "category": "Rtd Single Consumption"
   },
   {
@@ -5798,7 +5807,7 @@
   {
     "name": "Mixed Fruit Drink",
     "brand": "Smak",
-    "price": 230.0,
+    "price": 240.0,
     "quantity": "250ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-mixed-fruit-drink-250ml/p/129935",
@@ -5807,7 +5816,7 @@
   {
     "name": "Sherbet Drink Can",
     "brand": "Smak",
-    "price": 230.0,
+    "price": 240.0,
     "quantity": "250ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-sherbet-drink-can-250ml/p/129934",
@@ -5816,7 +5825,7 @@
   {
     "name": "Chocolate Drink Can",
     "brand": "Smak",
-    "price": 230.0,
+    "price": 240.0,
     "quantity": "250ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-chocolate-drink-can-250ml/p/129933",
@@ -5825,7 +5834,7 @@
   {
     "name": "Mango Nectar Can",
     "brand": "Smak",
-    "price": 230.0,
+    "price": 240.0,
     "quantity": "250ml",
     "discount": "0",
     "url": "https://glomark.lk/smak-mango-nectar-can-250ml/p/129932",
@@ -7814,7 +7823,7 @@
   {
     "name": "Mixed Fruit Jam 500G",
     "brand": "Md",
-    "price": 600.0,
+    "price": 630.0,
     "quantity": "Per 1 unit(s)",
     "discount": "0",
     "url": "https://glomark.lk/md-mixed-fruit-jam-500g/p/46618",
@@ -9000,6 +9009,15 @@
     "category": "Ready To Cook"
   },
   {
+    "name": "Isle Harvest Eday Salad",
+    "brand": "Ceylon",
+    "price": 460.0,
+    "quantity": "250g",
+    "discount": "0",
+    "url": "https://glomark.lk/ceylon-isle-harvest-eday-salad-250g/p/132280",
+    "category": "Ready To Cook"
+  },
+  {
     "name": "Ready To Cook Dosa Batter",
     "brand": "Milma",
     "price": 490.0,
@@ -9020,7 +9038,7 @@
   {
     "name": "Cut Wings",
     "brand": "Crispy",
-    "price": 1056.0,
+    "price": 1137.0,
     "quantity": "Per  300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/crispy-cut-wings/p/83603",
@@ -9029,7 +9047,7 @@
   {
     "name": "Boneless Thigh",
     "brand": "Crispy",
-    "price": 1152.0,
+    "price": 1242.0,
     "quantity": "Per  300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/crispy-boneless-thigh/p/83602",
@@ -9065,7 +9083,7 @@
   {
     "name": "Loin",
     "brand": "Crispy",
-    "price": 4010.0,
+    "price": 4320.0,
     "quantity": "Per  1 unit(s)",
     "discount": "0",
     "url": "https://glomark.lk/crispy-loin/p/64312",
@@ -9074,7 +9092,7 @@
   {
     "name": "Popcorn",
     "brand": "Crispy",
-    "price": 4010.0,
+    "price": 4320.0,
     "quantity": "Per  1 kg(s)",
     "discount": "0",
     "url": "https://glomark.lk/crispy-popcorn/p/64311",
@@ -9128,7 +9146,7 @@
   {
     "name": "Minced",
     "brand": "Chicken",
-    "price": 262.0,
+    "price": 281.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/minced-chicken/p/15960",
@@ -9182,7 +9200,7 @@
   {
     "name": "Drumsticks",
     "brand": "Chicken",
-    "price": 543.0,
+    "price": 585.0,
     "quantity": "s/l",
     "discount": "0",
     "url": "https://glomark.lk/chicken-drumsticks-s-l/p/13205",
@@ -9191,7 +9209,7 @@
   {
     "name": "Shoulder Chops",
     "brand": "Pork",
-    "price": 1329.0,
+    "price": 1689.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/pork-shoulder-chops/p/12594",
@@ -9209,7 +9227,7 @@
   {
     "name": "Wings",
     "brand": "Chicken",
-    "price": 336.0,
+    "price": 360.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-wings/p/12171",
@@ -9218,7 +9236,7 @@
   {
     "name": "Winglets",
     "brand": "Chicken",
-    "price": 456.0,
+    "price": 489.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-winglets/p/12170",
@@ -9227,7 +9245,7 @@
   {
     "name": "Whole Legs S/O",
     "brand": "Chicken",
-    "price": 486.0,
+    "price": 519.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-whole-legs-s-o/p/12169",
@@ -9236,7 +9254,7 @@
   {
     "name": "Drumsticks S/O",
     "brand": "Chicken",
-    "price": 447.0,
+    "price": 480.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-drumsticks-s-o/p/12168",
@@ -9245,7 +9263,7 @@
   {
     "name": "Cubes Rindless",
     "brand": "Pork",
-    "price": 1671.0,
+    "price": 2124.0,
     "quantity": "b/l",
     "discount": "0",
     "url": "https://glomark.lk/pork-cubes-rindless-b-l/p/11605",
@@ -9254,7 +9272,7 @@
   {
     "name": "Bone In Curry",
     "brand": "Pork",
-    "price": 1200.0,
+    "price": 1524.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/bone-in-curry-pork/p/10242",
@@ -9272,7 +9290,7 @@
   {
     "name": "Breast",
     "brand": "Chicken",
-    "price": 573.0,
+    "price": 612.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-breast/p/9154",
@@ -9281,7 +9299,7 @@
   {
     "name": "Gizzard",
     "brand": "Chicken",
-    "price": 453.0,
+    "price": 483.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-gizzard/p/9153",
@@ -9290,7 +9308,7 @@
   {
     "name": "Leg Chop Boneless",
     "brand": "Pork",
-    "price": 1758.0,
+    "price": 2235.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/pork-leg-chop-boneless/p/8581",
@@ -9299,7 +9317,7 @@
   {
     "name": "Thigh S/O",
     "brand": "Chicken",
-    "price": 486.0,
+    "price": 522.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-thigh-s-o/p/8200",
@@ -9308,7 +9326,7 @@
   {
     "name": "Thigh",
     "brand": "Chicken",
-    "price": 564.0,
+    "price": 609.0,
     "quantity": "s/l",
     "discount": "0",
     "url": "https://glomark.lk/chicken-thigh-s-l/p/8199",
@@ -9317,7 +9335,7 @@
   {
     "name": "Neck",
     "brand": "Chicken",
-    "price": 306.0,
+    "price": 327.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-neck/p/8198",
@@ -9326,7 +9344,7 @@
   {
     "name": "Liver",
     "brand": "Chicken",
-    "price": 294.0,
+    "price": 315.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-liver/p/8197",
@@ -9335,7 +9353,7 @@
   {
     "name": "Beef Topside",
     "brand": "",
-    "price": 1287.0,
+    "price": 1635.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/beef-topside/p/7313",
@@ -9344,7 +9362,7 @@
   {
     "name": "Boneless Breast",
     "brand": "Chicken",
-    "price": 729.0,
+    "price": 783.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chicken-boneless-breast/p/7237",
@@ -9353,7 +9371,7 @@
   {
     "name": "Beef Cubes",
     "brand": "",
-    "price": 1191.0,
+    "price": 1512.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/beef-cubes/p/6459",
@@ -9362,7 +9380,7 @@
   {
     "name": "Whole Legs",
     "brand": "Chicken",
-    "price": 573.0,
+    "price": 612.0,
     "quantity": "s/l",
     "discount": "0",
     "url": "https://glomark.lk/chicken-whole-legs-s-l/p/6071",
@@ -9452,7 +9470,7 @@
   {
     "name": "Cabbage",
     "brand": "Chinese",
-    "price": 92.5,
+    "price": 95.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/chinese-cabbage/p/12720",
@@ -9461,7 +9479,7 @@
   {
     "name": "Zucchini",
     "brand": "",
-    "price": 1023.0,
+    "price": 1077.0,
     "quantity": "Per  300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/zucchini/p/12712",
@@ -9470,7 +9488,7 @@
   {
     "name": "Yellow Zucchini",
     "brand": "",
-    "price": 970.5,
+    "price": 1056.0,
     "quantity": "Per  300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/yellow-zucchini/p/12711",
@@ -9479,7 +9497,7 @@
   {
     "name": "Leeks",
     "brand": "",
-    "price": 88.5,
+    "price": 90.0,
     "quantity": "Per  300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/leeks/p/12709",
@@ -9533,7 +9551,7 @@
   {
     "name": "Ribbed Gourd",
     "brand": "",
-    "price": 123.0,
+    "price": 129.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/ribbed-gourd/p/11747",
@@ -9542,7 +9560,7 @@
   {
     "name": "",
     "brand": "Garlic",
-    "price": 258.0,
+    "price": 276.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/garlic/p/11742",
@@ -9551,7 +9569,7 @@
   {
     "name": "",
     "brand": "Capsicum",
-    "price": 279.0,
+    "price": 285.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/capsicum/p/11733",
@@ -9560,7 +9578,7 @@
   {
     "name": "",
     "brand": "Bitter Gourd",
-    "price": 172.5,
+    "price": 177.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/bitter-gourd/p/11730",
@@ -9569,7 +9587,7 @@
   {
     "name": "Beans",
     "brand": "Long",
-    "price": 100.5,
+    "price": 108.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/long-beans/p/11695",
@@ -9578,7 +9596,7 @@
   {
     "name": "",
     "brand": "Coconut",
-    "price": 165.0,
+    "price": 169.0,
     "quantity": "Per 1 unit(s)",
     "discount": "0",
     "url": "https://glomark.lk/coconut/p/11624",
@@ -9596,7 +9614,7 @@
   {
     "name": "Coriander Leaves",
     "brand": "",
-    "price": 90.0,
+    "price": 96.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/coriander-leaves/p/11346",
@@ -9623,7 +9641,7 @@
   {
     "name": "Cauliflower",
     "brand": "",
-    "price": 72.0,
+    "price": 75.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/cauliflower/p/10740",
@@ -9632,7 +9650,7 @@
   {
     "name": "Premium",
     "brand": "Garlic",
-    "price": 94.0,
+    "price": 165.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/garlic-premium/p/10737",
@@ -9641,7 +9659,7 @@
   {
     "name": "Kohila",
     "brand": "",
-    "price": 35.0,
+    "price": 39.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/kohila/p/10731",
@@ -9650,7 +9668,7 @@
   {
     "name": "Beetroot",
     "brand": "",
-    "price": 99.0,
+    "price": 102.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/beetroot/p/10716",
@@ -9659,7 +9677,7 @@
   {
     "name": "Plantains",
     "brand": "Ash",
-    "price": 75.0,
+    "price": 78.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/ash-plantains/p/10707",
@@ -9668,7 +9686,7 @@
   {
     "name": "Ladies Fingers",
     "brand": "",
-    "price": 57.0,
+    "price": 60.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/ladies-fingers/p/10705",
@@ -9677,7 +9695,7 @@
   {
     "name": "Red",
     "brand": "Bell Pepper",
-    "price": 304.0,
+    "price": 315.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/bell-pepper-red/p/10703",
@@ -9686,7 +9704,7 @@
   {
     "name": "Pumpkin",
     "brand": "",
-    "price": 60.0,
+    "price": 63.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/pumpkin/p/10682",
@@ -9713,7 +9731,7 @@
   {
     "name": "Big Onion Premium",
     "brand": "",
-    "price": 35.0,
+    "price": 39.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/big-onion-premium/p/9729",
@@ -9722,7 +9740,7 @@
   {
     "name": "Minchi Leaves",
     "brand": "",
-    "price": 105.5,
+    "price": 111.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/minchi-leaves/p/9728",
@@ -9740,7 +9758,7 @@
   {
     "name": "Ambarella",
     "brand": "",
-    "price": 43.5,
+    "price": 46.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/ambarella/p/9699",
@@ -9749,7 +9767,7 @@
   {
     "name": "Tomatoes",
     "brand": "",
-    "price": 141.0,
+    "price": 144.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/tomatoes/p/9690",
@@ -9758,7 +9776,7 @@
   {
     "name": "Raddish",
     "brand": "",
-    "price": 64.5,
+    "price": 66.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/raddish/p/9689",
@@ -9767,7 +9785,7 @@
   {
     "name": "Green Chilies",
     "brand": "",
-    "price": 119.5,
+    "price": 121.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/green-chilies/p/9682",
@@ -9776,7 +9794,7 @@
   {
     "name": "Iceberg ( Lettuce )",
     "brand": "",
-    "price": 233.5,
+    "price": 245.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/iceberg-(-lettuce-)/p/9674",
@@ -9794,7 +9812,7 @@
   {
     "name": "Green",
     "brand": "Bell Pepper",
-    "price": 226.5,
+    "price": 241.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/bell-pepper-green/p/8733",
@@ -9812,7 +9830,7 @@
   {
     "name": "Knol Khol",
     "brand": "",
-    "price": 29.5,
+    "price": 31.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/knol-khol/p/8718",
@@ -9821,7 +9839,7 @@
   {
     "name": "Onion",
     "brand": "Spring",
-    "price": 51.0,
+    "price": 53.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/spring-onion/p/8713",
@@ -9830,7 +9848,7 @@
   {
     "name": "Brinjals",
     "brand": "",
-    "price": 171.0,
+    "price": 180.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/brinjals/p/8711",
@@ -9839,7 +9857,7 @@
   {
     "name": "Green Beans",
     "brand": "",
-    "price": 210.0,
+    "price": 216.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/green-beans/p/8706",
@@ -9848,7 +9866,7 @@
   {
     "name": "",
     "brand": "Cabbage",
-    "price": 67.5,
+    "price": 72.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/cabbage/p/8686",
@@ -9857,7 +9875,7 @@
   {
     "name": "Red Onions",
     "brand": "",
-    "price": 141.0,
+    "price": 150.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/red-onions/p/8598",
@@ -9866,7 +9884,7 @@
   {
     "name": "",
     "brand": "Cabbage Leaves",
-    "price": 47.0,
+    "price": 49.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/cabbage-leaves/p/8321",
@@ -9893,7 +9911,7 @@
   {
     "name": "Salad Leaves",
     "brand": "",
-    "price": 195.0,
+    "price": 204.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/salad-leaves/p/7764",
@@ -9902,7 +9920,7 @@
   {
     "name": "Red Onion Premium",
     "brand": "",
-    "price": 52.0,
+    "price": 56.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/red-onion-premium/p/7763",
@@ -9911,7 +9929,7 @@
   {
     "name": "Plantain Flower",
     "brand": "",
-    "price": 43.5,
+    "price": 45.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/plantain-flower/p/7752",
@@ -9920,7 +9938,7 @@
   {
     "name": "Carrot",
     "brand": "",
-    "price": 109.5,
+    "price": 114.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/carrot/p/7740",
@@ -9929,7 +9947,7 @@
   {
     "name": "Celery",
     "brand": "",
-    "price": 272.0,
+    "price": 285.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/celery/p/6792",
@@ -9938,7 +9956,7 @@
   {
     "name": "Potatoes",
     "brand": "",
-    "price": 99.0,
+    "price": 102.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/potatoes/p/6789",
@@ -9947,7 +9965,7 @@
   {
     "name": "Salad Cucumber",
     "brand": "",
-    "price": 127.5,
+    "price": 132.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/salad-cucumber/p/6786",
@@ -9965,7 +9983,7 @@
   {
     "name": "Dambala",
     "brand": "",
-    "price": 65.5,
+    "price": 68.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/dambala/p/6781",
@@ -9974,7 +9992,7 @@
   {
     "name": "Big Onions",
     "brand": "",
-    "price": 90.0,
+    "price": 99.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/big-onions/p/6763",
@@ -9983,7 +10001,7 @@
   {
     "name": "Yellow",
     "brand": "Bell Pepper",
-    "price": 301.0,
+    "price": 310.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/bell-pepper-yellow/p/6762",
@@ -9992,7 +10010,7 @@
   {
     "name": "Kekiri",
     "brand": "",
-    "price": 19.0,
+    "price": 20.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/kekiri/p/6741",
@@ -10001,7 +10019,7 @@
   {
     "name": "Green House Tomatoes",
     "brand": "",
-    "price": 116.5,
+    "price": 130.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/green-house-tomatoes/p/6651",
@@ -10010,7 +10028,7 @@
   {
     "name": "Thalana Batu",
     "brand": "",
-    "price": 145.5,
+    "price": 156.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/thalana-batu/p/6505",
@@ -10019,7 +10037,7 @@
   {
     "name": "Snake Gourd",
     "brand": "",
-    "price": 124.5,
+    "price": 132.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/snake-gourd/p/6496",
@@ -10028,7 +10046,7 @@
   {
     "name": "Parsley",
     "brand": "",
-    "price": 176.5,
+    "price": 186.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/parsley/p/6478",
@@ -10037,7 +10055,7 @@
   {
     "name": "Lime",
     "brand": "",
-    "price": 62.0,
+    "price": 66.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/lime/p/6474",
@@ -10046,7 +10064,7 @@
   {
     "name": "Brocolli",
     "brand": "",
-    "price": 196.5,
+    "price": 203.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/brocolli/p/6172",
@@ -10064,7 +10082,7 @@
   {
     "name": "Fresh Salmon",
     "brand": "",
-    "price": 906.0,
+    "price": 1000.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/fresh-salmon/p/13836",
@@ -10073,7 +10091,7 @@
   {
     "name": "Kumbalawa",
     "brand": "",
-    "price": 207.0,
+    "price": 217.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/kumbalawa/p/10756",
@@ -10082,7 +10100,7 @@
   {
     "name": "White Mullete",
     "brand": "",
-    "price": 211.5,
+    "price": 221.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/white-mullete/p/9719",
@@ -10091,7 +10109,7 @@
   {
     "name": "Fish",
     "brand": "Tuna",
-    "price": 355.0,
+    "price": 373.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/tuna-fish/p/9718",
@@ -10100,7 +10118,7 @@
   {
     "name": "Seer Fish Slice",
     "brand": "",
-    "price": 586.5,
+    "price": 592.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/seer-fish-slice/p/9604",
@@ -10109,7 +10127,7 @@
   {
     "name": "Hurulla",
     "brand": "",
-    "price": 191.0,
+    "price": 206.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/hurulla/p/8735",
@@ -10118,7 +10136,7 @@
   {
     "name": "(Koppara)",
     "brand": "Thalapath",
-    "price": 410.0,
+    "price": 430.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/thalapath-%2528koppara%2529/p/8732",
@@ -10127,7 +10145,7 @@
   {
     "name": "Prawns(Lagoon)",
     "brand": "",
-    "price": 308.0,
+    "price": 323.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/prawns%2528lagoon%2529/p/7774",
@@ -10136,7 +10154,7 @@
   {
     "name": "(Small)",
     "brand": "Paraw",
-    "price": 200.0,
+    "price": 223.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/paraw%2528small%2529/p/7772",
@@ -10145,7 +10163,7 @@
   {
     "name": "Lena",
     "brand": "Paraw",
-    "price": 153.0,
+    "price": 171.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/lena-paraw/p/7771",
@@ -10154,7 +10172,7 @@
   {
     "name": "Alagoduwa",
     "brand": "",
-    "price": 116.5,
+    "price": 121.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/alagoduwa/p/7577",
@@ -10163,7 +10181,7 @@
   {
     "name": "Sudaya",
     "brand": "",
-    "price": 88.5,
+    "price": 84.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/sudaya/p/6804",
@@ -10172,7 +10190,7 @@
   {
     "name": "Fish Slice",
     "brand": "Paraw",
-    "price": 383.0,
+    "price": 401.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/paraw-fish-slice/p/6801",
@@ -10181,7 +10199,7 @@
   {
     "name": "Handella(Large)",
     "brand": "",
-    "price": 221.0,
+    "price": 234.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/handella%2528large%2529/p/6515",
@@ -10190,7 +10208,7 @@
   {
     "name": "(Small)",
     "brand": "Thalapath",
-    "price": 385.5,
+    "price": 400.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/thalapath-%2528small%2529/p/6511",
@@ -10199,7 +10217,7 @@
   {
     "name": "Linna",
     "brand": "",
-    "price": 119.0,
+    "price": 124.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/linna/p/6508",
@@ -10334,7 +10352,7 @@
   {
     "name": "Apple - Gala",
     "brand": "Royal",
-    "price": 699.0,
+    "price": 759.0,
     "quantity": "Per  300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/apple---royal-gala/p/13661",
@@ -10343,7 +10361,7 @@
   {
     "name": "Seeni",
     "brand": "Banana",
-    "price": 81.0,
+    "price": 87.0,
     "quantity": "Per  300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/banana---seeni/p/13309",
@@ -10352,7 +10370,7 @@
   {
     "name": "Ambun",
     "brand": "Banana",
-    "price": 162.0,
+    "price": 177.0,
     "quantity": "Per  300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/banana---ambun/p/13308",
@@ -10361,7 +10379,7 @@
   {
     "name": "Ambul",
     "brand": "Banana",
-    "price": 33.0,
+    "price": 36.0,
     "quantity": "Per  100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/banana---ambul/p/13307",
@@ -10370,7 +10388,7 @@
   {
     "name": "Melon - Dark",
     "brand": "Bell",
-    "price": 156.0,
+    "price": 180.0,
     "quantity": "Per 1200 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/melon---dark-bell/p/12768",
@@ -10379,7 +10397,7 @@
   {
     "name": "Pineapple",
     "brand": "",
-    "price": 740.0,
+    "price": 800.0,
     "quantity": "Per 1 unit(s)",
     "discount": "0",
     "url": "https://glomark.lk/pineapple/p/11790",
@@ -10388,7 +10406,7 @@
   {
     "name": "Papaya Tanin",
     "brand": "",
-    "price": 375.0,
+    "price": 495.0,
     "quantity": "Per 1500 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/papaya-tanin/p/11789",
@@ -10406,7 +10424,7 @@
   {
     "name": "Green",
     "brand": "Grapes",
-    "price": 316.0,
+    "price": 354.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/grapes---green/p/11732",
@@ -10415,7 +10433,7 @@
   {
     "name": "Orange Imported",
     "brand": "",
-    "price": 762.0,
+    "price": 792.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/orange-imported/p/11277",
@@ -10424,7 +10442,7 @@
   {
     "name": "Apple - China Fuji",
     "brand": "",
-    "price": 663.0,
+    "price": 714.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/apple---china-fuji/p/10592",
@@ -10433,7 +10451,7 @@
   {
     "name": "Guava",
     "brand": "",
-    "price": 45.0,
+    "price": 49.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/guava/p/9777",
@@ -10442,7 +10460,7 @@
   {
     "name": "Apple - Red U.S.A.",
     "brand": "",
-    "price": 984.0,
+    "price": 1071.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/apple---red-u.s.a./p/9595",
@@ -10451,7 +10469,7 @@
   {
     "name": "Apple - Green",
     "brand": "",
-    "price": 543.0,
+    "price": 588.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/apple---green/p/9594",
@@ -10460,7 +10478,7 @@
   {
     "name": "Kolikuttu",
     "brand": "Banana",
-    "price": 67.0,
+    "price": 73.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/banana---kolikuttu/p/8317",
@@ -10469,7 +10487,7 @@
   {
     "name": "Pomegranate -Imported",
     "brand": "",
-    "price": 642.0,
+    "price": 663.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/pomegranate--imported/p/8316",
@@ -10478,7 +10496,7 @@
   {
     "name": "Mandarin Imported",
     "brand": "",
-    "price": 723.0,
+    "price": 747.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/mandarin-imported/p/7576",
@@ -10487,7 +10505,7 @@
   {
     "name": "Red",
     "brand": "Grapes",
-    "price": 723.0,
+    "price": 762.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/grapes---red/p/7574",
@@ -10496,7 +10514,7 @@
   {
     "name": "",
     "brand": "Avocado",
-    "price": 42.0,
+    "price": 46.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/avocado/p/7330",
@@ -10505,7 +10523,7 @@
   {
     "name": "Black",
     "brand": "Grapes",
-    "price": 1254.0,
+    "price": 1377.0,
     "quantity": "Per 300 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/grapes---black/p/6793",
@@ -10514,7 +10532,7 @@
   {
     "name": "Passion Fruit",
     "brand": "",
-    "price": 74.0,
+    "price": 80.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/passion-fruit/p/6550",
@@ -10523,7 +10541,7 @@
   {
     "name": "Melon - Red Fantasy",
     "brand": "",
-    "price": 108.0,
+    "price": 132.0,
     "quantity": "Per 1200 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/melon---red-fantasy/p/6547",
@@ -10532,7 +10550,7 @@
   {
     "name": "Mango - Tjc",
     "brand": "",
-    "price": 68.0,
+    "price": 73.0,
     "quantity": "Per 100 g(s)",
     "discount": "0",
     "url": "https://glomark.lk/mango---tjc/p/6545",
@@ -12132,24 +12150,6 @@
     "category": "Snacks"
   },
   {
-    "name": "Yoiki Paw",
-    "brand": "Chocolate",
-    "price": 490.0,
-    "quantity": "50g",
-    "discount": "0",
-    "url": "https://glomark.lk/yoiki-paw-chocolate-50g/p/140869",
-    "category": "Snacks"
-  },
-  {
-    "name": "Paw Corn",
-    "brand": "Mayasi",
-    "price": 490.0,
-    "quantity": "50g",
-    "discount": "0",
-    "url": "https://glomark.lk/mayasi-paw-corn-50g/p/140868",
-    "category": "Snacks"
-  },
-  {
     "name": "Paw Cheese",
     "brand": "Mayasi",
     "price": 490.0,
@@ -12165,6 +12165,42 @@
     "quantity": "100g",
     "discount": "0",
     "url": "https://glomark.lk/iyes-cashews-black-pepper-100g/p/140865",
+    "category": "Snacks"
+  },
+  {
+    "name": "Chili",
+    "brand": "Iyes Cashews",
+    "price": 1190.0,
+    "quantity": "100g",
+    "discount": "0",
+    "url": "https://glomark.lk/iyes-cashews-chili-100g/p/140862",
+    "category": "Snacks"
+  },
+  {
+    "name": "Peanuts Chili",
+    "brand": "Mayasi",
+    "price": 650.0,
+    "quantity": "65g",
+    "discount": "0",
+    "url": "https://glomark.lk/mayasi-peanuts-chili-65g/p/140860",
+    "category": "Snacks"
+  },
+  {
+    "name": "Yoiki Paw",
+    "brand": "Chocolate",
+    "price": 490.0,
+    "quantity": "50g",
+    "discount": "0",
+    "url": "https://glomark.lk/yoiki-paw-chocolate-50g/p/140869",
+    "category": "Snacks"
+  },
+  {
+    "name": "Paw Corn",
+    "brand": "Mayasi",
+    "price": 490.0,
+    "quantity": "50g",
+    "discount": "0",
+    "url": "https://glomark.lk/mayasi-paw-corn-50g/p/140868",
     "category": "Snacks"
   },
   {
@@ -12186,30 +12222,12 @@
     "category": "Snacks"
   },
   {
-    "name": "Chili",
-    "brand": "Iyes Cashews",
-    "price": 1190.0,
-    "quantity": "100g",
-    "discount": "0",
-    "url": "https://glomark.lk/iyes-cashews-chili-100g/p/140862",
-    "category": "Snacks"
-  },
-  {
     "name": "Peanuts Garlic",
     "brand": "Mayasi",
     "price": 650.0,
     "quantity": "65g",
     "discount": "0",
     "url": "https://glomark.lk/mayasi-peanuts-garlic-65g-/p/140861",
-    "category": "Snacks"
-  },
-  {
-    "name": "Peanuts Chili",
-    "brand": "Mayasi",
-    "price": 650.0,
-    "quantity": "65g",
-    "discount": "0",
-    "url": "https://glomark.lk/mayasi-peanuts-chili-65g/p/140860",
     "category": "Snacks"
   },
   {
@@ -15390,15 +15408,6 @@
     "category": "Dessert & Baking"
   },
   {
-    "name": "Cocoa Powder",
-    "brand": "Delish",
-    "price": 420.0,
-    "quantity": "50g",
-    "discount": "0",
-    "url": "https://glomark.lk/delish-cocoa-powder-50g/p/140813",
-    "category": "Dessert & Baking"
-  },
-  {
     "name": "Baking Powder",
     "brand": "Delish",
     "price": 300.0,
@@ -15426,21 +15435,30 @@
     "category": "Dessert & Baking"
   },
   {
-    "name": "Jelly Blueberry Flavoured 100",
-    "brand": "Delish",
-    "price": 230.0,
-    "quantity": "g",
-    "discount": "0",
-    "url": "https://glomark.lk/delish-jelly-blueberry-flavoured-100-g/p/140809",
-    "category": "Dessert & Baking"
-  },
-  {
     "name": "Jelly Strawberry & Blackcurrant Flavoured",
     "brand": "Delish",
     "price": 230.0,
     "quantity": "100g",
     "discount": "0",
     "url": "https://glomark.lk/delish-jelly-strawberry-blackcurrant-flavoured-100g/p/140808",
+    "category": "Dessert & Baking"
+  },
+  {
+    "name": "Cocoa Powder",
+    "brand": "Delish",
+    "price": 420.0,
+    "quantity": "50g",
+    "discount": "0",
+    "url": "https://glomark.lk/delish-cocoa-powder-50g/p/140813",
+    "category": "Dessert & Baking"
+  },
+  {
+    "name": "Jelly Blueberry Flavoured 100",
+    "brand": "Delish",
+    "price": 230.0,
+    "quantity": "g",
+    "discount": "0",
+    "url": "https://glomark.lk/delish-jelly-blueberry-flavoured-100-g/p/140809",
     "category": "Dessert & Baking"
   },
   {
@@ -20952,6 +20970,33 @@
     "category": "Confectionary"
   },
   {
+    "name": "Apple Cider Gummies 30S",
+    "brand": "Baraka",
+    "price": 1500.0,
+    "quantity": "Per 1 unit(s)",
+    "discount": "0",
+    "url": "https://glomark.lk/baraka-apple-cider-gummies-30s/p/140288",
+    "category": "Confectionary"
+  },
+  {
+    "name": "Black Seed Gummies 30S",
+    "brand": "Baraka",
+    "price": 1500.0,
+    "quantity": "Per 1 unit(s)",
+    "discount": "0",
+    "url": "https://glomark.lk/baraka-black-seed-gummies-30s/p/140287",
+    "category": "Confectionary"
+  },
+  {
+    "name": "Ashwagandha Gummies 30S",
+    "brand": "Baraka",
+    "price": 1500.0,
+    "quantity": "Per 1 unit(s)",
+    "discount": "0",
+    "url": "https://glomark.lk/baraka-ashwagandha-gummies-30s/p/140286",
+    "category": "Confectionary"
+  },
+  {
     "name": "Blueberry Cheesecake Cream Filled White Chocolate",
     "brand": "Zellers",
     "price": 450.0,
@@ -22673,7 +22718,7 @@
   {
     "name": "Lollipop Strawberry",
     "brand": "Candy Man",
-    "price": 25.0,
+    "price": 30.0,
     "quantity": "8g",
     "discount": "0",
     "url": "https://glomark.lk/candy-man-lollipop-strawberry-8g/p/71870",
@@ -34742,7 +34787,7 @@
   {
     "name": "Shampoo Intense Repair",
     "brand": "Dove",
-    "price": 581.25,
+    "price": 615.0,
     "quantity": "180ml",
     "discount": "0",
     "url": "https://glomark.lk/dove-shampoo-intense-repair-180ml/p/6016",
@@ -35867,7 +35912,7 @@
   {
     "name": "Shampoo Hfr Bio Protein",
     "brand": "Dove",
-    "price": 775.0,
+    "price": 820.0,
     "quantity": "180ml",
     "discount": "0",
     "url": "https://glomark.lk/dove-shampoo-hfr-bio-protein-180ml/p/7194",
@@ -36018,15 +36063,6 @@
     "category": "Facial Care"
   },
   {
-    "name": "St Ives Face Scrub Apricot Fresh Face Scrub",
-    "brand": "Skin",
-    "price": 1220.0,
-    "quantity": "50g",
-    "discount": "0",
-    "url": "https://glomark.lk/st-ives-face-scrub-apricot-fresh-skin-face-scrub-50g-/p/140821",
-    "category": "Facial Care"
-  },
-  {
     "name": "St Ives Green Blackhead Clearing Face Scrub",
     "brand": "Tea",
     "price": 1220.0,
@@ -36036,21 +36072,30 @@
     "category": "Facial Care"
   },
   {
-    "name": "Cocoa Butter Lip Care",
-    "brand": "Vaseline",
-    "price": 1200.0,
-    "quantity": "7g",
-    "discount": "0",
-    "url": "https://glomark.lk/vaseline-cocoa-butter-lip-care-7g/p/140819",
-    "category": "Facial Care"
-  },
-  {
     "name": "Cocoa Butter Lip Therapy Balm 4.8",
     "brand": "Vaseline",
     "price": 1095.0,
     "quantity": "g",
     "discount": "0",
     "url": "https://glomark.lk/vaseline-cocoa-butter-lip-therapy-balm-4.8-g/p/140818",
+    "category": "Facial Care"
+  },
+  {
+    "name": "St Ives Face Scrub Apricot Fresh Face Scrub",
+    "brand": "Skin",
+    "price": 1220.0,
+    "quantity": "50g",
+    "discount": "0",
+    "url": "https://glomark.lk/st-ives-face-scrub-apricot-fresh-skin-face-scrub-50g-/p/140821",
+    "category": "Facial Care"
+  },
+  {
+    "name": "Cocoa Butter Lip Care",
+    "brand": "Vaseline",
+    "price": 1200.0,
+    "quantity": "7g",
+    "discount": "0",
+    "url": "https://glomark.lk/vaseline-cocoa-butter-lip-care-7g/p/140819",
     "category": "Facial Care"
   },
   {
@@ -36164,7 +36209,7 @@
   {
     "name": "Facewash Bright Miracle",
     "brand": "Ponds",
-    "price": 480.0,
+    "price": 530.0,
     "quantity": "100ml",
     "discount": "0",
     "url": "https://glomark.lk/ponds-facewash-bright-miracle-100ml%C2%A0/p/133213",
@@ -40914,21 +40959,21 @@
     "category": "Skin Care"
   },
   {
-    "name": "Sunscreen Spf 35 Cream",
-    "brand": "Ponds",
-    "price": 1000.0,
-    "quantity": "50g",
-    "discount": "0",
-    "url": "https://glomark.lk/ponds-sunscreen-spf-35-cream-50g/p/140774",
-    "category": "Skin Care"
-  },
-  {
     "name": "Sunscreen Spf 50 Creme Gel",
     "brand": "Ponds",
     "price": 2150.0,
     "quantity": "50g",
     "discount": "0",
     "url": "https://glomark.lk/ponds-sunscreen-spf-50-creme-gel-50g-/p/140773",
+    "category": "Skin Care"
+  },
+  {
+    "name": "Sunscreen Spf 35 Cream",
+    "brand": "Ponds",
+    "price": 1000.0,
+    "quantity": "50g",
+    "discount": "0",
+    "url": "https://glomark.lk/ponds-sunscreen-spf-35-cream-50g/p/140774",
     "category": "Skin Care"
   },
   {
@@ -44525,7 +44570,7 @@
   {
     "name": "Tooth Paste Anti Cavity",
     "brand": "Ayush",
-    "price": 320.0,
+    "price": 335.0,
     "quantity": "110g",
     "discount": "0",
     "url": "https://glomark.lk/ayush-tooth-paste-anti-cavity-110g/p/70337",
@@ -44534,7 +44579,7 @@
   {
     "name": "Tooth Paste Anti Cavity",
     "brand": "Ayush",
-    "price": 255.0,
+    "price": 260.0,
     "quantity": "70g",
     "discount": "0",
     "url": "https://glomark.lk/ayush-tooth-paste-anti-cavity-70g/p/70336",
