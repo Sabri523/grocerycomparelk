@@ -44,6 +44,21 @@ This version:
   4. Carries each store's "discount" field (as scraped — e.g. "20.00%
      OFF", "5% OFF", "11% Off", or "0" when there's no discount) through
      into comparison.json as a "{store}_discount" column per row.
+  5. Exempts loose commodities (wholesale vegetables, fruits, rice,
+     grains — see LOOSE_COMMODITY_KEYWORDS) from the strict quantity
+     gate, but ONLY when neither side has an identified brand. A 500g
+     bag and a 1kg bag of plain carrots are the same product at the
+     same underlying rate, and the normalized unit_price (per 100g)
+     already makes them fairly comparable regardless of pack size — so
+     for these, only the unit TYPE must match (weight vs weight), within
+     a generous sanity ceiling (LOOSE_QTY_MIN_RATIO/MAX_RATIO) that still
+     stops a small retail pack from being matched against a bulk
+     wholesale sack. A branded product that happens to sit in one of
+     these categories (e.g. packaged branded rice) is NOT exempted and
+     still goes through the normal near-literal QTY_EXACT_TOLERANCE
+     check — the exemption is for genuinely generic produce/grain only.
+     Rows matched this way are flagged "pack_size_relaxed": true, so the
+     frontend can make clear the pack sizes being compared may differ.
 
 N-way matching approach:
   Rather than a proper N-way assignment (which would need something like
@@ -86,6 +101,26 @@ SIMILARITY_THRESHOLD = 85  # 0-100, raise this if you get bad name matches — a
 # intentionally tight — it is NOT the old "plausibly the same product
 # line, could be a different pack size" range. 0.02 = 2%.
 QTY_EXACT_TOLERANCE = 0.02
+
+# Categories where pack size shouldn't gate a match at all, PROVIDED the
+# item is brandless (see is_loose_commodity_pair()) — plain wholesale
+# vegetables, fruits, rice, and grains are the same product at the same
+# underlying rate regardless of whether one store bags it as 500g and
+# another as 1kg. Matched as a substring against the item's category
+# (lowercased), since each store phrases its own category names a bit
+# differently ("Vegetable" vs "Fresh Vegetables" vs "Vegetables & Fruits").
+LOOSE_COMMODITY_KEYWORDS = {
+    "vegetable", "vegetables", "fruit", "fruits",
+    "rice", "grain", "grains", "pulses", "lentil", "lentils", "dhal", "dal",
+}
+
+# Even for exempted loose commodities, keep a generous sanity ceiling so
+# a small retail pack is never matched against a bulk wholesale sack
+# (which is usually priced at a genuinely different bulk rate, not just
+# a bigger bag of the same rate) — e.g. this allows 500g vs 2.5kg (5x)
+# but still blocks 500g vs 25kg (50x).
+LOOSE_QTY_MIN_RATIO = 0.2
+LOOSE_QTY_MAX_RATIO = 5.0
 
 WEIGHT_UNITS = {
     "g": 1, "gram": 1, "grams": 1, "gm": 1, "gms": 1,
@@ -169,10 +204,13 @@ def unit_label(unit_type):
     return {"weight": "per 100g", "volume": "per 100ml", "count": "per piece"}.get(unit_type)
 
 
-def quantities_compatible(type_a, qty_a, type_b, qty_b):
+def quantities_compatible(type_a, qty_a, type_b, qty_b, relaxed=False):
     """True if two standardized quantities are close enough to count as a
-    literal match (same pack size, modulo rounding), NOT merely 'a
-    plausible pack-size variant of the same product line'."""
+    match. Normally this means near-exact equality (same pack size,
+    modulo rounding) — NOT merely 'a plausible pack-size variant of the
+    same product line'. When relaxed=True (brandless loose commodities
+    only — see is_loose_commodity_pair()), pack size itself is treated as
+    irrelevant and only a generous sanity ceiling applies instead."""
     if type_a is None or type_b is None:
         # Can't verify — allow the name match through, but the caller
         # should treat this as lower-confidence (flagged in the output
@@ -184,10 +222,34 @@ def quantities_compatible(type_a, qty_a, type_b, qty_b):
         return False
     if type_a == "count":
         # Counts are discrete (e.g. "10 pcs" vs "12 pcs" are genuinely
-        # different products) — no rounding tolerance applies.
+        # different products) — no rounding tolerance applies, relaxed
+        # or not.
         return qty_a == qty_b
     ratio = qty_a / qty_b
+    if relaxed:
+        return LOOSE_QTY_MIN_RATIO <= ratio <= LOOSE_QTY_MAX_RATIO
     return abs(ratio - 1) <= QTY_EXACT_TOLERANCE
+
+
+def is_loose_commodity_category(category):
+    """True if a category name matches one of the loose-commodity
+    keywords (vegetables, fruits, rice, grains, ...) via substring match,
+    tolerating each store's own phrasing of the category name."""
+    if not category:
+        return False
+    cat = category.lower()
+    return any(keyword in cat for keyword in LOOSE_COMMODITY_KEYWORDS)
+
+
+def is_loose_commodity_pair(item_a, item_b):
+    """True if a pair of items qualifies for the relaxed, pack-size-
+    agnostic quantity check: BOTH must be brandless (an identified brand
+    on either side means it's a specific packaged product, not generic
+    produce, so it goes back to the strict check) AND both must sit in a
+    loose-commodity category."""
+    if item_a.get("brand") or item_b.get("brand"):
+        return False
+    return is_loose_commodity_category(item_a.get("category")) and is_loose_commodity_category(item_b.get("category"))
 
 
 def standardize_brand(brand):
@@ -242,12 +304,14 @@ def enrich(item):
 
 
 def best_match(item, pool, pool_names, used_indices, stats):
-    """Return (matched_item, idx, score) for the best not-yet-used
-    candidate that clears ALL THREE gates: a fuzzy name score >=
-    SIMILARITY_THRESHOLD, a compatible (near-literal) quantity, and a
-    compatible (literal, once standardized) brand — or None if nothing
-    qualifies. `stats['rejected_for_size']` / `stats['rejected_for_brand']`
-    count otherwise-good-enough candidates turned down purely for an
+    """Return (matched_item, idx, score, relaxed) for the best not-yet-
+    used candidate that clears ALL THREE gates: a fuzzy name score >=
+    SIMILARITY_THRESHOLD, a compatible brand, and a compatible quantity
+    — or None if nothing qualifies. `relaxed` is True if the quantity
+    check was the brandless-loose-commodity exemption rather than the
+    normal near-literal check (see is_loose_commodity_pair()).
+    `stats['rejected_for_size']` / `stats['rejected_for_brand']` count
+    otherwise-good-enough candidates turned down purely for an
     incompatible pack size or brand, so main() can report those counts.
 
     Brand is checked before quantity since it's the cheaper/more
@@ -266,10 +330,15 @@ def best_match(item, pool, pool_names, used_indices, stats):
         if not brands_compatible(item.get("brand"), candidate.get("brand")):
             stats["rejected_for_brand"] += 1
             continue
-        if not quantities_compatible(item["unit_type"], item["base_qty"], candidate["unit_type"], candidate["base_qty"]):
+        relaxed = is_loose_commodity_pair(item, candidate)
+        if not quantities_compatible(
+            item["unit_type"], item["base_qty"], candidate["unit_type"], candidate["base_qty"], relaxed=relaxed
+        ):
             stats["rejected_for_size"] += 1
             continue
-        return candidate, idx, score
+        if relaxed:
+            stats["relaxed_matches"] += 1
+        return candidate, idx, score, relaxed
     return None
 
 
@@ -303,7 +372,7 @@ def main():
     loaded = {store: [enrich(x) for x in load_optional(STORE_FILES[store])] for store in STORE_ORDER}
     names = {store: [x["name"] for x in loaded[store]] for store in STORE_ORDER}
     used = {store: set() for store in STORE_ORDER}
-    stats = {"rejected_for_size": 0, "rejected_for_brand": 0}
+    stats = {"rejected_for_size": 0, "rejected_for_brand": 0, "relaxed_matches": 0}
 
     matched = []
 
@@ -325,15 +394,17 @@ def main():
 
             confidences = []
             present_unit_types = [item["unit_type"]]
+            any_relaxed = False
 
             for other_store in later_stores:
                 match = best_match(item, loaded[other_store], names[other_store], used[other_store], stats)
                 if match:
-                    m, midx, score = match
+                    m, midx, score, relaxed = match
                     used[other_store].add(midx)
                     confidences.append(score)
                     present_unit_types.append(m["unit_type"])
                     row.update(present_fields(other_store, m))
+                    any_relaxed = any_relaxed or relaxed
                 else:
                     row.update(na_fields(other_store))
 
@@ -346,6 +417,11 @@ def main():
             # size_verified: true only if at least one match was made AND
             # every store present on this row had a parseable quantity.
             row["size_verified"] = bool(confidences) and all(u is not None for u in present_unit_types)
+            # pack_size_relaxed: true if at least one matched pair on this
+            # row skipped the strict quantity check via the brandless
+            # loose-commodity exemption — lets the frontend flag that the
+            # pack sizes being compared may genuinely differ.
+            row["pack_size_relaxed"] = any_relaxed
 
             matched.append(row)
 
@@ -373,6 +449,7 @@ def main():
     print(f"Items with quantity from an explicit field (not guessed from name): {from_field}")
     print(f"Fuzzy candidates rejected for incompatible brand: {stats['rejected_for_brand']}")
     print(f"Fuzzy candidates rejected for incompatible pack size: {stats['rejected_for_size']}")
+    print(f"Matches made via the brandless loose-commodity exemption (pack size ignored): {stats['relaxed_matches']}")
     print("Review comparison.json — rows with size_verified=false had a quantity that")
     print("couldn't be parsed on at least one present side, so the size check was skipped there.")
 
