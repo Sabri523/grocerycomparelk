@@ -2,3 +2,4 @@
 !index.html
 /pycache
 *.json
+*.xml
