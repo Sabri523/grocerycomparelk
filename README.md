@@ -5,7 +5,7 @@ I was making it for public use and then I read the terms and conditions. Guys ma
 
 To run this:
 1. copy repository
-2. open cmd and "cd <directory>"
+2. open cmd and "cd *directory*"
 3. "python main.py"
 4. "python -m http.server 8000"
 5. then go to http://localhost:8000/ in a browser.
