@@ -29,7 +29,6 @@ Star Gold
 Flora
 Sethum
 Happy
-MUNCHEE
 Harischandra
 Smak
 Cic
@@ -38,7 +37,6 @@ Suree
 Raigam
 Zellers
 Vaseline
-New
 Eh
 Magic
 Richlife
@@ -47,7 +45,6 @@ Prevense
 San
 Alli
 San Remo
-Little
 Little Lion
 Panasonic
 Marvel
@@ -84,9 +81,8 @@ Promate
 Nature'S
 Ponds
 Highland
-Party
 Party Hat
-FLORA
+Flora
 Tiara
 Dreamron
 Oateo
@@ -102,8 +98,8 @@ Bellose
 Sunquick
 Renuka
 Phoenix
-MALIBAN
-ELEPHANT HOUSE
+Maliban
+Elephant House
 Dash
 Anods
 La
@@ -120,7 +116,6 @@ Sozo
 Mas
 Harpic
 Bic
-Tong
 Tong Garden
 Wijaya
 Heladiv
@@ -135,7 +130,6 @@ Kvc
 Kellogg'S
 Sobako
 Ma`S
-Khao
 Khao Shong
 Eva
 Siddhalepa
@@ -169,12 +163,11 @@ Coopoliva
 Hosen
 Vim
 Rathna
-Dum
 Dum Dum
 Janet
 Fadna
 American
-DASH
+Dash
 Arunalu
 Magna
 Daintee
@@ -183,7 +176,7 @@ Acon
 Ayush
 Link
 Anods Cocoa
-SERA
+Sera
 Diva
 Aer
 Bio Clean
@@ -197,24 +190,19 @@ Beam
 Dermapro
 Seepet
 Bayara
-PRIMA
-Sugar
+Prima
 Shan
 Silvermill
 Surf Excel
-Nature`S
 Heladiv Ice
 Island
 Vivya
 Gents
 Super
 Oreo
-SUNQUICK
-MALIBAN Biscuit
-MALWATTE
-CATCH
-NATURE'S
-NATURE'S SECRETS
+Sunquick
+Malwatte
+Catch
 Soul
 Cirio
 Comfort
@@ -226,32 +214,24 @@ Me-O
 Whiskas
 Str
 Nature`S Secrets
-Colour
 Colour Me
 Al
-Luv
 Luv Es
-MA'S
-DETTOL
-Kids
+Ma'S
 Kids Joy
 Lankasoy
 Sab
 Baraka
-Pasta
 Herman
 Godrej
 Lia
 Lovera
 4Rever
 Axe
-Chicken
-Casa
 Casa Rinaldi
 Mikee
 Acon Party
 Orient
-Rice
 MC
 Khomba Baby
 Golden
@@ -260,7 +240,6 @@ Arla
 Castello
 Mountain
 Coca
-Master
 Master Spice
 Heinz
 Marmite
@@ -273,31 +252,27 @@ Sooper
 Clear
 Adidas
 Pure
-Dad'S
 Dad'S Garden
 Mogrills
-DILMAH
-EDIN
-MC CURRIE
+Dilmah
+Edin
+Mc Currie
 Spring
-Good
+Good Knight
+Goodknight
 Rich
 Pelwatte
 Diamond
-Coco
 Coco Fresh
 Bebo
 Sab Dried
 Dimo
-Tip
 Tip Top
 Cargills
 Sam`S Chicken
 Finest
-Chupa
 Chupa Chups
 Mr.Pop
-Real
 Real Tasty
 Zesta Tea
 Pantene
@@ -305,11 +280,9 @@ Yardley
 Paldo
 Akshata
 Tiptop
-Rebecaa
 Rebecaa Lee
 Sandul
-NUTRILINE
-Coconut
+Nutriline
 Farlin
 Newdale
 Milo
@@ -331,24 +304,20 @@ Velvet Soap
 Eco
 Whisper
 Sb
-Ancient
 Ancient Nutra
 Aurica
-Buon
 Buon Appetito
 Margarita
 Sugar Free
 Super Chef
 Haribo
-H&S
 H&S A/D
 American Gourmet
 Battler
-LIFEBUOY
-BELLOSE
-GILLETTE
-PREVENSE
-Cow
+Lifebuoy
+Bellose
+Gillette
+Prevense
 Cow &
 Pepsi
 Nestomalt
@@ -358,10 +327,8 @@ Horlicks
 Sun Crush
 Spring Home
 Krest
-Fabbies
 Fabbies Gummy
 Center Fresh
-Date
 Date Crown
 Island Coffee
 Soul Coffee
@@ -376,28 +343,22 @@ Ahmad
 T-Sips
 Bfresh
 Nutrimedley
-Diana
 Diana Signature
 Maki'S
 Gindara
 Apple Baby
-Number
 Number Candle
 Kanokwan
 MD
-MAGGI
-FORTUNE
-DETTOL Hand
-Bell
-Bell Pepper
+Maggi
+Fortune
 Viscafe
 Ratthi
 Mountain Dew
 Nissin
-Marmite Yeast
+Marmite
 Coconut Miracle
 Mdk
-Pizza
 Pizza Oven
 Farm
 Golden Crop
@@ -405,10 +366,8 @@ Sensodyne
 Evangeline
 Sterilgarda
 Fan
-Banana
 Wonrich
 Prime
-Lucky
 Lucky Family
 Candytree
 Julies
@@ -421,20 +380,16 @@ Secrets
 Arunalu Dry
 Basso
 Battler Tea
-HARISCHANDRA
-RAIGAM
-SUN
-SUN CRUSH
-EVA
-BIO
+Raigam
+Sun Crush
+Eva
+Bio
 Bee
 Heavenly
 Lakspray
-Dads
 Dads Garden
 Captain
 Tess
-Berry
 Berry Much
 Kiwi
 Bcc
@@ -463,22 +418,20 @@ Gents Rubber
 Jeewaka
 Evon
 Bhpc
-Bhpc Polo
 Sudantha
 Nsk
 Countree
 Gourmet
-KOTMALE
-AHMAD
-MOTHA
+Kotmale
+Ahmad
+Motha
 Edin
-NATURE
-RANI
-CLOGARD
-BIC
+Nature
+Rani
+Clogard
+Btc
 Bee Safe
 Pampers
-Pampers Baby
 Viscafe Shong
 Alerics
 Horlicks Malted
@@ -496,51 +449,40 @@ Lorenz
 Cadbury Dairy
 Daawat
 Dumbara Kithul
-Balloon
-Balloon Metallic
 Aryu
 Himalaya
 Veet
 Embrace
-Embrace Edp
 Kopiko
 Loli
 Arla Cheese
-Bread
-Banana -
 Mccain
 Mayasi
 Bikano
 Natura
 Natura Ceylon
-Tai
 Tai Sun
 Nutrinno
 Maya
 Vicenzi
 Fox'S
-Planter'S
 Planter'S Kitchen
 Flava
 Hortons
 Ravan
 Ccuk
-Sri
 Sri Beauty
 Hope
-ZESTA
-STAR
-STAR GOLD
-CIC
-SAMAPOSHA
+Zesta
+Star Gold
+Samaposha
 Mccurry
-AMRONA
+Amrona
 Pasta Zara
-KHOMBA
-LUX
-JANET
-LYSOL
-Cabbage
+Khomba
+Lux
+Janet
+Lysol
 Sustagen
 Diamond Full
 Blue
@@ -552,17 +494,15 @@ Sprite
 K
 Rin
 Brightex
-Natures
 Natures Love
 Ocean
 Banno
 Maurimix
 Raala
 Bogawanthalawa
-Watawala Tea
+Watawala
 Drools
-Drools Chicken
-Lets
+Drools
 Lets Bite
 Let`S
 Let`S Bite
@@ -572,7 +512,6 @@ Fogg Body
 O'Nelle
 Colgate
 Fair
-Her
 Her Majesty
 Revlon
 Pantene Shampoo
@@ -580,64 +519,52 @@ Moods
 O`Nelle
 Nataraj
 Stassen
-Old
 Greenday
 Oncup
 Virgilio
 Bread Talk
 Crispy
-Three
 Three Star
 Pringles
-Donna
 Donna Chiara
 Aswenna
 Snapin
 Cherish
 Oristor
-N
 N Joy
 Glanrich
 N.Secrets
 Oks
-Body
 Body Doo
 Starlight
 Secrets Cologne
 Nutrimate
 Pastarina
 Dimes
-NESCAFE
-YETI
-LANKASOY
+Nescafe
+Yeti
+Lankasoy
 Hiru Nishpadana
-ROZA
-ROZA Pasta
-MCCURRY
-NUTRILINE Choco
+Roza
+Nutriline Choco
 Malwatte
-GOVI
-KEELLS
-TEEPOL
-VIM
-DIVA
-SOFTOUCH
-GOOD
-GOOD KNIGHT
+Govi
+Keells
+Teepol
+Vim
+Diva
+Softtouch
 Nan
 Splash
 Imorich
-Naturals
 Naturals Greek
 Kinley
 Olu
-100
 100 Plus
 May
 Greenland
 Nutella
 Teepol
-Teepol Dish
 Kiwi Shoe
 Helios
 Softny
@@ -650,17 +577,13 @@ Chef
 Farm Fresh
 Ocean Star
 Rage
-Rage Coffee
 Iodex
-Bees
 Bees Line
 Abha
 Champion
 Misumi
 Dearo
-Dearo Deo
-Head
-Head &
+Head & Shoulders
 Panadol
 Vicks
 Protinex
@@ -669,7 +592,6 @@ Park Avenue
 Maped
 Lakspray Milk
 Aquafina Bottled
-Aik
 Aik Cheong
 Loli Tails
 100Plus
@@ -680,13 +602,11 @@ Premier
 Nutrinnovate
 Samaayu Kolakenda
 Kernell'S
-Kernell'S Corn
 W.H.G
 Lath
 Kriollo
 Ferrero
 Wrigley'S
-Wrigley'S Doublemint
 M&M
 Banga
 Campagna
@@ -698,54 +618,39 @@ Thermos
 Angels
 Ibl
 Sanmo
-Food
 Pa.Avenue
 Shishu
 Odo
-Odo Plus
-Close
 Close Up
 Arizona
-Skin
 Skin Talks
 Dececco
-Town
 Town Bus
 Tropical
-SILVERMILL
-LIPTON
-RICHLIFE
-AHMAD TEA
-MAGGI Noodles
-SETHUM
-KVC
-ARUNALU
-GOVI ARUNA
-LINK
-FEMS
-CHAMPION
-CHAMPION Germ
-EARTH
-LUVESENCE
-O'NELLE
-HARPIC
-BIO CLEAN
-MORTEIN
-Garlic
-Honest
+Silvermill
+Lipton
+Richlife
+Sethum
+Kvc
+Arunalu
+Govi aruna
+Link
+Fems
+Champion
+Earth
+Luvesense
+O'Nelle
+Harpic
+Mortein
 Honest Greens
 Nangrow
 Lody
-Lody Baby
 Milkmaid
 Anlene
 Enfamama
-Enfamama A+
 Astra
 Nutrifix
 Highway
-Highway Peanut
-Dad`S
 Dad`S Garden
 Supreme
 Tabasco
@@ -755,7 +660,6 @@ Washy
 Parampara
 Rusiru
 Energizer
-Energizer Max
 Guardian
 Shock
 Cif
@@ -763,12 +667,9 @@ Beaufor
 Seven Star
 Pa
 Alpex
-Alpex Crusta
 Besto
 Thalapath
-Mister
 Mister Potato
-Lotus
 Lotus Biscoff
 Asiri
 Loacker
@@ -781,11 +682,9 @@ Denta Comfort
 Rani Shower
 Acnes
 Goya Cologne
-Safe
 Safe Guard
 Dandex
 Ensure
-Colgate Toothpaste
 Parachute
 Pediasure
 Revlon Colorsilk
@@ -793,16 +692,12 @@ Action
 Cetaphil
 Signature
 Romantra
-Romantra Perfume
 Fair Squared
-Denver Deodorant
-Denver Sporting
+Denver
 Innovate
-Riso
 Riso Scotti
 Abbott
 Stassen Organic
-T-
 T- Sips
 Sprite Pet
 Coca-Cola
@@ -818,16 +713,10 @@ Nootz
 Kico
 Teaser
 Ribena
-Tea
-Chocolate
 Breadtalk
-Grapes
-Grapes -
 Keells/Kr.
 Tuktuk
 Iyes
-Iyes Cashews
-Tuk
 Tuk Tuk
 Maxicorn
 Eatalia
@@ -846,13 +735,10 @@ Kapuwatta
 Tilda
 Ferrero Rocher
 Eclipse
-Candy
 Candy Man
-M&M Chocolate
 Dehy-V
 Cbl
 Ritz
-Grand
 Grand Asia
 Simply
 Janrich
@@ -860,21 +746,17 @@ Colavita
 Gw
 Ten
 Sanmo Kitchen
-Glowy
 Glowy Lip
-N.
 N. Secret
 C&C
 Divon
 Ivy
 Frella
 Antibo
-Antibo Bath
 N.Secrets B/Lotion
 Pet
 Cp
 Confetti
-Confetti London
 Romntra
 Menthosil
 Food Link
@@ -891,57 +773,37 @@ Govi Aruna
 Cavin'S
 Cavin'S Milkshake
 Monin
-ANCHOR
-AMBEWELA
-AMBEWELA Milk
-RATTHI
-BOGAWANTALAWA
-BOGAWANTALAWA Tea
-COCA
-COCA COLA
-RICHLIFE UHT
-SPRITE
-SOUL
-SOUL Coffee
+Anchor
+Ambewela
+Ratthi
+Bogawantalawa
+Richlife
+Sprite
+Soul
+Soul Coffee
 Vintage
-HAPPY
-RENUKA
-RENUKA Coconut
-SUPREME
-SUPREME Sprats
-KELLOGGS
-BARAKA
-SAMAAYU
-SAMAAYU Kolakenda
-GRAVITY
-TRUE
+Hap
+Renuka
+Supreme
+Kelloggs
+Samaayu
+Gravity
 True Choice
-GINDARA
+Gindara
 Sae
-Sae Dried
 Tropical Life
-RANI Shower
-VASELINE
-SIDDHALEPA
-DREAMRON
-EARTH ESSENCE
-PONDS
-MIRACLE
-ECO
-VIM Dishwash
-SOFTOUCH 2x
-NINJA
-SANRAY
-SANRAY Garbage
-ATLAS
-Capsicum
-Bitter
-Bitter Gourd
-Ash
-Long
-Cabbage Leaves
-Chinese
-Avocado
+Rani
+Vaseline
+Siddhalepa
+Dreamron
+Earth Essence
+Ponds
+Miracle
+Eco
+Softtouch
+Ninja
+Sanray
+Atlas
 Cerelac
 Lactogen
 Nan 1
@@ -949,18 +811,12 @@ Enfamil
 Puredale
 Nespray
 Frutty
-Frutty Fro
 Lurpak
-Lurpak Butter
 Kinley Soda
 Knuckles
 Pfanner
 Olu Tropical
-May Sparkling
-Chick
-Chick Peas
 Kernell`S
-Kernell`S Corn
 K Mate
 Splash Moist
 Gliz
@@ -968,38 +824,29 @@ Britol
 Mortein
 Guardian Aluminium
 Comfoods
-Comfoods Ziplock
-Store
 Store Easy
 N-Joy
 Colo
-Colo Coconut
 Rayin
 Beaufor Hot
 Panaderia
 Saras
-Saras Chicken
-Corn
 Corn Love
 Chef Spring
 Crysbro
-Tuna
 Paraw
 Bounty
 Happydent
 Mars
-Mars Chocolate
 Snickers
 Loacker Classic
 Pulathisi
 Sewmini Premium
-Keeri Samba
 Mauripan
 Mauripan Instant
 Upul
 Best
 Bogawanthalawa Extra
-Bon
 Bon Aroma
 Pastel
 Precare
@@ -1011,68 +858,50 @@ Strepsils
 Clean
 Prevence
 Clif
-Set
 Set Wet
 O3
 Signature Cologne
 K-Tape
 Airpore
-Airpore Hydrocolloid
 Ortho
 Ortho Shield
-Himani
 Himani Navaratna
 Jk
 Zara
 Oatside
-Oatside Oatmilk
-Dutch
 Dutch Lady
 Hershey'S
 Abbott Ensure
 Farmlank
-Farmlank Goat
-T
 T Sips
 Ranlanda
-Baskin
 Baskin Robbins
 Cbc
 Schweppes
 Alkafresh
-Alkafresh Alkaline
 Indo
 Old Town
 Barbican Non
-Kobra
 Kobra Energy
-Hype
 Hype Bam
 Turbo Nitro
 Lacnor
 Nootz Coconut
-Apluss
 Apluss Basil
 Snow
 Virgilio Parmigiano
 Soignon
-Soignon Goat
 Fruttyfroyo
 Nelna
-Pork
 Changami
 Cornlove
 Crispack
-Crispack Greenpeas
 Kraft
 Mamee
-O
 O My
 Tg Real
 Lays
 Unibic
-Pringles Sour
-Ramba
 Ramba Tetos
 Mara
 Capilano Manuka
@@ -1081,20 +910,16 @@ Fitmorn
 Health
 Cerera
 Sandun
-India
 India Gate
 Falak
 Cellengy
-Cellengy Easy
 Yatiyana
 Kapuwatta Keeri
 Piyaseela
-Piyaseela Gingelly
 Derby
 Revellotreats
 Eclipse Chewy
 Byd
-Byd Food
 Monggo
 Dil
 Dehy-V Garlic
@@ -1104,13 +929,10 @@ Hello
 Cameo
 Munchy'S
 Pocky
-Pocky Sticks
 Banga Atlantic
 Bis
 Weikfield
 Nando'S
-Nando'S Peri
-Crying
 Crying Thaiger
 Lingham'S
 Bachun
@@ -1120,43 +942,33 @@ Hsp
 C&C F/Wash
 Champion Soap
 Sterill
-Sterill Hand
 Brylcreem
 Old Spice
 Ogabo
 Avake
-Avake Hair
 Pa.Avenue Men
 Petma
 Willpower
 Pet A
-Meow
 Meow Kitbiz
 Farmchemi
 Farmchemi Canny
 Tixfree
 Tixfree Spot
 Kodomo
-Kodomo Tooth
-So
 So Soft
 Arizona A/F
 Shock Shoe
 Angels Wooden
-Target
 Target Pack
 Scentify
-Scentify Fabric
 Clomax
-Clomax Bleaching
 Frella Neutral
 Menthosil Caugh
 Cbl Ramba
 Dececco Sugo
 Dumindu
-Fine
 Fine Foods
-Halls
 Halls Candy
 Kettle
 Kettle Studio
@@ -1172,63 +984,38 @@ Sharibath
 Soopervegan
 Dimes 100%
 Al-Madina
-WATAWALA
-WATAWALA Tea
-PELWATTE
-RATTHI Full
-NESTOMALT
-NESCAFE Classic
-MILO
-LIPTON Ceylonta
-KHAO
-ISLAND
-ISLAND Coffee
-FANTA
-TEA
+Milo
+Lipton
+Island Coffee
+Fanta
 Tea 4U
 Vintage Teas
-HAPPY HEN
-KELLOGG'S
-ORIENT
-OATEO
-OATEO Instant
-FRAGATA
-CHERISH
-CHERISH Wafers
-LAHIRU
-LAHIRU Kothmale
-RITZBURY
-HOSEN
+Happy Hen
+Orient
+Oateo
+Fragata
+Cherish
 Lahiru
-Lahiru Kothmale
+Ritzbury
+Hosen
 Mamma
-KEELLS Chicken
-GINDARA Nai
-MASTER
-MASTER SPICE
-SENSODYNE
-SENSODYNE ToothPaste
-4
+Gindara Nai
+Master
+Sensodyne
 4 EVER
-FEMS Superior
-MISUMI
-MISUMI Whitning
-AXE
-VICKS
-VICKS Vaporub
+Misumi
+Axe
+Vicks
 Pond's
-Pond's Bright
-WHISPER
-WHISPER Ultra
-MIRACLE Shampoo
-NIMEX
-DIVA Power
-BUBBLE
-TEEPOL Dishwash
-HARPIC Fresh
-AMRITHA Incense
-ECO SACK
-ECOCLEAN
-SPRING HOME
-GILLS
+Whisper
+Miracle
+Nimex
+Diva
+Bubble
+Teepol
+Amritha
+Eco Sack
+Ecoclean
+Spring Home
+Gills
 
