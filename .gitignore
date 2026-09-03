@@ -1,5 +1,5 @@
 *.html
 !index.html
-/pycache
+/__pycache__
 *.json
 *.xml
