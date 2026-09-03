@@ -5589,15 +5589,6 @@
     "category": "Rtd Single Consumption"
   },
   {
-    "name": "Watermelon Ade",
-    "brand": "Oncup",
-    "price": 760.0,
-    "quantity": "230ml",
-    "discount": "0",
-    "url": "https://glomark.lk/oncup-watermelon-ade-230ml/p/140836",
-    "category": "Rtd Single Consumption"
-  },
-  {
     "name": "Blueberry Ade",
     "brand": "Oncup",
     "price": 760.0,
@@ -5640,6 +5631,15 @@
     "quantity": "230ml",
     "discount": "0",
     "url": "https://glomark.lk/oncup-bluelemon-ade-230ml/p/140837",
+    "category": "Rtd Single Consumption"
+  },
+  {
+    "name": "Watermelon Ade",
+    "brand": "Oncup",
+    "price": 760.0,
+    "quantity": "230ml",
+    "discount": "0",
+    "url": "https://glomark.lk/oncup-watermelon-ade-230ml/p/140836",
     "category": "Rtd Single Consumption"
   },
   {
@@ -9792,6 +9792,15 @@
     "category": "Vegetable"
   },
   {
+    "name": "Fresh Leaf Mukunuwanna",
+    "brand": "",
+    "price": 180.0,
+    "quantity": "150g",
+    "discount": "0",
+    "url": "https://glomark.lk/fresh-leaf-mukunuwanna-150g/p/9677",
+    "category": "Vegetable"
+  },
+  {
     "name": "Iceberg ( Lettuce )",
     "brand": "",
     "price": 245.0,
@@ -12150,42 +12159,6 @@
     "category": "Snacks"
   },
   {
-    "name": "Paw Cheese",
-    "brand": "Mayasi",
-    "price": 490.0,
-    "quantity": "50g",
-    "discount": "0",
-    "url": "https://glomark.lk/mayasi-paw-cheese-50g/p/140867",
-    "category": "Snacks"
-  },
-  {
-    "name": "Black Pepper",
-    "brand": "Iyes Cashews",
-    "price": 1190.0,
-    "quantity": "100g",
-    "discount": "0",
-    "url": "https://glomark.lk/iyes-cashews-black-pepper-100g/p/140865",
-    "category": "Snacks"
-  },
-  {
-    "name": "Chili",
-    "brand": "Iyes Cashews",
-    "price": 1190.0,
-    "quantity": "100g",
-    "discount": "0",
-    "url": "https://glomark.lk/iyes-cashews-chili-100g/p/140862",
-    "category": "Snacks"
-  },
-  {
-    "name": "Peanuts Chili",
-    "brand": "Mayasi",
-    "price": 650.0,
-    "quantity": "65g",
-    "discount": "0",
-    "url": "https://glomark.lk/mayasi-peanuts-chili-65g/p/140860",
-    "category": "Snacks"
-  },
-  {
     "name": "Yoiki Paw",
     "brand": "Chocolate",
     "price": 490.0,
@@ -12201,6 +12174,24 @@
     "quantity": "50g",
     "discount": "0",
     "url": "https://glomark.lk/mayasi-paw-corn-50g/p/140868",
+    "category": "Snacks"
+  },
+  {
+    "name": "Paw Cheese",
+    "brand": "Mayasi",
+    "price": 490.0,
+    "quantity": "50g",
+    "discount": "0",
+    "url": "https://glomark.lk/mayasi-paw-cheese-50g/p/140867",
+    "category": "Snacks"
+  },
+  {
+    "name": "Black Pepper",
+    "brand": "Iyes Cashews",
+    "price": 1190.0,
+    "quantity": "100g",
+    "discount": "0",
+    "url": "https://glomark.lk/iyes-cashews-black-pepper-100g/p/140865",
     "category": "Snacks"
   },
   {
@@ -12222,12 +12213,30 @@
     "category": "Snacks"
   },
   {
+    "name": "Chili",
+    "brand": "Iyes Cashews",
+    "price": 1190.0,
+    "quantity": "100g",
+    "discount": "0",
+    "url": "https://glomark.lk/iyes-cashews-chili-100g/p/140862",
+    "category": "Snacks"
+  },
+  {
     "name": "Peanuts Garlic",
     "brand": "Mayasi",
     "price": 650.0,
     "quantity": "65g",
     "discount": "0",
     "url": "https://glomark.lk/mayasi-peanuts-garlic-65g-/p/140861",
+    "category": "Snacks"
+  },
+  {
+    "name": "Peanuts Chili",
+    "brand": "Mayasi",
+    "price": 650.0,
+    "quantity": "65g",
+    "discount": "0",
+    "url": "https://glomark.lk/mayasi-peanuts-chili-65g/p/140860",
     "category": "Snacks"
   },
   {
@@ -15408,6 +15417,15 @@
     "category": "Dessert & Baking"
   },
   {
+    "name": "Cocoa Powder",
+    "brand": "Delish",
+    "price": 420.0,
+    "quantity": "50g",
+    "discount": "0",
+    "url": "https://glomark.lk/delish-cocoa-powder-50g/p/140813",
+    "category": "Dessert & Baking"
+  },
+  {
     "name": "Baking Powder",
     "brand": "Delish",
     "price": 300.0,
@@ -15435,30 +15453,21 @@
     "category": "Dessert & Baking"
   },
   {
-    "name": "Jelly Strawberry & Blackcurrant Flavoured",
-    "brand": "Delish",
-    "price": 230.0,
-    "quantity": "100g",
-    "discount": "0",
-    "url": "https://glomark.lk/delish-jelly-strawberry-blackcurrant-flavoured-100g/p/140808",
-    "category": "Dessert & Baking"
-  },
-  {
-    "name": "Cocoa Powder",
-    "brand": "Delish",
-    "price": 420.0,
-    "quantity": "50g",
-    "discount": "0",
-    "url": "https://glomark.lk/delish-cocoa-powder-50g/p/140813",
-    "category": "Dessert & Baking"
-  },
-  {
     "name": "Jelly Blueberry Flavoured 100",
     "brand": "Delish",
     "price": 230.0,
     "quantity": "g",
     "discount": "0",
     "url": "https://glomark.lk/delish-jelly-blueberry-flavoured-100-g/p/140809",
+    "category": "Dessert & Baking"
+  },
+  {
+    "name": "Jelly Strawberry & Blackcurrant Flavoured",
+    "brand": "Delish",
+    "price": 230.0,
+    "quantity": "100g",
+    "discount": "0",
+    "url": "https://glomark.lk/delish-jelly-strawberry-blackcurrant-flavoured-100g/p/140808",
     "category": "Dessert & Baking"
   },
   {
@@ -20760,6 +20769,33 @@
     "quantity": "250g",
     "discount": "0",
     "url": "https://glomark.lk/milma-soan-papdi-cashewnuts-250g/p/141422",
+    "category": "Confectionary"
+  },
+  {
+    "name": "Bauli Moonfils Croissant Cheese Cream",
+    "brand": "",
+    "price": 250.0,
+    "quantity": "45g",
+    "discount": "0",
+    "url": "https://glomark.lk/bauli-moonfils-croissant-cheese-cream-45g/p/141239",
+    "category": "Confectionary"
+  },
+  {
+    "name": "Bauli Moonfils Croissant Choco",
+    "brand": "",
+    "price": 250.0,
+    "quantity": "45g",
+    "discount": "0",
+    "url": "https://glomark.lk/bauli-moonfils-croissant-choco-45g/p/141238",
+    "category": "Confectionary"
+  },
+  {
+    "name": "Bauli Moonfils Croissant Vanila",
+    "brand": "",
+    "price": 250.0,
+    "quantity": "45g",
+    "discount": "0",
+    "url": "https://glomark.lk/bauli-moonfils-croissant-vanila-45g/p/141237",
     "category": "Confectionary"
   },
   {
@@ -36063,24 +36099,6 @@
     "category": "Facial Care"
   },
   {
-    "name": "St Ives Green Blackhead Clearing Face Scrub",
-    "brand": "Tea",
-    "price": 1220.0,
-    "quantity": "50g",
-    "discount": "0",
-    "url": "https://glomark.lk/st-ives-green-tea-blackhead-clearing-face-scrub-50g-/p/140820",
-    "category": "Facial Care"
-  },
-  {
-    "name": "Cocoa Butter Lip Therapy Balm 4.8",
-    "brand": "Vaseline",
-    "price": 1095.0,
-    "quantity": "g",
-    "discount": "0",
-    "url": "https://glomark.lk/vaseline-cocoa-butter-lip-therapy-balm-4.8-g/p/140818",
-    "category": "Facial Care"
-  },
-  {
     "name": "St Ives Face Scrub Apricot Fresh Face Scrub",
     "brand": "Skin",
     "price": 1220.0,
@@ -36090,12 +36108,30 @@
     "category": "Facial Care"
   },
   {
+    "name": "St Ives Green Blackhead Clearing Face Scrub",
+    "brand": "Tea",
+    "price": 1220.0,
+    "quantity": "50g",
+    "discount": "0",
+    "url": "https://glomark.lk/st-ives-green-tea-blackhead-clearing-face-scrub-50g-/p/140820",
+    "category": "Facial Care"
+  },
+  {
     "name": "Cocoa Butter Lip Care",
     "brand": "Vaseline",
     "price": 1200.0,
     "quantity": "7g",
     "discount": "0",
     "url": "https://glomark.lk/vaseline-cocoa-butter-lip-care-7g/p/140819",
+    "category": "Facial Care"
+  },
+  {
+    "name": "Cocoa Butter Lip Therapy Balm 4.8",
+    "brand": "Vaseline",
+    "price": 1095.0,
+    "quantity": "g",
+    "discount": "0",
+    "url": "https://glomark.lk/vaseline-cocoa-butter-lip-therapy-balm-4.8-g/p/140818",
     "category": "Facial Care"
   },
   {
@@ -37527,15 +37563,6 @@
     "quantity": "80g",
     "discount": "0",
     "url": "https://glomark.lk/ivy-anti-dandruff-soap-80g/p/133467",
-    "category": "Body Cleansing"
-  },
-  {
-    "name": "Soap Beauty 75G*5",
-    "brand": "Chandanalepa",
-    "price": 1100.0,
-    "quantity": "Per 1 unit(s)",
-    "discount": "0",
-    "url": "https://glomark.lk/chandanalepa-soap-beauty-75g*5/p/133387",
     "category": "Body Cleansing"
   },
   {
@@ -40734,15 +40761,6 @@
     "category": "Toiletries Men"
   },
   {
-    "name": "Fusion Power Razor",
-    "brand": "Gillette",
-    "price": 4480.0,
-    "quantity": "Per 1 unit(s)",
-    "discount": "0",
-    "url": "https://glomark.lk/gillette-fusion-power-razor/p/8302",
-    "category": "Toiletries Men"
-  },
-  {
     "name": "Shaving Foam Regular",
     "brand": "Gillette",
     "price": 790.0,
@@ -40959,21 +40977,21 @@
     "category": "Skin Care"
   },
   {
-    "name": "Sunscreen Spf 50 Creme Gel",
-    "brand": "Ponds",
-    "price": 2150.0,
-    "quantity": "50g",
-    "discount": "0",
-    "url": "https://glomark.lk/ponds-sunscreen-spf-50-creme-gel-50g-/p/140773",
-    "category": "Skin Care"
-  },
-  {
     "name": "Sunscreen Spf 35 Cream",
     "brand": "Ponds",
     "price": 1000.0,
     "quantity": "50g",
     "discount": "0",
     "url": "https://glomark.lk/ponds-sunscreen-spf-35-cream-50g/p/140774",
+    "category": "Skin Care"
+  },
+  {
+    "name": "Sunscreen Spf 50 Creme Gel",
+    "brand": "Ponds",
+    "price": 2150.0,
+    "quantity": "50g",
+    "discount": "0",
+    "url": "https://glomark.lk/ponds-sunscreen-spf-50-creme-gel-50g-/p/140773",
     "category": "Skin Care"
   },
   {
@@ -47274,6 +47292,15 @@
     "quantity": "500g",
     "discount": "0",
     "url": "https://glomark.lk/bubble-detegent-powdr-aloe-vera-500g/p/48779",
+    "category": "Laundry"
+  },
+  {
+    "name": "Matic Laundry Liq Front Load",
+    "brand": "Surf",
+    "price": 1290.0,
+    "quantity": "1l",
+    "discount": "0",
+    "url": "https://glomark.lk/surf-matic-laundry-liq-front-load-1l/p/48778",
     "category": "Laundry"
   },
   {
